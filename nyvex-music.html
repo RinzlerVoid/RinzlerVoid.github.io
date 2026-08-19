@@ -1,0 +1,321 @@
+/* ========================================
+   NYVEX • PRODUCT PAGES
+   ======================================== */
+
+.product-hero {
+    position: relative;
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(212, 175, 55, 0.10),
+            transparent 40%
+        ),
+        #0b0b0b;
+}
+
+.product-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 110px 0;
+}
+
+.product-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 25px;
+    padding: 7px 11px;
+
+    border: 1px solid rgba(40, 180, 90, 0.25);
+    border-radius: 999px;
+
+    background: rgba(40, 180, 90, 0.07);
+
+    color: #76d99c;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+.product-hero h1 {
+    color: var(--nyvex-white);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(58px, 8vw, 105px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.04em;
+}
+
+.product-hero h1 span {
+    color: var(--nyvex-gold);
+}
+
+.product-hero-description {
+    max-width: 680px;
+
+    margin-top: 30px;
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.product-hero-actions {
+    display: flex;
+    gap: 14px;
+
+    margin-top: 38px;
+}
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    margin-top: 48px;
+    padding-top: 28px;
+
+    border-top: 1px solid var(--border);
+}
+
+.product-meta-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+.product-meta-item strong {
+    color: var(--text-primary);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   PRODUCT FEATURES
+   ======================================== */
+
+.music-features {
+    padding: 110px 0;
+
+    background: #101010;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.feature-card {
+    min-height: 190px;
+
+    padding: 26px;
+
+    background: #131313;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: var(--radius-medium);
+
+    transition:
+        transform var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(212, 175, 55, 0.25);
+}
+
+.feature-icon {
+    margin-bottom: 20px;
+
+    font-size: 23px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--nyvex-white);
+
+    font-family: var(--font-display);
+
+    font-size: 21px;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   COMMANDS
+   ======================================== */
+
+.commands-section {
+    padding: 110px 0;
+
+    background: #0c0c0c;
+}
+
+.commands-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.commands-intro p {
+    max-width: 480px;
+
+    margin-top: 25px;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+}
+
+.commands-list {
+    display: grid;
+
+    gap: 9px;
+}
+
+.command {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 18px;
+
+    background: #121212;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 9px;
+
+    transition:
+        border-color var(--transition-normal),
+        background var(--transition-normal);
+}
+
+.command:hover {
+    background: #151515;
+
+    border-color:
+        rgba(212, 175, 55, 0.2);
+}
+
+.command code {
+    color: var(--nyvex-gold);
+
+    font-family: monospace;
+
+    font-size: 13px;
+}
+
+.command span {
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   PRODUCT CTA
+   ======================================== */
+
+.product-cta {
+    position: relative;
+
+    padding: 130px 0;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background: #080808;
+}
+
+.product-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212, 175, 55, 0.08),
+            transparent 68%
+        );
+}
+
+.product-cta-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.product-cta h2 {
+    color: var(--nyvex-white);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(40px, 5vw, 65px);
+}
+
+.product-cta p {
+    max-width: 600px;
+
+    margin: 20px auto 35px;
+
+    color: var(--text-secondary);
+}
