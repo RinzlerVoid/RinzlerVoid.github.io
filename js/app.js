@@ -1,5 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* En páginas de producto también ofrecemos el selector trilingüe. */
+    if (!document.querySelector(".language-selector")) {
+        const navbar = document.querySelector(".navbar");
+        if (navbar) {
+            const selector = document.createElement("div");
+            selector.className = "language-selector";
+            selector.innerHTML = `
+                <button class="language-button" id="language-toggle" type="button" aria-label="Select language">🌐 <span class="language-current" id="language-current">ES</span> ▾</button>
+                <div class="language-menu" id="language-menu">
+                    <button type="button" data-language="es">🇪🇸 Español</button>
+                    <button type="button" data-language="en">🇺🇸 English</button>
+                    <button type="button" data-language="pt">🇧🇷 Português Brasileiro</button>
+                </div>`;
+            navbar.appendChild(selector);
+        }
+    }
+
+    /* Chimes sutiles estilo ópera para tarjetas y botones. Se generan localmente
+       con Web Audio; no hay archivos externos ni reproducción automática. */
+    let chimeContext;
+    let lastChime = 0;
+    const playChime = (kind = "hover") => {
+        const now = performance.now();
+        if (now - lastChime < 180) return;
+        lastChime = now;
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        chimeContext ||= new AudioContext();
+        if (chimeContext.state === "suspended") chimeContext.resume();
+        const start = chimeContext.currentTime;
+        const notes = kind === "click"
+            ? [392.00, 523.25, 659.25, 783.99]
+            : [523.25, 659.25, 783.99];
+        notes.forEach((frequency, index) => {
+            const oscillator = chimeContext.createOscillator();
+            const gain = chimeContext.createGain();
+            oscillator.type = "sine";
+            oscillator.frequency.value = frequency;
+            gain.gain.setValueAtTime(0.0001, start + index * 0.055);
+            gain.gain.exponentialRampToValueAtTime(kind === "click" ? 0.028 : 0.022, start + index * 0.055 + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.0001, start + index * 0.055 + (kind === "click" ? 0.34 : 0.26));
+            oscillator.connect(gain).connect(chimeContext.destination);
+            oscillator.start(start + index * 0.055);
+            oscillator.stop(start + index * 0.055 + (kind === "click" ? 0.36 : 0.28));
+        });
+    };
+    document.querySelectorAll(".product-card, .future-card, .button, .product-link").forEach((element) => {
+        element.addEventListener("mouseenter", () => playChime("hover"), { passive: true });
+        element.addEventListener("click", () => playChime("click"), { passive: true });
+    });
+
     /* ========================================
        NYVEX • LANGUAGE SYSTEM
        ======================================== */
@@ -41,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         document.documentElement.lang =
-            language;
+            language === "pt" ? "pt-BR" : language;
 
 
         const elements =
@@ -87,9 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (languageCurrent) {
 
             languageCurrent.textContent =
-                language === "es"
-                    ? "ES"
-                    : "EN";
+                language === "es" ? "ES" : language === "pt" ? "PT-BR" : "EN";
 
         }
 
@@ -305,3 +354,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+

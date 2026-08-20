@@ -26,6 +26,14 @@ const translations = {
         dashboard_description:
             "Un solo lugar para administrar todo tu ecosistema NYVEX.",
 
+        dashboard_open: "Dashboard próximamente",
+        dashboard_page_description: "Un solo lugar para administrar todo tu ecosistema NYVEX.",
+        dashboard_features_title: "Todo tu ecosistema, en un solo panel.",
+        dashboard_feature_config: "Selecciona tu servidor y configura cada bot según sus necesidades.",
+        dashboard_feature_security: "Administra roles, canales, logs y protecciones desde un flujo centralizado.",
+        dashboard_feature_stats: "Consulta el estado y la actividad de tus herramientas de NekroNex.",
+        back_products: "Ver productos",
+
         /* =========================
            HOME
            ========================= */
@@ -67,13 +75,22 @@ const translations = {
             "Explorar KRYVEX →",
 
         explore_ticket:
-            "Explorar Ticket →",
+            "Explorar VELTRIX →",
+
+        explore_dashboard:
+            "Abrir Dashboard →",
 
         guard_description:
             "Protección y moderación avanzada diseñada para mantener tu comunidad de Discord segura, organizada y bajo control.",
 
         tickets_description:
             "Un sistema profesional de soporte diseñado para organizar conversaciones, solicitudes y asistencia dentro de tu comunidad de Discord.",
+
+        synvex_description:
+            "El sistema de alertas multimedia de tu comunidad. Detecta vídeos nuevos, directos en vivo y contenido reciente para mantener a tu servidor conectado y al día.",
+
+        synvex_status:
+            "Alertas multimedia próximamente.",
 
         coming_label:
             "PRÓXIMAMENTE",
@@ -937,7 +954,7 @@ const translations = {
            ========================= */
 
         docs_ticket_dev_description:
-            "VELTRIX - Tickets se encuentra actualmente en desarrollo. La documentación estará disponible a medida que avance el producto.",
+            "VELTRIX - Tickets está disponible para organizar el soporte de tu comunidad.",
 
         docs_ticket_status_label:
             "ESTADO DEL DESARROLLO",
@@ -970,7 +987,7 @@ const translations = {
             "Diseñado para un mejor soporte.",
 
         docs_ticket_features_description:
-            "Estas características representan la dirección planeada de VELTRIX - Tickets. La funcionalidad final puede evolucionar durante el desarrollo.",
+            "Estas funciones forman parte del sistema actual de soporte y tickets de VELTRIX.",
 
         docs_ticket_cta_label:
             "VELTRIX - TICKETS",
@@ -979,7 +996,7 @@ const translations = {
             "Mantente atento.",
 
         docs_ticket_cta_description:
-            "VELTRIX - Tickets recibirá su documentación completa cuando el desarrollo llegue a la etapa adecuada.",
+            "Consulta la documentación de VELTRIX - Tickets para comenzar la configuración.",
 
         /* =========================
            SUPPORT
@@ -1054,7 +1071,7 @@ const translations = {
             "VELTRIX - Tickets",
 
         support_ticket_description:
-            "Nuestro sistema de tickets está actualmente en desarrollo.",
+            "Nuestro sistema de tickets está listo para organizar el soporte de tu comunidad.",
 
         support_community_title:
             "Comunidad",
@@ -1084,7 +1101,7 @@ const translations = {
             "¿Guard y Ticket están disponibles?",
 
         support_faq_03:
-            "KRYVEX está disponible; VELTRIX - Tickets se encuentra actualmente en desarrollo.",
+            "KRYVEX y VELTRIX - Tickets están disponibles actualmente.",
 
         support_faq_04_title:
             "¿Dónde puedo obtener ayuda?",
@@ -1157,6 +1174,14 @@ const translations = {
         dashboard_description:
             "One place to manage your entire NYVEX ecosystem.",
 
+        dashboard_open: "Dashboard coming soon",
+        dashboard_page_description: "One place to manage your entire NYVEX ecosystem.",
+        dashboard_features_title: "Your entire ecosystem, in one panel.",
+        dashboard_feature_config: "Select your server and configure each bot according to its needs.",
+        dashboard_feature_security: "Manage roles, channels, logs and protections through one centralized flow.",
+        dashboard_feature_stats: "Check the status and activity of your NekroNex tools.",
+        back_products: "View products",
+
         /* =========================
            HOME
            ========================= */
@@ -1198,13 +1223,22 @@ const translations = {
             "Explore KRYVEX →",
 
         explore_ticket:
-            "Explore Ticket →",
+            "Explore VELTRIX →",
+
+        explore_dashboard:
+            "Open Dashboard →",
 
         guard_description:
             "Advanced protection and moderation designed to keep your Discord community secure, organized and under control.",
 
         tickets_description:
             "A professional support system designed to organize conversations, requests and assistance inside your Discord community.",
+
+        synvex_description:
+            "The multimedia alert system for your community. Detect new videos, live streams and recent content to keep your server connected and up to date.",
+
+        synvex_status:
+            "Media alerts coming soon.",
 
         coming_label:
             "COMING NEXT",
@@ -2068,7 +2102,7 @@ const translations = {
            ========================= */
 
         docs_ticket_dev_description:
-            "VELTRIX - Tickets is currently in development. Documentation will become available as the product progresses.",
+            "VELTRIX - Tickets is available to organize your community support.",
 
         docs_ticket_status_label:
             "DEVELOPMENT STATUS",
@@ -2101,7 +2135,7 @@ const translations = {
             "Built for better support.",
 
         docs_ticket_features_description:
-            "These features represent the planned direction of VELTRIX - Tickets. Final functionality may evolve during development.",
+            "These features are part of VELTRIX's current support and ticket system.",
 
         docs_ticket_cta_label:
             "VELTRIX - TICKETS",
@@ -2110,7 +2144,7 @@ const translations = {
             "Stay tuned.",
 
         docs_ticket_cta_description:
-            "VELTRIX - Tickets will receive its full documentation when development reaches the appropriate stage.",
+            "Read the VELTRIX - Tickets documentation to start configuring it.",
 
         /* =========================
            SUPPORT
@@ -2185,7 +2219,7 @@ const translations = {
             "VELTRIX - Tickets",
 
         support_ticket_description:
-            "Our dedicated ticket system is currently being developed.",
+            "Our ticket system is ready to organize your community support.",
 
         support_community_title:
             "Community",
@@ -2215,7 +2249,7 @@ const translations = {
             "Are Guard and Ticket available?",
 
         support_faq_03:
-            "KRYVEX is available; VELTRIX - Tickets is currently in development.",
+            "KRYVEX and VELTRIX - Tickets are currently available.",
 
         support_faq_04_title:
             "Where can I get help?",
@@ -2262,3 +2296,51 @@ const translations = {
     }
 
 };
+
+/* Português Brasileiro: mantém cobertura completa usando English como base
+   para chaves novas e traduz os textos principais do ecossistema. */
+translations.pt = {
+    ...translations.en,
+    nav_products: "Produtos",
+    nav_documentation: "Documentação",
+    nav_support: "Suporte",
+    nav_get_started: "Começar",
+    available: "DISPONÍVEL",
+    in_development: "EM DESENVOLVIMENTO",
+    planned: "PLANEJADO",
+    dashboard_description: "Um só lugar para administrar todo o ecossistema NYVEX.",
+    dashboard_open: "Dashboard em breve",
+    hero_label: "A NOVA GERAÇÃO DE FERRAMENTAS PARA DISCORD",
+    hero_tagline: "Tecnologia, refinada.",
+    hero_explore: "Explorar produtos",
+    products_label: "NOSSOS PRODUTOS",
+    products_title: "Ferramentas criadas para sua comunidade.",
+    products_description: "Um ecossistema crescente de ferramentas para Discord, projetadas para trabalhar juntas.",
+    music_description: "Uma experiência musical completa para Discord. Reproduza músicas, gerencie filas, crie playlists e controle tudo com facilidade.",
+    welcome_description: "Automatize boas-vindas e despedidas para criar uma primeira impressão melhor na sua comunidade.",
+    guard_description: "Proteção e moderação avançadas para manter sua comunidade segura, organizada e sob controle.",
+    tickets_description: "Um sistema profissional de suporte para organizar solicitações e atendimento na sua comunidade.",
+    synvex_description: "O sistema de alertas multimídia da sua comunidade. Detecta novos vídeos, lives e conteúdos recentes para manter seu servidor conectado e atualizado.",
+    synvex_status: "Alertas multimídia em breve.",
+    explore_music: "Explorar NEXORA →",
+    explore_welcome: "Explorar NYVEX Welcome →",
+    explore_guard: "Explorar KRYVEX →",
+    explore_ticket: "Explorar VELTRIX →",
+    explore_dashboard: "Abrir Dashboard →",
+    coming_label: "EM BREVE",
+    coming_title: "Mais do NYVEX.",
+    coming_description: "O ecossistema está apenas começando.",
+    ecosystem_label: "UM SÓ ECOSSISTEMA",
+    ecosystem_title: "Uma plataforma.<br>Várias ferramentas.",
+    documentation: "Explorar documentação",
+    footer_products: "Produtos",
+    footer_resources: "Recursos",
+    footer_legal: "Legal",
+    terms: "Termos de Serviço",
+    privacy: "Privacidade",
+    footer_description: "Tecnologia, refinada.",
+    support_ticket_description: "Nosso sistema de tickets está pronto para organizar o suporte da sua comunidade.",
+    support_faq_03: "KRYVEX e VELTRIX - Tickets estão disponíveis atualmente."
+};
+
+
