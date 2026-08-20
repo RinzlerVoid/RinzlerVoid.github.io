@@ -36,6 +36,15 @@
         gap: 45px;
     }
 
+    .workflow-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .product-hero-content {
         padding: 90px 0;
     }
@@ -127,16 +136,35 @@
     }
 
     .hero h1 {
-        font-size: 72px;
+        max-width: 100%;
+        font-size: clamp(48px, 17vw, 72px);
+        overflow-wrap: anywhere;
+    }
+
+    .hero-tagline {
+        max-width: 100%;
+        font-size: clamp(24px, 8vw, 34px);
+    }
+
+    .hero-description {
+        max-width: 34rem;
+        padding-inline: 8px;
     }
 
     .hero-actions {
         flex-direction: column;
+        width: 100%;
+        gap: 10px;
     }
 
     .button {
         width: 100%;
         max-width: 260px;
+    }
+
+    .hero-actions .button {
+        width: min(100%, 320px);
+        max-width: none;
     }
 
     .products-section,
@@ -191,6 +219,7 @@
 
     .product-meta {
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     .feature-grid {
@@ -204,6 +233,47 @@
 
     .product-cta {
         padding: 100px 0;
+    }
+
+    .collaborations-section {
+        padding: 82px 0;
+    }
+
+    .collaborations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collaboration-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-section,
+    .workflow-section {
+        padding: 82px 0;
+    }
+
+    .workflow-intro h2 {
+        font-size: clamp(34px, 11vw, 52px);
+    }
+
+    .workflow-step {
+        align-items: flex-start;
+        gap: 16px;
+        font-size: 15px;
+    }
+
+    .workflow-step b {
+        flex: 0 0 30px;
+    }
+
+    .support-panel {
+        width: min(360px, calc(100vw - 28px));
     }
 }
 
