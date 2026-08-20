@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* Chimes sutiles estilo ópera para tarjetas y botones. Se generan localmente
-       con Web Audio; no hay archivos externos ni reproducción automática. */
+    /* Chimes sutiles estilo interfaz gaming. Se generan localmente con Web Audio;
+       no hay archivos externos ni reproducción automática. */
     let chimeContext;
     let lastChime = 0;
     const playChime = (kind = "hover") => {
@@ -101,25 +101,76 @@ document.addEventListener("DOMContentLoaded", () => {
         if (chimeContext.state === "suspended") chimeContext.resume();
         const start = chimeContext.currentTime;
         const notes = kind === "click"
-            ? [392.00, 523.25, 659.25, 783.99]
-            : [523.25, 659.25, 783.99];
+            ? [196.00, 392.00, 523.25, 659.25, 783.99]
+            : [261.63, 523.25, 659.25, 880.00];
         notes.forEach((frequency, index) => {
             const oscillator = chimeContext.createOscillator();
             const gain = chimeContext.createGain();
-            oscillator.type = "sine";
-            oscillator.frequency.value = frequency;
+            const filter = chimeContext.createBiquadFilter();
+            oscillator.type = index === 0 ? "triangle" : "sine";
+            oscillator.frequency.setValueAtTime(frequency, start + index * 0.045);
+            oscillator.detune.setValueAtTime(kind === "click" ? index * 3 : index * 2, start + index * 0.045);
+            filter.type = "lowpass";
+            filter.frequency.setValueAtTime(kind === "click" ? 2600 : 1900, start + index * 0.045);
             gain.gain.setValueAtTime(0.0001, start + index * 0.055);
-            gain.gain.exponentialRampToValueAtTime(kind === "click" ? 0.028 : 0.022, start + index * 0.055 + 0.02);
-            gain.gain.exponentialRampToValueAtTime(0.0001, start + index * 0.055 + (kind === "click" ? 0.34 : 0.26));
-            oscillator.connect(gain).connect(chimeContext.destination);
+            gain.gain.exponentialRampToValueAtTime(kind === "click" ? 0.022 : 0.016, start + index * 0.055 + 0.018);
+            gain.gain.exponentialRampToValueAtTime(0.0001, start + index * 0.055 + (kind === "click" ? 0.30 : 0.22));
+            oscillator.connect(filter).connect(gain).connect(chimeContext.destination);
             oscillator.start(start + index * 0.055);
-            oscillator.stop(start + index * 0.055 + (kind === "click" ? 0.36 : 0.28));
+            oscillator.stop(start + index * 0.055 + (kind === "click" ? 0.32 : 0.24));
         });
     };
     document.querySelectorAll(".product-card, .future-card, .button, .product-link").forEach((element) => {
         element.addEventListener("mouseenter", () => playChime("hover"), { passive: true });
         element.addEventListener("click", () => playChime("click"), { passive: true });
     });
+
+    /* ========================================
+       NEKRONEX • COOKIE CONSENT
+       ======================================== */
+
+    const cookieConsentKey = "nekronex-cookie-consent-v1";
+    const cookieChoice = localStorage.getItem(cookieConsentKey);
+    if (!cookieChoice) {
+        const legalPrefix = window.location.pathname.includes("/pages/") ? "../legal/" : "pages/legal/";
+        const banner = document.createElement("aside");
+        banner.className = "cookie-banner";
+        banner.setAttribute("aria-label", "Cookie consent");
+        banner.innerHTML = `
+            <div class="cookie-mark">◌</div>
+            <div class="cookie-copy">
+                <h2 data-i18n="cookie_title">Cookies y privacidad</h2>
+                <p data-i18n="cookie_description">Usamos cookies necesarias para el funcionamiento y almacenamiento local para recordar tu idioma. Las opciones adicionales solo se activan con tu permiso.</p>
+                <div class="cookie-options" hidden>
+                    <label><input type="checkbox" checked disabled> <span data-i18n="cookie_necessary">Necesarias para el funcionamiento</span></label>
+                    <label><input class="cookie-optional" type="checkbox"> <span data-i18n="cookie_optional">Opcionales para mejoras y medición</span></label>
+                </div>
+                <div class="cookie-links"><a href="${legalPrefix}privacy.html">Política de privacidad</a><span>·</span><a href="${legalPrefix}terms.html">Términos de servicio</a></div>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-settings" type="button" data-i18n="cookie_settings">Configurar preferencias</button>
+                <button class="cookie-reject" type="button" data-i18n="cookie_reject">Rechazar opcionales</button>
+                <button class="cookie-accept" type="button" data-i18n="cookie_accept">Aceptar todas</button>
+            </div>`;
+        document.body.appendChild(banner);
+        const close = (choice) => { localStorage.setItem(cookieConsentKey, choice); banner.classList.add("cookie-dismissed"); setTimeout(() => banner.remove(), 280); };
+        banner.querySelector(".cookie-settings").addEventListener("click", () => { banner.querySelector(".cookie-options").hidden = !banner.querySelector(".cookie-options").hidden; });
+        banner.querySelector(".cookie-reject").addEventListener("click", () => close("necessary"));
+        banner.querySelector(".cookie-accept").addEventListener("click", () => close("all"));
+    }
+
+    /* Disuasión básica contra inspección accidental. Esto no sustituye la
+       seguridad real: el código enviado al navegador nunca puede ocultarse por completo. */
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
+    document.addEventListener("keydown", (event) => {
+        const blocked = event.key === "F12" ||
+            (event.ctrlKey && event.shiftKey && ["I", "J", "C"].includes(event.key.toUpperCase())) ||
+            (event.ctrlKey && event.key.toUpperCase() === "U");
+        if (blocked) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    }, true);
 
     /* ========================================
        NYVEX • LANGUAGE SYSTEM

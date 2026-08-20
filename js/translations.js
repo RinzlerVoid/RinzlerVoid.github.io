@@ -92,6 +92,16 @@ const translations = {
         synvex_status:
             "Alertas multimedia próximamente.",
 
+        mystery_title_01: "Proyecto en desarrollo",
+        mystery_description_01:
+            "Una nueva herramienta del ecosistema NekroNex está siendo diseñada para ampliar las posibilidades de tu comunidad.",
+        mystery_status_01: "Más información próximamente.",
+
+        mystery_title_02: "Nueva experiencia en preparación",
+        mystery_description_02:
+            "Un sistema especial está siendo planificado para ofrecer nuevas formas de conectar y administrar tu servidor.",
+        mystery_status_02: "Detalles reservados por ahora.",
+
         coming_label:
             "PRÓXIMAMENTE",
 
@@ -1137,6 +1147,14 @@ const translations = {
         privacy:
             "Política de privacidad",
 
+        cookie_title: "Cookies y privacidad",
+        cookie_description: "Usamos cookies necesarias para el funcionamiento y almacenamiento local para recordar tu idioma. Las opciones adicionales solo se activan con tu permiso.",
+        cookie_accept: "Aceptar todas",
+        cookie_reject: "Rechazar opcionales",
+        cookie_settings: "Configurar preferencias",
+        cookie_necessary: "Necesarias para el funcionamiento",
+        cookie_optional: "Opcionales para mejoras y medición",
+
         footer_description:
             "Tecnología, refinada.",
 
@@ -1239,6 +1257,16 @@ const translations = {
 
         synvex_status:
             "Media alerts coming soon.",
+
+        mystery_title_01: "Project in development",
+        mystery_description_01:
+            "A new NekroNex tool is being designed to expand what your community can do.",
+        mystery_status_01: "More information coming soon.",
+
+        mystery_title_02: "New experience in preparation",
+        mystery_description_02:
+            "A special system is being planned to offer new ways to connect and manage your server.",
+        mystery_status_02: "Details are reserved for now.",
 
         coming_label:
             "COMING NEXT",
@@ -2285,6 +2313,14 @@ const translations = {
         privacy:
             "Privacy Policy",
 
+        cookie_title: "Cookies and privacy",
+        cookie_description: "We use necessary cookies for functionality and local storage to remember your language. Optional features are enabled only with your permission.",
+        cookie_accept: "Accept all",
+        cookie_reject: "Reject optional",
+        cookie_settings: "Configure preferences",
+        cookie_necessary: "Necessary for functionality",
+        cookie_optional: "Optional improvements and measurement",
+
         footer_description:
             "Technology, refined.",
 
@@ -2322,6 +2358,12 @@ translations.pt = {
     tickets_description: "Um sistema profissional de suporte para organizar solicitações e atendimento na sua comunidade.",
     synvex_description: "O sistema de alertas multimídia da sua comunidade. Detecta novos vídeos, lives e conteúdos recentes para manter seu servidor conectado e atualizado.",
     synvex_status: "Alertas multimídia em breve.",
+    mystery_title_01: "Projeto em desenvolvimento",
+    mystery_description_01: "Uma nova ferramenta do ecossistema NekroNex está sendo projetada para ampliar as possibilidades da sua comunidade.",
+    mystery_status_01: "Mais informações em breve.",
+    mystery_title_02: "Nova experiência em preparação",
+    mystery_description_02: "Um sistema especial está sendo planejado para oferecer novas formas de conectar e administrar seu servidor.",
+    mystery_status_02: "Detalhes reservados por enquanto.",
     explore_music: "Explorar NEXORA →",
     explore_welcome: "Explorar NYVEX Welcome →",
     explore_guard: "Explorar KRYVEX →",
@@ -2338,6 +2380,13 @@ translations.pt = {
     footer_legal: "Legal",
     terms: "Termos de Serviço",
     privacy: "Privacidade",
+    cookie_title: "Cookies e privacidade",
+    cookie_description: "Usamos cookies necessários para o funcionamento e armazenamento local para lembrar seu idioma. Recursos opcionais só são ativados com sua permissão.",
+    cookie_accept: "Aceitar todos",
+    cookie_reject: "Recusar opcionais",
+    cookie_settings: "Configurar preferências",
+    cookie_necessary: "Necessários para o funcionamento",
+    cookie_optional: "Melhorias e medição opcionais",
     footer_description: "Tecnologia, refinada.",
     support_ticket_description: "Nosso sistema de tickets está pronto para organizar o suporte da sua comunidade.",
     support_faq_03: "KRYVEX e VELTRIX - Tickets estão disponíveis atualmente."
