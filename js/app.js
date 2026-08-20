@@ -1,5 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ========================================
+       NEKRONEX • AMBIENT PARTICLES
+       ======================================== */
+
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (!reducedMotion && !document.querySelector(".particle-layer")) {
+        const canvas = document.createElement("canvas");
+        canvas.className = "particle-layer";
+        canvas.setAttribute("aria-hidden", "true");
+        document.body.prepend(canvas);
+
+        const context = canvas.getContext("2d");
+        const particles = [];
+        const palette = ["#d4af37", "#8a7cff", "#00e5ff", "#62d69b"];
+        let width = 0;
+        let height = 0;
+        let animationFrame;
+
+        const resize = () => {
+            const ratio = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * ratio;
+            canvas.height = height * ratio;
+            canvas.style.width = `${width}px`;
+            canvas.style.height = `${height}px`;
+            context.setTransform(ratio, 0, 0, ratio, 0, 0);
+        };
+
+        const createParticle = () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 1.7 + .45,
+            speed: Math.random() * .18 + .05,
+            drift: (Math.random() - .5) * .12,
+            alpha: Math.random() * .45 + .18,
+            color: palette[Math.floor(Math.random() * palette.length)]
+        });
+
+        const resetParticles = () => {
+            particles.length = 0;
+            const amount = Math.min(105, Math.max(42, Math.floor((width * height) / 17500)));
+            for (let index = 0; index < amount; index += 1) particles.push(createParticle());
+        };
+
+        const draw = () => {
+            context.clearRect(0, 0, width, height);
+            particles.forEach((particle) => {
+                particle.y -= particle.speed;
+                particle.x += particle.drift;
+                if (particle.y < -8) particle.y = height + 8;
+                if (particle.x < -8) particle.x = width + 8;
+                if (particle.x > width + 8) particle.x = -8;
+                context.globalAlpha = particle.alpha;
+                context.fillStyle = particle.color;
+                context.beginPath();
+                context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                context.fill();
+            });
+            context.globalAlpha = 1;
+            animationFrame = requestAnimationFrame(draw);
+        };
+
+        resize();
+        resetParticles();
+        window.addEventListener("resize", () => { resize(); resetParticles(); }, { passive: true });
+        window.addEventListener("pagehide", () => cancelAnimationFrame(animationFrame), { once: true });
+        draw();
+    }
+
     /* En páginas de producto también ofrecemos el selector trilingüe. */
     if (!document.querySelector(".language-selector")) {
         const navbar = document.querySelector(".navbar");
@@ -354,3 +424,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+

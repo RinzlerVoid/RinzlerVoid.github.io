@@ -1,0 +1,18 @@
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+
+# Archivos generados por herramientas locales
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+*.log
+coverage/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
