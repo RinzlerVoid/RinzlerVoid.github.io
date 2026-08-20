@@ -1260,6 +1260,17 @@ body {
 .product-veltrix { --product-accent: #e96b70; --product-glow: rgba(233, 107, 112, .25); }
 .product-dashboard { --product-accent: #55aee8; --product-glow: rgba(85, 174, 232, .25); }
 .product-synvex { --product-accent: #00e5ff; --product-glow: rgba(0, 229, 255, .28); }
+.product-mystery { --product-accent: #8a7cff; --product-glow: rgba(138, 124, 255, .28); }
+.product-mystery-alt { --product-accent: #00b8d4; --product-glow: rgba(0, 184, 212, .24); }
+
+.mystery-art {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 18px var(--product-glow));
+}
 
 .product-status.development {
     display: inline-block;
@@ -1295,3 +1306,4 @@ body {
     color: var(--product-accent);
     border-color: color-mix(in srgb, var(--product-accent) 55%, transparent);
 }
+
