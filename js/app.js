@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const context = canvas.getContext("2d");
         const particles = [];
-        const palette = ["#ff3048", "#ff5969", "#d4af37", "#8a7cff", "#f5f5f5"];
+        const palette = ["#d4af37", "#8a7cff", "#00e5ff", "#f5f5f5", "#e67cf0"];
         let width = 0;
         let height = 0;
         let animationFrame;
