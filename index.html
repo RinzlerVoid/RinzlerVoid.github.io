@@ -149,6 +149,10 @@
                         🇺🇸 English
                     </button>
 
+                    <button type="button" data-language="pt">
+                        🇧🇷 Português Brasileiro
+                    </button>
+
                 </div>
 
             </div>
@@ -292,12 +296,14 @@
 
                     <!-- MUSIC -->
 
-                    <article class="product-card">
+                    <article class="product-card product-nexora">
 
 
                         <div class="product-icon">
                             🎵
                         </div>
+
+                        <img class="product-art" src="assets/products/nexora.png" alt="NEXORA Music">
 
 
                         <span
@@ -335,12 +341,14 @@
 
                     <!-- WELCOME -->
 
-                    <article class="product-card">
+                    <article class="product-card product-nyvex-welcome">
 
 
                         <div class="product-icon">
                             👋
                         </div>
+
+                        <img class="product-art" src="assets/products/nyvex.png" alt="NYVEX Welcome">
 
 
                         <span
@@ -377,11 +385,13 @@
 
                     <!-- KRYVEX -->
 
-                    <article class="product-card">
+                    <article class="product-card product-kryvex">
 
                         <div class="product-icon">
                             🛡️
                         </div>
+
+                        <img class="product-art" src="assets/products/kryvex.png" alt="KRYVEX Guard">
 
                         <span class="product-status available" data-i18n="available">
                             AVAILABLE
@@ -397,6 +407,17 @@
                             Explore KRYVEX →
                         </a>
 
+                    </article>
+
+                    <!-- VELTRIX -->
+
+                    <article class="product-card product-veltrix">
+                        <div class="product-icon">🎫</div>
+                        <img class="product-art" src="assets/products/veltrix.png" alt="VELTRIX Tickets">
+                        <span class="product-status available" data-i18n="available">AVAILABLE</span>
+                        <h3>VELTRIX - Tickets</h3>
+                        <p data-i18n="tickets_description">Professional support and ticket management for Discord communities.</p>
+                        <a href="pages/bots/nyvex-ticket.html" class="product-link" data-i18n="explore_ticket">Explore VELTRIX →</a>
                     </article>
 
 
@@ -445,42 +466,16 @@
                 <div class="future-grid">
 
 
-                    <!-- TICKETS -->
-
-                    <article class="future-card">
-
-                        <span>
-                            🎫
-                        </span>
-
-
-                        <h3>
-                            VELTRIX - Tickets
-                        </h3>
-
-
-                        <p data-i18n="tickets_description">
-                            A streamlined support system
-                            for your community.
-                        </p>
-
-
-                        <small data-i18n="in_development">
-                            IN DEVELOPMENT
-                        </small>
-
-                    </article>
-
-
-
                     <!-- DASHBOARD -->
 
-                    <article class="future-card">
+                    <article class="future-card product-dashboard">
 
                         <span>
                             ⚙️
                         </span>
 
+
+                        <img class="product-art" src="assets/products/dashboard.png" alt="NYVEX Dashboard">
 
                         <h3>
                             NYVEX Dashboard
@@ -493,9 +488,27 @@
                         </p>
 
 
-                        <small data-i18n="planned">
-                            PLANNED
-                        </small>
+                        <a href="pages/bots/nyvex-dashboard.html" class="product-link" data-i18n="explore_dashboard">Open Dashboard →</a>
+
+                    </article>
+
+                    <!-- SYNVEX -->
+
+                    <article class="future-card product-synvex">
+
+                        <img class="product-avatar" src="assets/products/synvex-avatar.png" alt="SYNVEX">
+
+                        <img class="product-art" src="assets/products/synvex.png" alt="SYNVEX Media Alerts">
+
+                        <span class="product-status development" data-i18n="in_development">IN DEVELOPMENT</span>
+
+                        <h3>SYNVEX</h3>
+
+                        <p data-i18n="synvex_description">
+                            Automatic alerts for new videos, live streams and recent creator content.
+                        </p>
+
+                        <small data-i18n="synvex_status">Media alerts coming soon.</small>
 
                     </article>
 
@@ -715,3 +728,4 @@
 </body>
 
 </html>
+
