@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const selector = document.createElement("div");
             selector.className = "language-selector";
             selector.innerHTML = `
-                <button class="language-button" id="language-toggle" type="button" aria-label="Select language">🌐 <span class="language-current" id="language-current">🇪🇸</span> ▾</button>
+                <button class="language-button" id="language-toggle" type="button" aria-label="Select language">🌐 <span class="language-current" id="language-current"><span class="flag flag-es" aria-hidden="true"></span></span> ▾</button>
                 <div class="language-menu" id="language-menu">
-                    <button type="button" data-language="es">🇪🇸 Español</button>
-                    <button type="button" data-language="en">🇺🇸 English</button>
-                    <button type="button" data-language="pt">🇧🇷 Português Brasileiro</button>
-                    <button type="button" data-language="de">🇩🇪 Deutsch</button>
-                    <button type="button" data-language="fr">🇫🇷 Français</button>
+                    <button type="button" data-language="es"><span class="flag flag-es" aria-hidden="true"></span> Español</button>
+                    <button type="button" data-language="en"><span class="flag flag-us" aria-hidden="true"></span> English</button>
+                    <button type="button" data-language="pt"><span class="flag flag-br" aria-hidden="true"></span> Português Brasileiro</button>
+                    <button type="button" data-language="de"><span class="flag flag-de" aria-hidden="true"></span> Deutsch</button>
+                    <button type="button" data-language="fr"><span class="flag flag-fr" aria-hidden="true"></span> Français</button>
                 </div>`;
             navbar.appendChild(selector);
         }
@@ -340,8 +340,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (languageCurrent) {
 
-            const flags = { es: "🇪🇸", en: "🇺🇸", pt: "🇧🇷", de: "🇩🇪", fr: "🇫🇷" };
-            languageCurrent.textContent = flags[language] || flags.es;
+            const flags = { es: "flag-es", en: "flag-us", pt: "flag-br", de: "flag-de", fr: "flag-fr" };
+            languageCurrent.innerHTML = `<span class="flag ${flags[language] || flags.es}" aria-hidden="true"></span>`;
 
         }
 
