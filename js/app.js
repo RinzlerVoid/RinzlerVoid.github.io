@@ -261,6 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
     Object.keys(catalogInterfaceTranslations).forEach((language) => {
         if (typeof translations !== "undefined" && translations[language]) Object.assign(translations[language], catalogInterfaceTranslations[language]);
     });
+    const documentationLabelTranslations = { es: "Abrir documentación", en: "Open documentation", pt: "Abrir documentação", de: "Dokumentation öffnen", fr: "Ouvrir la documentation" };
+    Object.keys(documentationLabelTranslations).forEach((language) => {
+        if (typeof translations !== "undefined" && translations[language]) translations[language].open_documentation = documentationLabelTranslations[language];
+    });
 
     /* Textos estructurales que también aparecen en páginas antiguas. Se
        centralizan aquí para que ninguna vista pueda quedar parcialmente en
