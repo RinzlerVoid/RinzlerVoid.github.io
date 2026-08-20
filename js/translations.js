@@ -2439,4 +2439,3 @@ translations.pt = {
     support_faq_03: "KRYVEX e VELTRIX - Tickets estão disponíveis atualmente."
 };
 
-

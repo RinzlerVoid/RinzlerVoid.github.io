@@ -112,11 +112,15 @@ body::after {
 }
 
 main,
-footer,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 
 ::selection {
@@ -1614,7 +1618,9 @@ body {
 
 /* Floating support panel */
 .support-widget { position: fixed; right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 32px); z-index: 2100; font-family: var(--font-ui); }
-.support-launcher { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; color: #09090b; background: linear-gradient(135deg, #d4af37, #a87ddd 58%, #65d5dc); box-shadow: 0 14px 34px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.2) inset; font-size: 24px; animation: support-pulse 3.2s ease-in-out infinite; }
+.support-launcher { display: grid; place-items: center; width: 58px; height: 58px; padding: 0; border-radius: 50%; color: #09090b; background: linear-gradient(135deg, #d4af37, #a87ddd 58%, #65d5dc); box-shadow: 0 14px 34px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.2) inset; font-size: 0; animation: support-pulse 3.2s ease-in-out infinite; }
+.support-launcher span { display: grid; place-items: center; width: 30px; height: 24px; border: 2px solid currentColor; border-radius: 8px; font-size: 0; position: relative; }
+.support-launcher span::after { content: ""; position: absolute; left: 4px; bottom: -6px; width: 8px; height: 8px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: skewY(-28deg); background: transparent; }
 .support-launcher:hover { transform: translateY(-3px) scale(1.04); }
 .support-panel { position: absolute; right: 0; bottom: 74px; width: min(360px, calc(100vw - 32px)); max-height: min(620px, calc(100vh - 112px)); overflow-y: auto; padding: 18px; color: var(--nyvex-white); background: rgba(13,13,16,.97); border: 1px solid rgba(212,175,55,.32); border-radius: 18px; box-shadow: 0 24px 80px rgba(0,0,0,.6), 0 0 38px rgba(138,124,255,.14); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); animation: support-enter .24s ease both; }
 .support-panel-header { display: flex; align-items: center; gap: 10px; }
@@ -1637,7 +1643,60 @@ body {
     .cookie-mark { width: 32px; height: 32px; font-size: 20px; }
     .cookie-actions { grid-column: 1 / -1; justify-content: stretch; }
     .cookie-actions button { flex: 1; }
-    .support-widget { right: 16px; bottom: 16px; }
-    .support-panel { right: -2px; bottom: 70px; }
+    .support-widget { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); }
+    .support-panel { right: 0; bottom: 70px; width: min(340px, calc(100vw - 32px)); max-height: calc(100dvh - 104px); padding: 16px; }
+    .support-launcher { width: 52px; height: 52px; }
 }
 
+/* Responsive layout: keep the desktop composition, but let every section
+   become a readable single flow on narrow screens. */
+@media (max-width: 900px) {
+    .container { width: min(100% - 32px, 720px); }
+    .navbar { gap: 16px; }
+    .nav-links { display: none; }
+    .mobile-menu-button { display: inline-grid; place-items: center; order: 2; width: 42px; height: 42px; color: var(--nyvex-white); background: rgba(255,255,255,.05); border: 1px solid var(--border); border-radius: 10px; font-size: 20px; }
+    .mobile-menu { position: absolute; top: calc(100% + 10px); left: 16px; right: 16px; display: grid; gap: 4px; padding: 10px; opacity: 0; visibility: hidden; transform: translateY(-8px); background: rgba(13,13,16,.98); border: 1px solid rgba(212,175,55,.2); border-radius: 16px; box-shadow: 0 24px 70px rgba(0,0,0,.58); backdrop-filter: blur(22px); z-index: 1300; transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
+    .mobile-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
+    .mobile-menu a { padding: 12px 14px; color: var(--text-secondary); border-radius: 10px; font-size: 14px; }
+    .mobile-menu a:hover { color: var(--nyvex-white); background: rgba(138,124,255,.12); }
+    .language-switcher, .language-selector { margin-left: auto; order: 3; }
+    .hero { min-height: auto; padding: 92px 0 110px; }
+    .hero-content { max-width: 760px; }
+    .hero h1 { font-size: clamp(52px, 10vw, 92px); }
+    .hero-tagline { font-size: clamp(28px, 5vw, 48px); }
+    .workflow-layout { grid-template-columns: 1fr; gap: 54px; }
+    .platform-grid, .products-grid, .future-grid, .collaborations-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .footer-content { grid-template-columns: 1fr; gap: 42px; }
+}
+
+@media (max-width: 620px) {
+    .container { width: calc(100% - 32px); }
+    .site-header, .navbar { height: 64px; }
+    .brand { font-size: 18px; }
+    .language-button { padding: 8px; }
+    .language-icon { display: none; }
+    .hero { padding: 64px 0 86px; }
+    .hero h1 { font-size: clamp(42px, 14vw, 70px); line-height: .96; overflow-wrap: anywhere; }
+    .hero-tagline { font-size: clamp(25px, 8vw, 38px); }
+    .hero-description { font-size: 14px; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .hero-actions .button { width: 100%; justify-content: center; }
+    .platform-grid, .products-grid, .future-grid, .collaborations-grid { grid-template-columns: 1fr; gap: 18px; }
+    .platform-section, .workflow-section, .products-section, .future-section, .collaborations-section, .ecosystem-section { padding: 78px 0; }
+    .platform-card, .product-card, .future-card, .collaboration-card { min-width: 0; padding: 22px; }
+    .platform-card h3, .product-card h3 { font-size: 25px; overflow-wrap: anywhere; }
+    .workflow-step { align-items: flex-start; gap: 14px; font-size: 16px; }
+    .workflow-step b { flex: 0 0 30px; }
+    .product-art { height: 160px; object-fit: contain; background: rgba(0,0,0,.28); }
+    .collaboration-card { grid-template-columns: 1fr; }
+    .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; margin-top: 42px; }
+}
+
+@media (max-width: 390px) {
+    .brand { font-size: 16px; }
+    .mobile-menu-button { width: 38px; height: 38px; }
+    .language-button { min-width: 42px; }
+    .hero h1 { font-size: 40px; }
+    .footer-links { grid-template-columns: 1fr; }
+}
