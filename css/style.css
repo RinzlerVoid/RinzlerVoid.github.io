@@ -46,6 +46,8 @@ html {
 }
 
 body {
+    position: relative;
+    isolation: isolate;
     min-height: 100vh;
 
     background:
@@ -67,6 +69,51 @@ body {
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+}
+
+/* Ambient background layer used by the lightweight particle system. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    opacity: .34;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 18% 15%, rgba(138,124,255,.18), transparent 28%),
+        radial-gradient(circle at 84% 20%, rgba(0,229,255,.12), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(212,175,55,.08), transparent 32%),
+        #080808;
+}
+
+.particle-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .82;
+}
+
+main,
+footer,
+.site-header {
+    position: relative;
+    z-index: 1;
 }
 
 ::selection {
@@ -1179,6 +1226,28 @@ body {
         radial-gradient(circle at 80% 10%, rgba(20, 184, 190, 0.16), transparent 38%);
 }
 
+.hero {
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 12% 18% 4%;
+    z-index: -1;
+    border: 1px solid rgba(212,175,55,.11);
+    border-radius: 50%;
+    transform: rotate(-8deg);
+    box-shadow: 0 0 100px rgba(95,73,183,.14), inset 0 0 80px rgba(0,229,255,.06);
+    animation: orbit-pulse 8s ease-in-out infinite;
+}
+
+@keyframes orbit-pulse {
+    0%, 100% { opacity: .38; transform: rotate(-8deg) scale(.98); }
+    50% { opacity: .78; transform: rotate(-4deg) scale(1.02); }
+}
+
 .product-card,
 .future-card {
     background:
@@ -1295,6 +1364,17 @@ body {
     box-shadow: 0 22px 60px var(--product-glow);
 }
 
+.product-card::before,
+.future-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: linear-gradient(115deg, rgba(255,255,255,.08), transparent 22%, transparent 72%, rgba(255,255,255,.035));
+    opacity: .35;
+}
+
 .product-card .product-icon,
 .future-card > span {
     color: var(--product-accent);
@@ -1305,5 +1385,14 @@ body {
 .future-card small {
     color: var(--product-accent);
     border-color: color-mix(in srgb, var(--product-accent) 55%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+    }
 }
 
