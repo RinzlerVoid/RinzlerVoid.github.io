@@ -26,7 +26,7 @@ const translations = {
         dashboard_description:
             "Un solo lugar para administrar todo tu ecosistema NYVEX.",
 
-        dashboard_open: "Dashboard próximamente",
+        dashboard_open: "Abrir Dashboard →",
         dashboard_page_description: "Un solo lugar para administrar todo tu ecosistema NYVEX.",
         dashboard_features_title: "Todo tu ecosistema, en un solo panel.",
         dashboard_feature_config: "Selecciona tu servidor y configura cada bot según sus necesidades.",
@@ -1174,7 +1174,7 @@ const translations = {
         dashboard_description:
             "One place to manage your entire NYVEX ecosystem.",
 
-        dashboard_open: "Dashboard coming soon",
+        dashboard_open: "Open Dashboard →",
         dashboard_page_description: "One place to manage your entire NYVEX ecosystem.",
         dashboard_features_title: "Your entire ecosystem, in one panel.",
         dashboard_feature_config: "Select your server and configure each bot according to its needs.",
@@ -2309,7 +2309,7 @@ translations.pt = {
     in_development: "EM DESENVOLVIMENTO",
     planned: "PLANEJADO",
     dashboard_description: "Um só lugar para administrar todo o ecossistema NYVEX.",
-    dashboard_open: "Dashboard em breve",
+    dashboard_open: "Abrir Dashboard →",
     hero_label: "A NOVA GERAÇÃO DE FERRAMENTAS PARA DISCORD",
     hero_tagline: "Tecnologia, refinada.",
     hero_explore: "Explorar produtos",
@@ -2342,4 +2342,5 @@ translations.pt = {
     support_ticket_description: "Nosso sistema de tickets está pronto para organizar o suporte da sua comunidade.",
     support_faq_03: "KRYVEX e VELTRIX - Tickets estão disponíveis atualmente."
 };
+
 
