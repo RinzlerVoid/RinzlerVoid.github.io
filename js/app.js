@@ -187,15 +187,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <section class="support-panel" hidden>
             <div class="support-panel-header">
                 <div class="support-avatar">✦</div>
-                <div><strong>Soporte NEKRONEX</strong><small>Normalmente respondemos en 24 horas</small></div>
-                <button class="support-close" type="button" aria-label="Cerrar soporte">×</button>
+                <div><strong data-support="title">Soporte NEKRONEX</strong><small data-support="response">Normalmente respondemos en 24 horas</small></div>
+                <button class="support-close" type="button" aria-label="Cerrar soporte" data-support="close">×</button>
             </div>
-            <p class="support-greeting">Hola. ¿En qué podemos ayudarte?</p>
-            <div class="support-status"><span></span> Atención por correo disponible</div>
-            <a class="support-ticket" href="mailto:nekronex.support@gmail.com?subject=Soporte%20NEKRONEX">Abrir nuevo ticket</a>
-            <div class="support-links"><a href="mailto:nekronex.official@gmail.com">Contacto general</a><span>·</span><a href="${window.location.pathname.includes("/pages/") ? "../legal/" : "pages/legal/"}privacy.html">Privacidad</a></div>
+            <p class="support-greeting" data-support="greeting">Hola. ¿En qué podemos ayudarte?</p>
+            <div class="support-status"><span></span> <span data-support="status">Atención por correo disponible</span></div>
+            <a class="support-ticket" data-support="ticket" href="mailto:nekronex.support@gmail.com?subject=Soporte%20NEKRONEX">Abrir nuevo ticket</a>
+            <div class="support-links"><a data-support="general" href="mailto:nekronex.official@gmail.com">Contacto general</a><span>·</span><a data-support="privacy" href="${window.location.pathname.includes("/pages/") ? "../legal/" : "pages/legal/"}privacy.html">Privacidad</a></div>
         </section>
-        <button class="support-launcher" type="button" aria-expanded="false" aria-label="Abrir soporte"><span>✦</span></button>`;
+        <button class="support-launcher" type="button" aria-expanded="false" aria-label="Abrir soporte" data-support="open"><span>✦</span></button>`;
     document.body.appendChild(supportWidget);
 
     const supportPanel = supportWidget.querySelector(".support-panel");
@@ -208,12 +208,37 @@ document.addEventListener("DOMContentLoaded", () => {
     supportLauncher.addEventListener("click", () => toggleSupport(supportPanel.hidden));
     supportWidget.querySelector(".support-close").addEventListener("click", () => toggleSupport(false));
 
+    const supportCopy = {
+        es: { title: "Soporte NEKRONEX", response: "Normalmente respondemos en 24 horas", close: "Cerrar soporte", greeting: "Hola. ¿En qué podemos ayudarte?", status: "Atención por correo disponible", ticket: "Abrir nuevo ticket", general: "Contacto general", privacy: "Privacidad", open: "Abrir soporte" },
+        en: { title: "NEKRONEX Support", response: "We usually reply within 24 hours", close: "Close support", greeting: "Hello. How can we help you?", status: "Email support available", ticket: "Open a new ticket", general: "General contact", privacy: "Privacy", open: "Open support" },
+        pt: { title: "Suporte NEKRONEX", response: "Normalmente respondemos em 24 horas", close: "Fechar suporte", greeting: "Olá. Como podemos ajudar?", status: "Atendimento por e-mail disponível", ticket: "Abrir novo ticket", general: "Contato geral", privacy: "Privacidade", open: "Abrir suporte" }
+    };
+    const updateSupportCopy = (language) => {
+        const copy = supportCopy[language] || supportCopy.es;
+        supportWidget.querySelectorAll("[data-support]").forEach((element) => {
+            const key = element.getAttribute("data-support");
+            if (copy[key]) element.textContent = copy[key];
+        });
+        supportWidget.querySelector(".support-panel")?.setAttribute("aria-label", copy.title);
+        supportWidget.querySelector(".support-close")?.setAttribute("aria-label", copy.close);
+        supportWidget.querySelector(".support-launcher")?.setAttribute("aria-label", copy.open);
+    };
+
     /* ========================================
        NYVEX • LANGUAGE SYSTEM
        ======================================== */
 
     const languageSelector =
         document.querySelector(".language-selector");
+
+    const interfaceTranslations = {
+        es: { nav_resources: "Recursos", nav_legal: "Legal", nav_community: "Comunidad", nav_product_overview: "Resumen", nav_quick_start: "Guía rápida", nav_dashboard: "Abrir Dashboard", collaborations_label: "FUTURAS COLABORACIONES", collaborations_title: "Construyamos con quienes comparten la visión.", collaborations_description: "Un espacio para futuros creadores, comunidades de Minecraft y proyectos de seguridad que quieran crear experiencias más seguras en Discord.", collaboration_status: "PRÓXIMAMENTE", collaboration_streamer_title: "Colaboración con streamer", collaboration_streamer_description: "Una futura colaboración para conectar contenido, herramientas de comunidad y una experiencia de Discord cuidada.", collaboration_minecraft_title: "Comunidad de Minecraft", collaboration_minecraft_description: "Una futura colaboración centrada en servidores, comunidades, moderación y seguridad en Discord.", collaboration_details: "Los detalles se anunciarán pronto" },
+        en: { nav_resources: "Resources", nav_legal: "Legal", nav_community: "Community", nav_product_overview: "Overview", nav_quick_start: "Quick start", nav_dashboard: "Open Dashboard", collaborations_label: "FUTURE COLLABORATIONS", collaborations_title: "Built with people who share the vision.", collaborations_description: "A dedicated space for future creators, Minecraft communities and security projects that want to build safer Discord experiences together.", collaboration_status: "COMING SOON", collaboration_streamer_title: "Streamer collaboration", collaboration_streamer_description: "A future creator partnership to connect content, community tools and a polished Discord experience.", collaboration_minecraft_title: "Minecraft community", collaboration_minecraft_description: "A future partnership focused on servers, communities, moderation and Discord security.", collaboration_details: "Details will be announced soon" },
+        pt: { nav_resources: "Recursos", nav_legal: "Legal", nav_community: "Comunidade", nav_product_overview: "Visão geral", nav_quick_start: "Guia rápido", nav_dashboard: "Abrir Dashboard", collaborations_label: "FUTURAS COLABORAÇÕES", collaborations_title: "Construindo com quem compartilha a visão.", collaborations_description: "Um espaço para futuros criadores, comunidades de Minecraft e projetos de segurança que queiram criar experiências mais seguras no Discord.", collaboration_status: "EM BREVE", collaboration_streamer_title: "Colaboração com streamer", collaboration_streamer_description: "Uma futura parceria para conectar conteúdo, ferramentas da comunidade e uma experiência refinada no Discord.", collaboration_minecraft_title: "Comunidade de Minecraft", collaboration_minecraft_description: "Uma futura parceria focada em servidores, comunidades, moderação e segurança no Discord.", collaboration_details: "Detalhes serão anunciados em breve" }
+    };
+    Object.keys(interfaceTranslations).forEach((language) => {
+        if (typeof translations !== "undefined" && translations[language]) Object.assign(translations[language], interfaceTranslations[language]);
+    });
 
     const languageToggle =
         document.getElementById("language-toggle");
@@ -246,6 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         currentLanguage = language;
+        updateSupportCopy(language);
 
 
         document.documentElement.lang =
@@ -399,6 +425,30 @@ document.addEventListener("DOMContentLoaded", () => {
        ======================================== */
 
     translatePage(savedLanguage);
+
+    /* ========================================
+       CLICK-TOGGLE NAVIGATION
+       ======================================== */
+
+    const navGroups = [...document.querySelectorAll(".nav-menu-group")];
+    const closeNavGroups = (except = null) => navGroups.forEach((group) => {
+        if (group !== except) {
+            group.classList.remove("open");
+            group.querySelector(".nav-menu-trigger")?.setAttribute("aria-expanded", "false");
+        }
+    });
+    navGroups.forEach((group) => {
+        const trigger = group.querySelector(".nav-menu-trigger");
+        trigger?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const open = group.classList.toggle("open");
+            closeNavGroups(open ? group : null);
+            trigger.setAttribute("aria-expanded", String(open));
+        });
+    });
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".nav-menu-group")) closeNavGroups();
+    });
 
 
     /* ========================================
