@@ -254,6 +254,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (typeof translations !== "undefined" && translations[language]) Object.assign(translations[language], dashboardInterfaceTranslations[language]);
     });
 
+    const catalogInterfaceTranslations = {
+        de: { products_label: "UNSERE PRODUKTE", products_title: "Werkzeuge für deine Community.", products_description: "Ein wachsendes Ökosystem leistungsstarker Discord-Werkzeuge, die perfekt zusammenspielen.", available: "VERFÜGBAR", music_description: "Eine vollständige Musikerfahrung für Discord. Spiele Songs, verwalte Warteschlangen, erstelle Playlists und steuere alles bequem.", welcome_description: "Automatisiere Begrüßungen und Abschiede für einen besseren ersten Eindruck deiner Community.", guard_description: "Sicherheits- und Moderationswerkzeuge für sicherere Discord-Communities.", tickets_description: "Professioneller Support und Ticketverwaltung für Discord-Communities.", dashboard_description: "Ein zentraler Ort für dein gesamtes NYVEX-Ökosystem.", explore_music: "NEXORA entdecken →", explore_welcome: "NYVEX Welcome entdecken →", explore_guard: "KRYVEX entdecken →", explore_ticket: "VELTRIX entdecken →", explore_dashboard: "Dashboard öffnen →" },
+        fr: { products_label: "NOS PRODUITS", products_title: "Des outils créés pour votre communauté.", products_description: "Un écosystème grandissant d’outils Discord puissants, conçus pour fonctionner ensemble.", available: "DISPONIBLE", music_description: "Une expérience musicale complète pour Discord. Écoutez des morceaux, gérez les files, créez des playlists et gardez le contrôle simplement.", welcome_description: "Automatisez les arrivées et les départs pour offrir une meilleure première impression à votre communauté.", guard_description: "Des outils de sécurité et de modération pour des communautés Discord plus sûres.", tickets_description: "Un support professionnel et une gestion des tickets pour les communautés Discord.", dashboard_description: "Un espace unique pour gérer tout votre écosystème NYVEX.", explore_music: "Découvrir NEXORA →", explore_welcome: "Découvrir NYVEX Welcome →", explore_guard: "Découvrir KRYVEX →", explore_ticket: "Découvrir VELTRIX →", explore_dashboard: "Ouvrir le Dashboard →" }
+    };
+    Object.keys(catalogInterfaceTranslations).forEach((language) => {
+        if (typeof translations !== "undefined" && translations[language]) Object.assign(translations[language], catalogInterfaceTranslations[language]);
+    });
+
     /* Textos estructurales que también aparecen en páginas antiguas. Se
        centralizan aquí para que ninguna vista pueda quedar parcialmente en
        inglés al cambiar el idioma. */
