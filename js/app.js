@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const resetParticles = () => {
             particles.length = 0;
-            const amount = Math.min(105, Math.max(42, Math.floor((width * height) / 17500)));
+            const amount = Math.min(145, Math.max(55, Math.floor((width * height) / 12500)));
             for (let index = 0; index < amount; index += 1) particles.push(createParticle());
         };
 
@@ -59,6 +59,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
                 context.fill();
             });
+
+            // Conexiones muy sutiles para aportar profundidad sin competir con el contenido.
+            context.lineWidth = 0.55;
+            for (let first = 0; first < particles.length; first += 1) {
+                for (let second = first + 1; second < particles.length; second += 1) {
+                    const a = particles[first];
+                    const b = particles[second];
+                    const distance = Math.hypot(a.x - b.x, a.y - b.y);
+                    if (distance > 118) continue;
+                    context.globalAlpha = (1 - distance / 118) * 0.13;
+                    context.strokeStyle = a.color;
+                    context.beginPath();
+                    context.moveTo(a.x, a.y);
+                    context.lineTo(b.x, b.y);
+                    context.stroke();
+                }
+            }
             context.globalAlpha = 1;
             animationFrame = requestAnimationFrame(draw);
         };
@@ -159,18 +176,37 @@ document.addEventListener("DOMContentLoaded", () => {
         banner.querySelector(".cookie-accept").addEventListener("click", () => close("all"));
     }
 
-    /* Disuasión básica contra inspección accidental. Esto no sustituye la
-       seguridad real: el código enviado al navegador nunca puede ocultarse por completo. */
-    document.addEventListener("contextmenu", (event) => event.preventDefault());
-    document.addEventListener("keydown", (event) => {
-        const blocked = event.key === "F12" ||
-            (event.ctrlKey && event.shiftKey && ["I", "J", "C"].includes(event.key.toUpperCase())) ||
-            (event.ctrlKey && event.key.toUpperCase() === "U");
-        if (blocked) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-    }, true);
+    /* ========================================
+       NEKRONEX • SUPPORT WIDGET
+       ======================================== */
+
+    const supportWidget = document.createElement("aside");
+    supportWidget.className = "support-widget";
+    supportWidget.setAttribute("aria-label", "Soporte NEKRONEX");
+    supportWidget.innerHTML = `
+        <section class="support-panel" hidden>
+            <div class="support-panel-header">
+                <div class="support-avatar">✦</div>
+                <div><strong>Soporte NEKRONEX</strong><small>Normalmente respondemos en 24 horas</small></div>
+                <button class="support-close" type="button" aria-label="Cerrar soporte">×</button>
+            </div>
+            <p class="support-greeting">Hola. ¿En qué podemos ayudarte?</p>
+            <div class="support-status"><span></span> Atención por correo disponible</div>
+            <a class="support-ticket" href="mailto:nekronex.support@gmail.com?subject=Soporte%20NEKRONEX">Abrir nuevo ticket</a>
+            <div class="support-links"><a href="mailto:nekronex.official@gmail.com">Contacto general</a><span>·</span><a href="${window.location.pathname.includes("/pages/") ? "../legal/" : "pages/legal/"}privacy.html">Privacidad</a></div>
+        </section>
+        <button class="support-launcher" type="button" aria-expanded="false" aria-label="Abrir soporte"><span>✦</span></button>`;
+    document.body.appendChild(supportWidget);
+
+    const supportPanel = supportWidget.querySelector(".support-panel");
+    const supportLauncher = supportWidget.querySelector(".support-launcher");
+    const toggleSupport = (open) => {
+        supportPanel.hidden = !open;
+        supportWidget.classList.toggle("is-open", open);
+        supportLauncher.setAttribute("aria-expanded", String(open));
+    };
+    supportLauncher.addEventListener("click", () => toggleSupport(supportPanel.hidden));
+    supportWidget.querySelector(".support-close").addEventListener("click", () => toggleSupport(false));
 
     /* ========================================
        NYVEX • LANGUAGE SYSTEM
@@ -438,10 +474,8 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileMenuButton.addEventListener(
             "click",
             () => {
-
-                mobileMenu.classList.toggle(
-                    "active"
-                );
+                const isOpen = mobileMenu.classList.toggle("active");
+                mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
 
             }
         );
@@ -466,6 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         mobileMenu.classList.remove(
                             "active"
                         );
+                        mobileMenuButton?.setAttribute("aria-expanded", "false");
 
                     }
                 );
