@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const context = canvas.getContext("2d");
         const particles = [];
-        const palette = ["#d4af37", "#8a7cff", "#00e5ff", "#62d69b"];
+        const palette = ["#ff3048", "#ff5969", "#d4af37", "#8a7cff", "#f5f5f5"];
         let width = 0;
         let height = 0;
         let animationFrame;
@@ -32,16 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const createParticle = () => ({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 1.7 + .45,
-            speed: Math.random() * .18 + .05,
+            radius: Math.random() * 1.9 + .55,
+            speed: Math.random() * .24 + .07,
             drift: (Math.random() - .5) * .12,
-            alpha: Math.random() * .45 + .18,
+            alpha: Math.random() * .5 + .25,
             color: palette[Math.floor(Math.random() * palette.length)]
         });
 
         const resetParticles = () => {
             particles.length = 0;
-            const amount = Math.min(145, Math.max(55, Math.floor((width * height) / 12500)));
+            const amount = Math.min(220, Math.max(80, Math.floor((width * height) / 9000)));
             for (let index = 0; index < amount; index += 1) particles.push(createParticle());
         };
 
@@ -94,11 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const selector = document.createElement("div");
             selector.className = "language-selector";
             selector.innerHTML = `
-                <button class="language-button" id="language-toggle" type="button" aria-label="Select language">🌐 <span class="language-current" id="language-current">ES</span> ▾</button>
+                <button class="language-button" id="language-toggle" type="button" aria-label="Select language">🌐 <span class="language-current" id="language-current">🇪🇸</span> ▾</button>
                 <div class="language-menu" id="language-menu">
                     <button type="button" data-language="es">🇪🇸 Español</button>
                     <button type="button" data-language="en">🇺🇸 English</button>
                     <button type="button" data-language="pt">🇧🇷 Português Brasileiro</button>
+                    <button type="button" data-language="de">🇩🇪 Deutsch</button>
+                    <button type="button" data-language="fr">🇫🇷 Français</button>
                 </div>`;
             navbar.appendChild(selector);
         }
@@ -211,7 +213,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const supportCopy = {
         es: { title: "Soporte NEKRONEX", response: "Normalmente respondemos en 24 horas", close: "Cerrar soporte", greeting: "Hola. ¿En qué podemos ayudarte?", status: "Atención por correo disponible", ticket: "Abrir nuevo ticket", general: "Contacto general", privacy: "Privacidad", open: "Abrir soporte" },
         en: { title: "NEKRONEX Support", response: "We usually reply within 24 hours", close: "Close support", greeting: "Hello. How can we help you?", status: "Email support available", ticket: "Open a new ticket", general: "General contact", privacy: "Privacy", open: "Open support" },
-        pt: { title: "Suporte NEKRONEX", response: "Normalmente respondemos em 24 horas", close: "Fechar suporte", greeting: "Olá. Como podemos ajudar?", status: "Atendimento por e-mail disponível", ticket: "Abrir novo ticket", general: "Contato geral", privacy: "Privacidade", open: "Abrir suporte" }
+        pt: { title: "Suporte NEKRONEX", response: "Normalmente respondemos em 24 horas", close: "Fechar suporte", greeting: "Olá. Como podemos ajudar?", status: "Atendimento por e-mail disponível", ticket: "Abrir novo ticket", general: "Contato geral", privacy: "Privacidade", open: "Abrir suporte" },
+        de: { title: "NEKRONEX Support", response: "Wir antworten normalerweise innerhalb von 24 Stunden", close: "Support schließen", greeting: "Hallo. Wie können wir helfen?", status: "E-Mail-Support verfügbar", ticket: "Neues Ticket öffnen", general: "Allgemeiner Kontakt", privacy: "Datenschutz", open: "Support öffnen" },
+        fr: { title: "Support NEKRONEX", response: "Nous répondons généralement sous 24 heures", close: "Fermer le support", greeting: "Bonjour. Comment pouvons-nous vous aider ?", status: "Support par e-mail disponible", ticket: "Ouvrir un nouveau ticket", general: "Contact général", privacy: "Confidentialité", open: "Ouvrir le support" }
     };
     const updateSupportCopy = (language) => {
         const copy = supportCopy[language] || supportCopy.es;
@@ -234,10 +238,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const interfaceTranslations = {
         es: { nav_resources: "Recursos", nav_legal: "Legal", nav_community: "Comunidad", nav_product_overview: "Resumen", nav_quick_start: "Guía rápida", nav_dashboard: "Abrir Dashboard", collaborations_label: "FUTURAS COLABORACIONES", collaborations_title: "Construyamos con quienes comparten la visión.", collaborations_description: "Un espacio para futuros creadores, comunidades de Minecraft y proyectos de seguridad que quieran crear experiencias más seguras en Discord.", collaboration_status: "PRÓXIMAMENTE", collaboration_streamer_title: "Colaboración con streamer", collaboration_streamer_description: "Una futura colaboración para conectar contenido, herramientas de comunidad y una experiencia de Discord cuidada.", collaboration_minecraft_title: "Comunidad de Minecraft", collaboration_minecraft_description: "Una futura colaboración centrada en servidores, comunidades, moderación y seguridad en Discord.", collaboration_details: "Los detalles se anunciarán pronto" },
         en: { nav_resources: "Resources", nav_legal: "Legal", nav_community: "Community", nav_product_overview: "Overview", nav_quick_start: "Quick start", nav_dashboard: "Open Dashboard", collaborations_label: "FUTURE COLLABORATIONS", collaborations_title: "Built with people who share the vision.", collaborations_description: "A dedicated space for future creators, Minecraft communities and security projects that want to build safer Discord experiences together.", collaboration_status: "COMING SOON", collaboration_streamer_title: "Streamer collaboration", collaboration_streamer_description: "A future creator partnership to connect content, community tools and a polished Discord experience.", collaboration_minecraft_title: "Minecraft community", collaboration_minecraft_description: "A future partnership focused on servers, communities, moderation and Discord security.", collaboration_details: "Details will be announced soon" },
-        pt: { nav_resources: "Recursos", nav_legal: "Legal", nav_community: "Comunidade", nav_product_overview: "Visão geral", nav_quick_start: "Guia rápido", nav_dashboard: "Abrir Dashboard", collaborations_label: "FUTURAS COLABORAÇÕES", collaborations_title: "Construindo com quem compartilha a visão.", collaborations_description: "Um espaço para futuros criadores, comunidades de Minecraft e projetos de segurança que queiram criar experiências mais seguras no Discord.", collaboration_status: "EM BREVE", collaboration_streamer_title: "Colaboração com streamer", collaboration_streamer_description: "Uma futura parceria para conectar conteúdo, ferramentas da comunidade e uma experiência refinada no Discord.", collaboration_minecraft_title: "Comunidade de Minecraft", collaboration_minecraft_description: "Uma futura parceria focada em servidores, comunidades, moderação e segurança no Discord.", collaboration_details: "Detalhes serão anunciados em breve" }
+        pt: { nav_resources: "Recursos", nav_legal: "Legal", nav_community: "Comunidade", nav_product_overview: "Visão geral", nav_quick_start: "Guia rápido", nav_dashboard: "Abrir Dashboard", collaborations_label: "FUTURAS COLABORAÇÕES", collaborations_title: "Construindo com quem compartilha a visão.", collaborations_description: "Um espaço para futuros criadores, comunidades de Minecraft e projetos de segurança que queiram criar experiências mais seguras no Discord.", collaboration_status: "EM BREVE", collaboration_streamer_title: "Colaboração com streamer", collaboration_streamer_description: "Uma futura parceria para conectar conteúdo, ferramentas da comunidade e uma experiência refinada no Discord.", collaboration_minecraft_title: "Comunidade de Minecraft", collaboration_minecraft_description: "Uma futura parceria focada em servidores, comunidades, moderação e segurança no Discord.", collaboration_details: "Detalhes serão anunciados em breve" },
+        de: { nav_resources: "Ressourcen", nav_legal: "Rechtliches", nav_community: "Community", nav_product_overview: "Übersicht", nav_quick_start: "Schnellstart", nav_dashboard: "Dashboard öffnen", collaborations_label: "ZUKÜNFTIGE KOLLABORATIONEN", collaborations_title: "Gemeinsam mit Menschen, die dieselbe Vision teilen.", collaborations_description: "Ein Bereich für zukünftige Creator, Minecraft-Communities und Sicherheitsprojekte, die gemeinsam sichere Discord-Erlebnisse entwickeln möchten.", collaboration_status: "DEMNÄCHST", collaboration_streamer_title: "Streamer-Kollaboration", collaboration_streamer_description: "Eine zukünftige Partnerschaft für Inhalte, Community-Werkzeuge und ein hochwertiges Discord-Erlebnis.", collaboration_minecraft_title: "Minecraft-Community", collaboration_minecraft_description: "Eine zukünftige Partnerschaft für Server, Communities, Moderation und Discord-Sicherheit.", collaboration_details: "Details werden bald bekannt gegeben" },
+        fr: { nav_resources: "Ressources", nav_legal: "Mentions légales", nav_community: "Communauté", nav_product_overview: "Aperçu", nav_quick_start: "Démarrage rapide", nav_dashboard: "Ouvrir le Dashboard", collaborations_label: "COLLABORATIONS FUTURES", collaborations_title: "Construire avec celles et ceux qui partagent la vision.", collaborations_description: "Un espace pour les futurs créateurs, communautés Minecraft et projets de sécurité souhaitant construire des expériences Discord plus sûres ensemble.", collaboration_status: "BIENTÔT DISPONIBLE", collaboration_streamer_title: "Collaboration avec un streamer", collaboration_streamer_description: "Un futur partenariat pour réunir contenu, outils communautaires et expérience Discord soignée.", collaboration_minecraft_title: "Communauté Minecraft", collaboration_minecraft_description: "Un futur partenariat autour des serveurs, des communautés, de la modération et de la sécurité Discord.", collaboration_details: "Les détails seront annoncés bientôt" }
     };
     Object.keys(interfaceTranslations).forEach((language) => {
         if (typeof translations !== "undefined" && translations[language]) Object.assign(translations[language], interfaceTranslations[language]);
+    });
+
+    /* Textos estructurales que también aparecen en páginas antiguas. Se
+       centralizan aquí para que ninguna vista pueda quedar parcialmente en
+       inglés al cambiar el idioma. */
+    const missingInterfaceTranslations = {
+        es: { platform_label: "EL ENFOQUE NEKRONEX", platform_title: "Todo conectado, sin ruido.", platform_description: "Una capa de control clara para comunidades que quieren más orden, control y menos fricción.", platform_card_01_title: "Un ecosistema", platform_card_01_description: "Bienvenida, música, seguridad, tickets y alertas multimedia diseñados como una sola familia.", platform_card_02_title: "Configuración clara", platform_card_02_description: "Elige tu servidor y configura la experiencia desde un panel visual en tu idioma.", platform_card_03_title: "Listo para crecer", platform_card_03_description: "Empieza con lo esencial y añade sistemas NYVEX a medida que tu comunidad evoluciona.", workflow_label: "CÓMO FUNCIONA", workflow_title: "Del primer clic a una mejor comunidad.", workflow_description: "Conecta tu cuenta de Discord, elige un servidor y deja que el ecosistema te guíe durante la configuración.", workflow_step_01: "Conecta tu cuenta", workflow_step_02: "Selecciona un servidor", workflow_step_03: "Elige los sistemas que necesitas", workflow_step_04: "Configura y lanza" },
+        en: { platform_label: "THE NEKRONEX APPROACH", platform_title: "Everything connected, without the noise.", platform_description: "A focused control layer for communities that want more clarity, more control and less friction.", platform_card_01_title: "One ecosystem", platform_card_01_description: "Welcome, music, security, tickets and media alerts designed to feel like one family.", platform_card_02_title: "Clear configuration", platform_card_02_description: "Choose your server and configure the experience from a visual panel that speaks your language.", platform_card_03_title: "Ready to grow", platform_card_03_description: "Start small and add more NYVEX systems as your community evolves.", workflow_label: "HOW IT WORKS", workflow_title: "From first click to a better community.", workflow_description: "Connect your Discord account, choose a server and let the ecosystem guide the setup.", workflow_step_01: "Connect your account", workflow_step_02: "Select a server", workflow_step_03: "Choose the systems you need", workflow_step_04: "Configure and launch" },
+        pt: { platform_label: "A ABORDAGEM NEKRONEX", platform_title: "Tudo conectado, sem ruído.", platform_description: "Uma camada de controle clara para comunidades que querem mais organização, controle e menos atrito.", platform_card_01_title: "Um ecossistema", platform_card_01_description: "Boas-vindas, música, segurança, tickets e alertas de mídia pensados como uma só família.", platform_card_02_title: "Configuração clara", platform_card_02_description: "Escolha seu servidor e configure a experiência em um painel visual no seu idioma.", platform_card_03_title: "Pronto para crescer", platform_card_03_description: "Comece pelo essencial e adicione sistemas NYVEX conforme sua comunidade evolui.", workflow_label: "COMO FUNCIONA", workflow_title: "Do primeiro clique a uma comunidade melhor.", workflow_description: "Conecte sua conta do Discord, escolha um servidor e deixe o ecossistema orientar a configuração.", workflow_step_01: "Conecte sua conta", workflow_step_02: "Selecione um servidor", workflow_step_03: "Escolha os sistemas necessários", workflow_step_04: "Configure e lance" },
+        de: { platform_label: "DER NEKRONEX-ANSATZ", platform_title: "Alles verbunden, ohne unnötigen Lärm.", platform_description: "Eine klare Kontrollebene für Communities, die mehr Übersicht, Kontrolle und weniger Reibung wünschen.", platform_card_01_title: "Ein Ökosystem", platform_card_01_description: "Willkommen, Musik, Sicherheit, Tickets und Medienalarme als zusammengehörige Werkzeuge.", platform_card_02_title: "Klare Einrichtung", platform_card_02_description: "Wähle deinen Server und konfiguriere alles über ein visuelles Panel in deiner Sprache.", platform_card_03_title: "Bereit zum Wachsen", platform_card_03_description: "Starte mit dem Wesentlichen und füge weitere NYVEX-Systeme hinzu, wenn deine Community wächst.", workflow_label: "SO FUNKTIONIERT ES", workflow_title: "Vom ersten Klick zur besseren Community.", workflow_description: "Verbinde dein Discord-Konto, wähle einen Server und lass dich durch die Einrichtung führen.", workflow_step_01: "Konto verbinden", workflow_step_02: "Server auswählen", workflow_step_03: "Benötigte Systeme auswählen", workflow_step_04: "Konfigurieren und starten" },
+        fr: { platform_label: "L’APPROCHE NEKRONEX", platform_title: "Tout connecté, sans bruit.", platform_description: "Une couche de contrôle claire pour les communautés qui veulent plus de clarté, de contrôle et moins de friction.", platform_card_01_title: "Un écosystème", platform_card_01_description: "Accueil, musique, sécurité, tickets et alertes média conçus comme une seule famille.", platform_card_02_title: "Configuration claire", platform_card_02_description: "Choisissez votre serveur et configurez l’expérience depuis un panneau visuel dans votre langue.", platform_card_03_title: "Prêt à évoluer", platform_card_03_description: "Commencez simplement et ajoutez des systèmes NYVEX au fil de la croissance de votre communauté.", workflow_label: "COMMENT ÇA MARCHE", workflow_title: "Du premier clic à une meilleure communauté.", workflow_description: "Connectez votre compte Discord, choisissez un serveur et laissez l’écosystème vous guider.", workflow_step_01: "Connecter votre compte", workflow_step_02: "Sélectionner un serveur", workflow_step_03: "Choisir les systèmes nécessaires", workflow_step_04: "Configurer et lancer" }
+    };
+    Object.keys(missingInterfaceTranslations).forEach((language) => {
+        if (typeof translations !== "undefined" && translations[language]) Object.assign(translations[language], missingInterfaceTranslations[language]);
     });
 
     const languageToggle =
@@ -320,8 +340,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (languageCurrent) {
 
-            languageCurrent.textContent =
-                language === "es" ? "ES" : language === "pt" ? "PT-BR" : "EN";
+            const flags = { es: "🇪🇸", en: "🇺🇸", pt: "🇧🇷", de: "🇩🇪", fr: "🇫🇷" };
+            languageCurrent.textContent = flags[language] || flags.es;
 
         }
 
