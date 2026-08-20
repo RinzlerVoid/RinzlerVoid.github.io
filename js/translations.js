@@ -2333,6 +2333,53 @@ const translations = {
 
 };
 
+/* Alemán y francés heredan el catálogo completo en inglés mientras cada
+   pantalla termina su traducción editorial; así nunca quedan claves sin
+   resolver ni fragmentos mezclados en otro idioma. */
+translations.de = {
+    ...translations.en,
+    nav_resources: "Ressourcen",
+    nav_legal: "Rechtliches",
+    nav_community: "Community",
+    nav_product_overview: "Übersicht",
+    nav_quick_start: "Schnellstart",
+    nav_dashboard: "Dashboard öffnen",
+    workflow_label: "SO FUNKTIONIERT ES",
+    workflow_title: "Vom ersten Klick zur besseren Community.",
+    workflow_description: "Verbinde dein Discord-Konto, wähle einen Server und lass dich durch die Einrichtung führen.",
+    workflow_step_01: "Konto verbinden",
+    workflow_step_02: "Server auswählen",
+    workflow_step_03: "Benötigte Systeme auswählen",
+    workflow_step_04: "Konfigurieren und starten",
+    collaborations_label: "ZUKÜNFTIGE KOLLABORATIONEN",
+    collaborations_title: "Gemeinsam mit Menschen, die dieselbe Vision teilen.",
+    collaborations_description: "Ein Bereich für zukünftige Creator, Minecraft-Communities und Sicherheitsprojekte, die gemeinsam sichere Discord-Erlebnisse entwickeln möchten.",
+    collaboration_status: "DEMNÄCHST",
+    collaboration_details: "Details werden bald bekannt gegeben"
+};
+
+translations.fr = {
+    ...translations.en,
+    nav_resources: "Ressources",
+    nav_legal: "Mentions légales",
+    nav_community: "Communauté",
+    nav_product_overview: "Aperçu",
+    nav_quick_start: "Démarrage rapide",
+    nav_dashboard: "Ouvrir le Dashboard",
+    workflow_label: "COMMENT ÇA MARCHE",
+    workflow_title: "Du premier clic à une meilleure communauté.",
+    workflow_description: "Connectez votre compte Discord, choisissez un serveur et laissez l’écosystème vous guider.",
+    workflow_step_01: "Connecter votre compte",
+    workflow_step_02: "Sélectionner un serveur",
+    workflow_step_03: "Choisir les systèmes nécessaires",
+    workflow_step_04: "Configurer et lancer",
+    collaborations_label: "COLLABORATIONS FUTURES",
+    collaborations_title: "Construire avec celles et ceux qui partagent la vision.",
+    collaborations_description: "Un espace pour les futurs créateurs, communautés Minecraft et projets de sécurité souhaitant construire des expériences Discord plus sûres ensemble.",
+    collaboration_status: "BIENTÔT DISPONIBLE",
+    collaboration_details: "Les détails seront annoncés bientôt"
+};
+
 /* Português Brasileiro: mantém cobertura completa usando English como base
    para chaves novas e traduz os textos principais do ecossistema. */
 translations.pt = {

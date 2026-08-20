@@ -598,7 +598,7 @@ button:focus-visible {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: hero-word-shimmer 7s linear infinite, name-pulse 4.8s ease-in-out infinite;
+    animation: hero-word-shimmer 7s linear infinite, hero-title-flicker 3.8s ease-in-out infinite;
 
     font-family: var(--font-display);
 
@@ -633,7 +633,7 @@ button:focus-visible {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: tagline-shimmer 6s ease-in-out infinite;
+    animation: tagline-shimmer 6s ease-in-out infinite, hero-title-flicker 4.6s ease-in-out infinite reverse;
 }
 
 .hero-description {
@@ -1015,6 +1015,7 @@ button:focus-visible {
 @keyframes button-pulse { 0%, 100% { box-shadow: 0 10px 28px rgba(126,91,197,.18); } 50% { box-shadow: 0 10px 34px rgba(126,91,197,.42), 0 0 18px rgba(212,175,55,.14); } }
 @keyframes hero-word-shimmer { to { background-position: 220% center; } }
 @keyframes tagline-shimmer { 0%, 100% { background-position: 0% center; filter: drop-shadow(0 0 0 rgba(138,124,255,0)); } 50% { background-position: 100% center; filter: drop-shadow(0 0 16px rgba(138,124,255,.25)); } }
+@keyframes hero-title-flicker { 0%, 100% { filter: brightness(.96) drop-shadow(0 0 0 rgba(255,48,72,0)); } 46% { filter: brightness(1.08) drop-shadow(0 0 12px rgba(255,48,72,.18)); } 52% { filter: brightness(1.18) drop-shadow(0 0 24px rgba(212,175,55,.22)); } 58% { filter: brightness(1) drop-shadow(0 0 6px rgba(138,124,255,.14)); } }
 
 /* ========================================
    ECOSYSTEM
@@ -1301,6 +1302,11 @@ body {
 }
 
 .hero::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
     background:
         radial-gradient(circle at 20% 30%, rgba(120, 82, 220, 0.23), transparent 42%),
         radial-gradient(circle at 80% 10%, rgba(20, 184, 190, 0.16), transparent 38%);
@@ -1389,8 +1395,9 @@ body {
     box-shadow: 0 0 26px rgba(212,175,55,.24);
 }
 
-.collaboration-avatar-streamer { background: linear-gradient(135deg, #d4af37, #ff6a7a); }
-.collaboration-avatar-minecraft { background: linear-gradient(135deg, #72e6a0, #00b8ff); }
+.collaboration-avatar-kick { background: #53fc18; color: #080808; font-family: Arial, sans-serif; font-style: italic; font-weight: 950; }
+.collaboration-avatar-minecraft { position: relative; background: #7fcf43; border: 4px solid #3f7b2f; border-radius: 7px; box-shadow: inset 0 -10px 0 rgba(44,92,37,.3), 0 0 26px rgba(114,230,160,.25); }
+.collaboration-avatar-minecraft::before { content: ""; width: 34px; height: 27px; background: #2d572b; clip-path: polygon(0 0, 30% 0, 30% 28%, 70% 28%, 70% 0, 100% 0, 100% 100%, 70% 100%, 70% 72%, 30% 72%, 30% 100%, 0 100%); }
 .collaboration-status { color: var(--nyvex-gold); font-size: 9px; font-weight: 800; letter-spacing: .16em; }
 .collaboration-card h3 { margin: 12px 0 10px; color: var(--nyvex-white); font-family: var(--font-display); font-size: 25px; }
 .collaboration-card p { color: var(--text-secondary); font-size: 14px; line-height: 1.75; }
