@@ -68,31 +68,68 @@
                 class="nav-links"
                 aria-label="Main navigation"
             >
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_products">Products</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_products">PRODUCTS</span>
+                        <a href="#products" data-i18n="nav_product_overview">Overview</a>
+                        <a href="pages/bots/nyvex-welcome.html">NYVEX Welcome</a>
+                        <a href="pages/bots/nyvex-music.html">NEXORA Music</a>
+                        <a href="pages/bots/nyvex-guard.html">KRYVEX Guard</a>
+                        <a href="pages/bots/nyvex-ticket.html">VELTRIX Tickets</a>
+                        <a href="pages/bots/nyvex-dashboard.html">NYVEX Dashboard</a>
+                    </div>
+                </div>
 
-                <a
-                    href="#products"
-                    data-i18n="nav_products"
-                >
-                    Products
-                </a>
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_resources">Resources</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_resources">RESOURCES</span>
+                        <a href="pages/documentation/index.html" data-i18n="nav_documentation">Documentation</a>
+                        <a href="pages/documentation/index.html#quick-start" data-i18n="nav_quick_start">Quick start</a>
+                        <a href="pages/support.html" data-i18n="nav_support">Support</a>
+                    </div>
+                </div>
 
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_legal">Legal</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_legal">LEGAL</span>
+                        <a href="pages/legal/privacy.html" data-i18n="privacy">Privacy Policy</a>
+                        <a href="pages/legal/terms.html" data-i18n="terms">Terms of Service</a>
+                    </div>
+                </div>
 
-                <a
-                    href="pages/documentation/index.html"
-                    data-i18n="nav_documentation"
-                >
-                    Documentation
-                </a>
-
-
-                <a
-                    href="pages/support.html"
-                    data-i18n="nav_support"
-                >
-                    Support
-                </a>
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_community">Community</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_community">COMMUNITY</span>
+                        <a href="pages/support.html" data-i18n="nav_support">Support</a>
+                        <a href="https://nyvex-dashboard-production.up.railway.app" target="_blank" rel="noopener" data-i18n="nav_dashboard">Open Dashboard</a>
+                        <a href="mailto:nekronex.official@gmail.com">nekronex.official@gmail.com</a>
+                    </div>
+                </div>
 
             </nav>
+
+            <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="#products" data-i18n="nav_product_overview">Products</a>
+                <a href="pages/documentation/index.html" data-i18n="nav_documentation">Documentation</a>
+                <a href="pages/support.html" data-i18n="nav_support">Support</a>
+                <a href="pages/legal/privacy.html" data-i18n="privacy">Privacy Policy</a>
+                <a href="pages/legal/terms.html" data-i18n="terms">Terms of Service</a>
+                <a href="https://nyvex-dashboard-production.up.railway.app" target="_blank" rel="noopener" data-i18n="nav_dashboard">Open Dashboard</a>
+            </div>
 
 
 
@@ -249,6 +286,42 @@
 
             </div>
 
+        </section>
+
+        <!-- ========================================
+             PLATFORM
+             ======================================== -->
+
+        <section class="platform-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label" data-i18n="platform_label">THE NEKRONEX APPROACH</span>
+                    <h2 data-i18n="platform_title">Everything connected, without the noise.</h2>
+                    <p data-i18n="platform_description">A focused control layer for communities that want more clarity, more control and less friction.</p>
+                </div>
+                <div class="platform-grid">
+                    <article class="platform-card"><span class="platform-number">01</span><h3 data-i18n="platform_card_01_title">One ecosystem</h3><p data-i18n="platform_card_01_description">Welcome, music, security, tickets and media alerts designed to feel like one family.</p></article>
+                    <article class="platform-card"><span class="platform-number">02</span><h3 data-i18n="platform_card_02_title">Clear configuration</h3><p data-i18n="platform_card_02_description">Choose your server and configure the experience from a visual panel that speaks your language.</p></article>
+                    <article class="platform-card"><span class="platform-number">03</span><h3 data-i18n="platform_card_03_title">Ready to grow</h3><p data-i18n="platform_card_03_description">Start small and add more NYVEX systems as your community evolves.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow-section">
+            <div class="container workflow-layout">
+                <div class="workflow-intro">
+                    <span class="section-label" data-i18n="workflow_label">HOW IT WORKS</span>
+                    <h2 data-i18n="workflow_title">From first click to a better community.</h2>
+                    <p data-i18n="workflow_description">Connect your Discord account, choose a server and let the ecosystem guide the setup.</p>
+                    <a class="button button-primary" href="https://nyvex-dashboard-production.up.railway.app" target="_blank" rel="noopener" data-i18n="nav_dashboard">Open Dashboard</a>
+                </div>
+                <div class="workflow-steps">
+                    <div class="workflow-step"><b>01</b><span data-i18n="workflow_step_01">Connect your account</span></div>
+                    <div class="workflow-step"><b>02</b><span data-i18n="workflow_step_02">Select a server</span></div>
+                    <div class="workflow-step"><b>03</b><span data-i18n="workflow_step_03">Choose the systems you need</span></div>
+                    <div class="workflow-step"><b>04</b><span data-i18n="workflow_step_04">Configure and launch</span></div>
+                </div>
+            </div>
         </section>
 
 
