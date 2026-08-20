@@ -92,6 +92,16 @@ const translations = {
         synvex_status:
             "Alertas multimedia próximamente.",
 
+        mystery_title_01: "Proyecto en desarrollo",
+        mystery_description_01:
+            "Una nueva herramienta del ecosistema NekroNex está siendo diseñada para ampliar las posibilidades de tu comunidad.",
+        mystery_status_01: "Más información próximamente.",
+
+        mystery_title_02: "Nueva experiencia en preparación",
+        mystery_description_02:
+            "Un sistema especial está siendo planificado para ofrecer nuevas formas de conectar y administrar tu servidor.",
+        mystery_status_02: "Detalles reservados por ahora.",
+
         coming_label:
             "PRÓXIMAMENTE",
 
@@ -1240,6 +1250,16 @@ const translations = {
         synvex_status:
             "Media alerts coming soon.",
 
+        mystery_title_01: "Project in development",
+        mystery_description_01:
+            "A new NekroNex tool is being designed to expand what your community can do.",
+        mystery_status_01: "More information coming soon.",
+
+        mystery_title_02: "New experience in preparation",
+        mystery_description_02:
+            "A special system is being planned to offer new ways to connect and manage your server.",
+        mystery_status_02: "Details are reserved for now.",
+
         coming_label:
             "COMING NEXT",
 
@@ -2322,6 +2342,12 @@ translations.pt = {
     tickets_description: "Um sistema profissional de suporte para organizar solicitações e atendimento na sua comunidade.",
     synvex_description: "O sistema de alertas multimídia da sua comunidade. Detecta novos vídeos, lives e conteúdos recentes para manter seu servidor conectado e atualizado.",
     synvex_status: "Alertas multimídia em breve.",
+    mystery_title_01: "Projeto em desenvolvimento",
+    mystery_description_01: "Uma nova ferramenta do ecossistema NekroNex está sendo projetada para ampliar as possibilidades da sua comunidade.",
+    mystery_status_01: "Mais informações em breve.",
+    mystery_title_02: "Nova experiência em preparação",
+    mystery_description_02: "Um sistema especial está sendo planejado para oferecer novas formas de conectar e administrar seu servidor.",
+    mystery_status_02: "Detalhes reservados por enquanto.",
     explore_music: "Explorar NEXORA →",
     explore_welcome: "Explorar NYVEX Welcome →",
     explore_guard: "Explorar KRYVEX →",
