@@ -1654,6 +1654,7 @@ body {
     .container { width: min(100% - 32px, 720px); }
     .navbar { gap: 16px; }
     .nav-links { display: none; }
+    .navbar > .nav-button { display: none; }
     .mobile-menu-button { display: inline-grid; place-items: center; order: 2; width: 42px; height: 42px; color: var(--nyvex-white); background: rgba(255,255,255,.05); border: 1px solid var(--border); border-radius: 10px; font-size: 20px; }
     .mobile-menu { position: absolute; top: calc(100% + 10px); left: 16px; right: 16px; display: grid; gap: 4px; padding: 10px; opacity: 0; visibility: hidden; transform: translateY(-8px); background: rgba(13,13,16,.98); border: 1px solid rgba(212,175,55,.2); border-radius: 16px; box-shadow: 0 24px 70px rgba(0,0,0,.58); backdrop-filter: blur(22px); z-index: 1300; transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
     .mobile-menu.active { opacity: 1; visibility: visible; transform: translateY(0); }
