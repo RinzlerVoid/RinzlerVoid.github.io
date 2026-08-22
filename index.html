@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEKRONEX | Technology, refined.</title>
+
+    <meta
+        name="description"
+        content="NEKRONEX creates focused technology brands and the NYVEX ecosystem for modern Discord communities."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         HEADER
+         ======================================== -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <!-- BRAND -->
+
+            <a
+                href="./index.html"
+                class="brand"
+                aria-label="NEKRONEX Home"
+            >
+                𝐍𝐄𝐊𝐑𝐎𝐍𝐄𝐗
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_products">Products</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_products">PRODUCTS</span>
+                        <a href="#products" data-i18n="nav_product_overview">Overview</a>
+                        <a href="pages/bots/nyvex-welcome.html">NYVEX Welcome</a>
+                        <a href="pages/bots/nyvex-music.html">NEXORA Music</a>
+                        <a href="pages/bots/nyvex-guard.html">KRYVEX Guard</a>
+                        <a href="pages/bots/nyvex-ticket.html">VELTRIX Tickets</a>
+                        <a href="pages/bots/nyvex-dashboard.html">NYVEX Dashboard</a>
+                    </div>
+                </div>
+
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_resources">Resources</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_resources">RESOURCES</span>
+                        <a href="pages/documentation/index.html" data-i18n="nav_documentation">Documentation</a>
+                        <a href="pages/documentation/index.html#quick-start" data-i18n="nav_quick_start">Quick start</a>
+                        <a href="pages/support.html" data-i18n="nav_support">Support</a>
+                    </div>
+                </div>
+
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_legal">Legal</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_legal">LEGAL</span>
+                        <a href="pages/legal/privacy.html" data-i18n="privacy">Privacy Policy</a>
+                        <a href="pages/legal/terms.html" data-i18n="terms">Terms of Service</a>
+                    </div>
+                </div>
+
+                <div class="nav-menu-group">
+                    <button class="nav-menu-trigger" type="button" aria-expanded="false">
+                        <span data-i18n="nav_community">Community</span><span aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="nav-menu-panel">
+                        <span class="nav-menu-kicker" data-i18n="nav_community">COMMUNITY</span>
+                        <a href="pages/support.html" data-i18n="nav_support">Support</a>
+                        <a href="https://nyvex-dashboard-production.up.railway.app" target="_blank" rel="noopener" data-i18n="nav_dashboard">Open Dashboard</a>
+                        <a href="mailto:nekronex.official@gmail.com">nekronex.official@gmail.com</a>
+                    </div>
+                </div>
+
+            </nav>
+
+            <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="#products" data-i18n="nav_product_overview">Products</a>
+                <a href="pages/documentation/index.html" data-i18n="nav_documentation">Documentation</a>
+                <a href="pages/support.html" data-i18n="nav_support">Support</a>
+                <a href="pages/legal/privacy.html" data-i18n="privacy">Privacy Policy</a>
+                <a href="pages/legal/terms.html" data-i18n="terms">Terms of Service</a>
+                <a href="https://nyvex-dashboard-production.up.railway.app" target="_blank" rel="noopener" data-i18n="nav_dashboard">Open Dashboard</a>
+            </div>
+
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-selector">
+
+
+                <button
+                    class="language-button"
+                    id="language-toggle"
+                    type="button"
+                    aria-label="Select language"
+                >
+
+                    <span class="language-icon">
+                        🌐
+                    </span>
+
+
+                    <span
+                        class="language-current"
+                        id="language-current"
+                    >
+                        <span class="flag flag-es" aria-label="Español"></span>
+                    </span>
+
+
+                    <span class="language-arrow">
+                        ▾
+                    </span>
+
+                </button>
+
+
+
+                <div
+                    class="language-menu"
+                    id="language-menu"
+                >
+
+                    <button
+                        type="button"
+                        data-language="es"
+                    >
+                        <span class="flag flag-es" aria-hidden="true"></span> Español
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-language="en"
+                    >
+                        <span class="flag flag-us" aria-hidden="true"></span> English
+                    </button>
+
+                    <button type="button" data-language="pt">
+                        <span class="flag flag-br" aria-hidden="true"></span> Português Brasileiro
+                    </button>
+
+                    <button type="button" data-language="de">
+                        <span class="flag flag-de" aria-hidden="true"></span> Deutsch
+                    </button>
+
+                    <button type="button" data-language="fr">
+                        <span class="flag flag-fr" aria-hidden="true"></span> Français
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GET STARTED -->
+
+            <a
+                href="#products"
+                class="nav-button"
+                data-i18n="nav_get_started"
+            >
+                Get Started
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         MAIN
+         ======================================== -->
+
+    <main>
+
+
+        <!-- ========================================
+             HERO
+             ======================================== -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+
+                <span
+                    class="hero-label"
+                    data-i18n="hero_label"
+                >
+                    THE NEXT GENERATION OF DISCORD TOOLS
+                </span>
+
+
+                <h1>
+                    𝐍𝐄𝐊𝐑𝐎𝐍𝐄𝐗
+                </h1>
+
+
+                <p
+                    class="hero-tagline"
+                    data-i18n="hero_tagline"
+                >
+                    Technology, refined.
+                </p>
+
+
+                <p
+                    class="hero-description"
+                    data-i18n="hero_description"
+                >
+                    Powerful tools and infrastructure designed
+                    for modern Discord communities.
+                </p>
+
+
+
+                <div class="hero-actions">
+
+
+                    <a
+                        href="#products"
+                        class="button button-primary"
+                        data-i18n="hero_explore"
+                    >
+                        Explore Products
+                    </a>
+
+
+                    <a
+                        href="pages/documentation/index.html"
+                        class="button button-secondary"
+                        data-i18n="nav_documentation"
+                    >
+                        Documentation
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             PLATFORM
+             ======================================== -->
+
+        <section class="platform-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label" data-i18n="platform_label">THE NEKRONEX APPROACH</span>
+                    <h2 data-i18n="platform_title">Everything connected, without the noise.</h2>
+                    <p data-i18n="platform_description">A focused control layer for communities that want more clarity, more control and less friction.</p>
+                </div>
+                <div class="platform-grid">
+                    <article class="platform-card"><span class="platform-number">01</span><h3 data-i18n="platform_card_01_title">One ecosystem</h3><p data-i18n="platform_card_01_description">Welcome, music, security, tickets and media alerts designed to feel like one family.</p></article>
+                    <article class="platform-card"><span class="platform-number">02</span><h3 data-i18n="platform_card_02_title">Clear configuration</h3><p data-i18n="platform_card_02_description">Choose your server and configure the experience from a visual panel that speaks your language.</p></article>
+                    <article class="platform-card"><span class="platform-number">03</span><h3 data-i18n="platform_card_03_title">Ready to grow</h3><p data-i18n="platform_card_03_description">Start small and add more NYVEX systems as your community evolves.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow-section">
+            <div class="container workflow-layout">
+                <div class="workflow-intro">
+                    <span class="section-label" data-i18n="workflow_label">HOW IT WORKS</span>
+                    <h2 data-i18n="workflow_title">From first click to a better community.</h2>
+                    <p data-i18n="workflow_description">Connect your Discord account, choose a server and let the ecosystem guide the setup.</p>
+                    <a class="button button-primary" href="https://nyvex-dashboard-production.up.railway.app" target="_blank" rel="noopener" data-i18n="nav_dashboard">Open Dashboard</a>
+                </div>
+                <div class="workflow-steps">
+                    <div class="workflow-step"><b>01</b><span data-i18n="workflow_step_01">Connect your account</span></div>
+                    <div class="workflow-step"><b>02</b><span data-i18n="workflow_step_02">Select a server</span></div>
+                    <div class="workflow-step"><b>03</b><span data-i18n="workflow_step_03">Choose the systems you need</span></div>
+                    <div class="workflow-step"><b>04</b><span data-i18n="workflow_step_04">Configure and launch</span></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ========================================
+             PRODUCTS
+             ======================================== -->
+
+        <section
+            class="products-section"
+            id="products"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+
+                    <span
+                        class="section-label"
+                        data-i18n="products_label"
+                    >
+                        OUR PRODUCTS
+                    </span>
+
+
+                    <h2 data-i18n="products_title">
+                        Tools built for your community.
+                    </h2>
+
+
+                    <p data-i18n="products_description">
+                        A growing ecosystem of powerful Discord
+                        tools, designed to work beautifully together.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="products-grid">
+
+
+                    <!-- MUSIC -->
+
+                    <article class="product-card product-nexora">
+
+
+                        <div class="product-icon">
+                            🎵
+                        </div>
+
+                        <img class="product-art" src="assets/products/nexora.png" alt="NEXORA Music">
+
+
+                        <span
+                            class="product-status available"
+                            data-i18n="available"
+                        >
+                            AVAILABLE
+                        </span>
+
+
+                        <h3>
+                            NEXORA - Música
+                        </h3>
+
+
+                        <p data-i18n="music_description">
+                            A complete music experience for Discord.
+                            Play songs, manage queues, create playlists
+                            and control your music with ease.
+                        </p>
+
+
+                        <a
+                            href="pages/bots/nyvex-music.html"
+                            class="product-link"
+                            data-i18n="explore_music"
+                        >
+                            Explore Music →
+                        </a>
+                        <a href="pages/documentation/index.html#nexora" class="product-doc-link" data-i18n="open_documentation">Abrir documentación</a>
+
+
+                    </article>
+
+
+
+                    <!-- WELCOME -->
+
+                    <article class="product-card product-nyvex-welcome">
+
+
+                        <div class="product-icon">
+                            👋
+                        </div>
+
+                        <img class="product-art" src="assets/products/nyvex.png" alt="NYVEX Welcome">
+
+
+                        <span
+                            class="product-status available"
+                            data-i18n="available"
+                        >
+                            AVAILABLE
+                        </span>
+
+
+                        <h3>
+                            NYVEX - Welcome
+                        </h3>
+
+
+                        <p data-i18n="welcome_description">
+                            Automated welcomes and goodbyes designed
+                            to give every member a better first impression
+                            of your community.
+                        </p>
+
+
+                        <a
+                            href="pages/bots/nyvex-welcome.html"
+                            class="product-link"
+                            data-i18n="explore_welcome"
+                        >
+                            Explore Welcome →
+                        </a>
+                        <a href="pages/documentation/index.html#nyvex-welcome" class="product-doc-link" data-i18n="open_documentation">Abrir documentación</a>
+
+
+                    </article>
+
+
+                    <!-- KRYVEX -->
+
+                    <article class="product-card product-kryvex">
+
+                        <div class="product-icon">
+                            🛡️
+                        </div>
+
+                        <img class="product-art" src="assets/products/kryvex.png" alt="KRYVEX Guard">
+
+                        <span class="product-status available" data-i18n="available">
+                            AVAILABLE
+                        </span>
+
+                        <h3>KRYVEX</h3>
+
+                        <p data-i18n="guard_description">
+                            Security and moderation tools for safer Discord communities.
+                        </p>
+
+                        <a href="pages/bots/nyvex-guard.html" class="product-link" data-i18n="explore_guard">
+                            Explore KRYVEX →
+                        </a>
+                        <a href="pages/documentation/index.html#kryvex" class="product-doc-link" data-i18n="open_documentation">Abrir documentación</a>
+
+                    </article>
+
+                    <!-- VELTRIX -->
+
+                    <article class="product-card product-veltrix">
+                        <div class="product-icon">🎫</div>
+                        <img class="product-art" src="assets/products/veltrix.png" alt="VELTRIX Tickets">
+                        <span class="product-status available" data-i18n="available">AVAILABLE</span>
+                        <h3>VELTRIX - Tickets</h3>
+                        <p data-i18n="tickets_description">Professional support and ticket management for Discord communities.</p>
+                        <a href="pages/bots/nyvex-ticket.html" class="product-link" data-i18n="explore_ticket">Explore VELTRIX →</a>
+                        <a href="pages/documentation/index.html#veltrix" class="product-doc-link" data-i18n="open_documentation">Abrir documentación</a>
+                    </article>
+
+                    <!-- DASHBOARD -->
+
+                    <article class="product-card product-dashboard">
+
+                        <div class="product-icon">⚙️</div>
+
+                        <img class="product-art" src="assets/products/dashboard.png" alt="NYVEX Dashboard">
+
+                        <span class="product-status available" data-i18n="available">AVAILABLE</span>
+
+                        <h3>NYVEX Dashboard</h3>
+
+                        <p data-i18n="dashboard_description">
+                            One place to manage your entire NYVEX ecosystem.
+                        </p>
+
+                        <a href="pages/bots/nyvex-dashboard.html" class="product-link" data-i18n="explore_dashboard">
+                            Open Dashboard →
+                        </a>
+                        <a href="pages/documentation/index.html#dashboard" class="product-doc-link" data-i18n="open_documentation">Abrir documentación</a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             FUTURE PRODUCTS
+             ======================================== -->
+
+        <section class="future-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+
+                    <span
+                        class="section-label"
+                        data-i18n="coming_label"
+                    >
+                        COMING NEXT
+                    </span>
+
+
+                    <h2 data-i18n="coming_title">
+                        More from NYVEX.
+                    </h2>
+
+
+                    <p data-i18n="coming_description">
+                        The ecosystem is only getting started.
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="future-grid">
+
+
+                    <!-- SYNVEX -->
+
+                    <article class="future-card product-synvex">
+
+                        <img class="product-avatar" src="assets/products/synvex-avatar.png" alt="SYNVEX">
+
+                        <img class="product-art" src="assets/products/synvex.png" alt="SYNVEX Media Alerts">
+
+                        <span class="product-status development" data-i18n="in_development">IN DEVELOPMENT</span>
+
+                        <h3>SYNVEX</h3>
+
+                        <p data-i18n="synvex_description">
+                            Automatic alerts for new videos, live streams and recent creator content.
+                        </p>
+
+                        <small data-i18n="synvex_status">Media alerts coming soon.</small>
+
+                    </article>
+
+                    <!-- MYSTERY PROJECTS -->
+
+                    <article class="future-card product-mystery">
+
+                        <img class="mystery-art" src="assets/products/signo-interrogacion.png" alt="" aria-hidden="true">
+
+                        <span class="product-status development" data-i18n="in_development">IN DEVELOPMENT</span>
+
+                        <h3 data-i18n="mystery_title_01">Project in development</h3>
+
+                        <p data-i18n="mystery_description_01">
+                            A new NekroNex tool is being designed to expand what your community can do.
+                        </p>
+
+                        <small data-i18n="mystery_status_01">More information coming soon.</small>
+
+                    </article>
+
+                    <article class="future-card product-mystery product-mystery-alt">
+
+                        <img class="mystery-art" src="assets/products/signo-interrogacion.png" alt="" aria-hidden="true">
+
+                        <span class="product-status development" data-i18n="in_development">IN DEVELOPMENT</span>
+
+                        <h3 data-i18n="mystery_title_02">New experience in preparation</h3>
+
+                        <p data-i18n="mystery_description_02">
+                            A special system is being planned to offer new ways to connect and manage your server.
+                        </p>
+
+                        <small data-i18n="mystery_status_02">Details are reserved for now.</small>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="collaborations-section" id="collaborations">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label" data-i18n="collaborations_label">FUTURE COLLABORATIONS</span>
+                    <h2 data-i18n="collaborations_title">Built with people who share the vision.</h2>
+                    <p data-i18n="collaborations_description">A dedicated space for future creators, Minecraft communities and security projects that want to build safer Discord experiences together.</p>
+                </div>
+                <div class="collaborations-grid">
+                    <article class="collaboration-card">
+                        <div class="collaboration-avatar collaboration-avatar-kick" role="img" aria-label="Kick"><img src="assets/collaborations/kick.png" alt="Kick"></div>
+                        <div>
+                            <span class="collaboration-status" data-i18n="collaboration_status">COMING SOON</span>
+                            <h3 data-i18n="collaboration_streamer_title">Streamer collaboration</h3>
+                            <p data-i18n="collaboration_streamer_description">A future creator partnership to connect content, community tools and a polished Discord experience.</p>
+                            <span class="collaboration-link" data-i18n="collaboration_details">Details will be announced soon</span>
+                        </div>
+                    </article>
+                    <article class="collaboration-card">
+                        <div class="collaboration-avatar collaboration-avatar-minecraft" role="img" aria-label="Minecraft"><img src="assets/collaborations/minecraft.png" alt="Minecraft"></div>
+                        <div>
+                            <span class="collaboration-status" data-i18n="collaboration_status">COMING SOON</span>
+                            <h3 data-i18n="collaboration_minecraft_title">Minecraft community</h3>
+                            <p data-i18n="collaboration_minecraft_description">A future partnership focused on servers, communities, moderation and Discord security.</p>
+                            <span class="collaboration-link" data-i18n="collaboration_details">Details will be announced soon</span>
+                        </div>
+                    </article>
+                    <article class="collaboration-card">
+                        <div class="collaboration-avatar collaboration-avatar-twitch" role="img" aria-label="Twitch"><img src="assets/collaborations/twitch.png" alt="Twitch"></div>
+                        <div>
+                            <span class="collaboration-status" data-i18n="collaboration_status">COMING SOON</span>
+                            <h3 data-i18n="collaboration_twitch_title">Twitch streamer collaboration</h3>
+                            <p data-i18n="collaboration_twitch_description">A future partnership with Twitch creators to connect content, community tools and a polished Discord experience.</p>
+                            <span class="collaboration-link" data-i18n="collaboration_details">Details will be announced soon</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ========================================
+             ECOSYSTEM
+             ======================================== -->
+
+        <section class="ecosystem-section">
+
+            <div class="container ecosystem-content">
+
+
+                <span
+                    class="section-label"
+                    data-i18n="ecosystem_label"
+                >
+                    ONE ECOSYSTEM
+                </span>
+
+
+                <h2
+                    data-i18n="ecosystem_title"
+                    data-i18n-html
+                >
+                    One platform.<br>
+                    Multiple tools.
+                </h2>
+
+
+                <p data-i18n="ecosystem_description">
+                    NYVEX is building a growing ecosystem of
+                    tools designed to work together, giving
+                    communities everything they need from one place.
+                </p>
+
+
+                <a
+                    href="pages/documentation/index.html"
+                    class="button button-secondary"
+                    data-i18n="documentation"
+                >
+                    Explore Documentation
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+
+    <footer class="site-footer">
+
+
+        <div class="container footer-content">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-brand">
+
+
+                <span class="brand">
+                    𝐍𝐄𝐊𝐑𝐎𝐍𝐄𝐗
+                </span>
+
+
+                <p data-i18n="footer_description">
+                    Technology, refined.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- FOOTER LINKS -->
+
+            <div class="footer-links">
+
+
+                <!-- PRODUCTS -->
+
+                <div>
+
+                    <h4 data-i18n="footer_products">
+                        Products
+                    </h4>
+
+
+                    <a
+                        href="pages/bots/nyvex-music.html"
+                    >
+                        NEXORA - Música
+                    </a>
+
+
+                    <a
+                        href="pages/bots/nyvex-welcome.html"
+                    >
+                        NYVEX - Welcome
+                    </a>
+
+                </div>
+
+
+
+                <!-- RESOURCES -->
+
+                <div>
+
+                    <h4 data-i18n="footer_resources">
+                        Resources
+                    </h4>
+
+
+                    <a
+                        href="pages/documentation/index.html"
+                        data-i18n="nav_documentation"
+                    >
+                        Documentation
+                    </a>
+
+
+                    <a
+                        href="pages/support.html"
+                        data-i18n="nav_support"
+                    >
+                        Support
+                    </a>
+
+                </div>
+
+
+
+                <!-- LEGAL -->
+
+                <div>
+
+                    <h4>
+                        Legal
+                    </h4>
+
+
+                    <a
+                        href="pages/legal/terms.html"
+                        data-i18n="terms"
+                    >
+                        Terms of Service
+                    </a>
+
+
+                    <a
+                        href="pages/legal/privacy.html"
+                        data-i18n="privacy"
+                    >
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="container footer-bottom">
+
+
+            <span data-i18n="footer_rights">
+                © 2026 NEKRONEX
+            </span>
+
+
+            <span data-i18n="footer_creator">
+                An independent project by RinzlerVoid.
+            </span>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- ========================================
+         SCRIPTS
+         ======================================== -->
+
+    <script src="./js/translations.js"></script>
+
+    <script src="./js/app.js"></script>
+
+
+</body>
+
+</html>
