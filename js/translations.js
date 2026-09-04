@@ -1220,7 +1220,59 @@ const translations = {
         workflow_step_01: "Conecta tu cuenta",
         workflow_step_02: "Selecciona un servidor",
         workflow_step_03: "Elige los sistemas que necesitas",
-        workflow_step_04: "Configura y lanza"
+        workflow_step_04: "Configura y lanza",
+
+        legal_back: "← Volver al inicio",
+        legal_note_label: "Documento base:",
+        terms_title: "Términos de servicio",
+        terms_meta: "Última actualización: 20 de agosto de 2026",
+        terms_note: "estos términos están preparados para la plataforma NekroNex y sus bots de Discord. Deben revisarse con un profesional legal antes de usarse como documento definitivo.",
+        terms_intro: "Al acceder o utilizar NekroNex, NYVEX Dashboard, NEXORA, NYVEX, KRYVEX, VELTRIX, SYNVEX u otros sistemas relacionados, aceptas estos términos. Si no estás de acuerdo, no utilices los servicios.",
+        terms_h2_1: "1. Descripción del servicio",
+        terms_p_1: "NekroNex ofrece herramientas y bots para comunidades de Discord, incluyendo automatización, bienvenida, música, seguridad, tickets, alertas multimedia y paneles de configuración. Algunas funciones pueden encontrarse en desarrollo, estar limitadas por permisos o depender de servicios externos.",
+        terms_h2_2: "2. Requisitos de uso",
+        terms_li_2_1: "Debes cumplir las reglas de Discord y las leyes aplicables.",
+        terms_li_2_2: "Debes tener permiso suficiente para instalar y configurar un bot en el servidor.",
+        terms_li_2_3: "Eres responsable de proteger tu cuenta, tus permisos y cualquier configuración realizada desde el Dashboard.",
+        terms_li_2_4: "No debes usar los servicios para spam, fraude, abuso, acoso, malware, evasión de sanciones o actividades ilegales.",
+        terms_h2_3: "3. Discord y servicios externos",
+        terms_p_3: "NekroNex no es propiedad ni está patrocinado por Discord. El uso de Discord continúa sujeto a sus propios términos, políticas y reglas. La disponibilidad de funciones que dependan de Discord, Railway, proveedores de música, redes sociales u otros terceros puede cambiar sin control directo de NekroNex.",
+        terms_h2_4: "4. Configuración y responsabilidad del servidor",
+        terms_p_4: "La persona que administra un servidor decide qué canales, roles, mensajes, logs y permisos utilizar. NekroNex no garantiza que una configuración sea adecuada para todos los servidores. Revisa siempre los permisos antes de activar moderación, registros o automatizaciones.",
+        terms_h2_5: "5. Disponibilidad y cambios",
+        terms_p_5: "Podemos modificar, suspender o retirar funciones para mejorar la seguridad, corregir errores o adaptar el servicio. Procuraremos mantener la continuidad, pero no prometemos disponibilidad permanente ni ausencia total de errores.",
+        terms_h2_6: "6. Propiedad intelectual",
+        terms_p_6: "Los nombres, marcas, diseños, código, imágenes y componentes propios de NekroNex pertenecen a sus respectivos titulares. No puedes copiar, revender, redistribuir o presentar estos elementos como propios sin autorización.",
+        terms_h2_7: "7. Limitación de responsabilidad",
+        terms_p_7: "En la medida permitida por la ley, NekroNex se proporciona “tal cual”. No nos hacemos responsables por pérdida de datos, configuraciones incorrectas, interrupciones de Discord o decisiones tomadas por administradores y usuarios del servidor.",
+        terms_h2_8: "8. Cambios en estos términos",
+        terms_p_8: "Podemos actualizar estos términos. La fecha de actualización aparecerá al principio de esta página. Continuar utilizando los servicios después de un cambio significa que aceptas la versión actualizada.",
+        terms_h2_9: "9. Contacto",
+        terms_p_9: "Para dudas sobre estos términos, escribe a <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> o utiliza los canales oficiales de soporte publicados en la página de NekroNex.",
+        privacy_title: "Política de privacidad",
+        privacy_note: "esta política describe el funcionamiento previsto de NekroNex. Debe ajustarse a la jurisdicción, proveedores y datos reales antes de publicarse como versión definitiva.",
+        privacy_intro: "Esta política explica qué información puede procesar NekroNex cuando utilizas sus páginas, bots, Dashboard o sistemas relacionados.",
+        privacy_h2_1: "1. Información que podemos recibir",
+        privacy_li_1_1: "<strong>Cuenta de Discord:</strong> identificador, nombre de usuario, avatar y servidores que Discord permite mostrar mediante OAuth2.",
+        privacy_li_1_2: "<strong>Configuración del servidor:</strong> preferencias de canales, roles, mensajes, logs y módulos que un administrador guarda desde el Dashboard.",
+        privacy_li_1_3: "<strong>Datos técnicos:</strong> dirección IP, navegador, registros de errores y datos básicos necesarios para seguridad y funcionamiento.",
+        privacy_li_1_4: "<strong>Contenido configurado:</strong> mensajes, imágenes o enlaces que el administrador decida guardar o enviar mediante un bot.",
+        privacy_h2_2: "2. Para qué utilizamos la información",
+        privacy_p_2: "Utilizamos la información para autenticar usuarios, mostrar servidores administrables, guardar configuraciones, ejecutar funciones solicitadas, mantener la seguridad, corregir errores y mejorar los servicios.",
+        privacy_h2_3: "3. Discord y terceros",
+        privacy_p_3: "La autenticación utiliza Discord OAuth2. También podemos utilizar proveedores de alojamiento, bases de datos, analítica, almacenamiento o distribución. Esos proveedores pueden procesar datos conforme a sus propias políticas y acuerdos.",
+        privacy_h2_4: "4. Conservación y eliminación",
+        privacy_p_4: "Conservamos la información mientras sea necesaria para prestar el servicio, mantener la seguridad o cumplir obligaciones legales. Puedes solicitar la eliminación de configuraciones o retirar la autorización de Discord; algunos registros técnicos pueden conservarse durante un periodo limitado por seguridad.",
+        privacy_h2_5: "5. Seguridad",
+        privacy_p_5: "Aplicamos medidas razonables como variables de entorno para secretos, permisos mínimos, validación de redirecciones, control de acceso y protección de sesiones. Ningún sistema conectado a Internet puede garantizar seguridad absoluta.",
+        privacy_h2_6: "6. Cookies y almacenamiento local",
+        privacy_p_6: "El Dashboard puede utilizar cookies de sesión necesarias para mantener la autenticación. La web pública puede guardar localmente la preferencia de idioma. No utilizamos esa preferencia para identificarte.",
+        privacy_h2_7: "7. Derechos y contacto",
+        privacy_p_7: "Dependiendo de tu jurisdicción, puedes solicitar acceso, corrección, eliminación, limitación u oposición al tratamiento de tus datos. Para realizar una solicitud, escribe a <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> e indica qué información deseas revisar.",
+        privacy_h2_8: "8. Menores",
+        privacy_p_8: "Los servicios no están diseñados para recopilar conscientemente información de menores. Si crees que un menor nos proporcionó datos personales, contacta con soporte para que podamos revisarlo.",
+        privacy_h2_9: "9. Cambios",
+        privacy_p_9: "Podemos actualizar esta política cuando cambien los servicios, proveedores o requisitos legales. Publicaremos la fecha de actualización en esta página.",
     },
 
 
@@ -2444,7 +2496,59 @@ const translations = {
         workflow_step_01: "Connect your account",
         workflow_step_02: "Select a server",
         workflow_step_03: "Choose the systems you need",
-        workflow_step_04: "Configure and launch"
+        workflow_step_04: "Configure and launch",
+
+        legal_back: "← Back to home",
+        legal_note_label: "Base document:",
+        terms_title: "Terms of Service",
+        terms_meta: "Last updated: August 20, 2026",
+        terms_note: "these terms are prepared for the NekroNex platform and its Discord bots. They should be reviewed by a legal professional before being used as a final document.",
+        terms_intro: "By accessing or using NekroNex, NYVEX Dashboard, NEXORA, NYVEX, KRYVEX, VELTRIX, SYNVEX or related systems, you agree to these terms. If you do not agree, do not use the services.",
+        terms_h2_1: "1. Service description",
+        terms_p_1: "NekroNex offers tools and bots for Discord communities, including automation, welcome, music, security, tickets, media alerts and configuration panels. Some features may be under development, limited by permissions, or dependent on external services.",
+        terms_h2_2: "2. Requirements for use",
+        terms_li_2_1: "You must comply with Discord's rules and applicable laws.",
+        terms_li_2_2: "You must have sufficient permission to install and configure a bot on the server.",
+        terms_li_2_3: "You are responsible for protecting your account, your permissions, and any configuration made from the Dashboard.",
+        terms_li_2_4: "You must not use the services for spam, fraud, abuse, harassment, malware, evasion of sanctions, or illegal activity.",
+        terms_h2_3: "3. Discord and external services",
+        terms_p_3: "NekroNex is not owned by or sponsored by Discord. Use of Discord remains subject to its own terms, policies and rules. The availability of features that depend on Discord, Railway, music providers, social networks or other third parties may change without NekroNex's direct control.",
+        terms_h2_4: "4. Server configuration and responsibility",
+        terms_p_4: "The person administering a server decides which channels, roles, messages, logs and permissions to use. NekroNex does not guarantee that a configuration is suitable for every server. Always review permissions before enabling moderation, logging or automation.",
+        terms_h2_5: "5. Availability and changes",
+        terms_p_5: "We may modify, suspend or withdraw features to improve security, fix bugs or adapt the service. We will try to maintain continuity, but we do not promise permanent availability or the total absence of errors.",
+        terms_h2_6: "6. Intellectual property",
+        terms_p_6: "The names, trademarks, designs, code, images and components belonging to NekroNex belong to their respective owners. You may not copy, resell, redistribute or present these elements as your own without authorization.",
+        terms_h2_7: "7. Limitation of liability",
+        terms_p_7: "To the extent permitted by law, NekroNex is provided \"as is\". We are not responsible for data loss, incorrect configurations, Discord outages, or decisions made by server administrators and users.",
+        terms_h2_8: "8. Changes to these terms",
+        terms_p_8: "We may update these terms. The update date will appear at the top of this page. Continuing to use the services after a change means you accept the updated version.",
+        terms_h2_9: "9. Contact",
+        terms_p_9: "For questions about these terms, write to <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> or use the official support channels published on the NekroNex site.",
+        privacy_title: "Privacy Policy",
+        privacy_note: "this policy describes NekroNex's intended operation. It should be adapted to the applicable jurisdiction, providers and real data before being published as a final version.",
+        privacy_intro: "This policy explains what information NekroNex may process when you use its pages, bots, Dashboard or related systems.",
+        privacy_h2_1: "1. Information we may receive",
+        privacy_li_1_1: "<strong>Discord account:</strong> identifier, username, avatar and servers that Discord allows to be shown via OAuth2.",
+        privacy_li_1_2: "<strong>Server configuration:</strong> channel, role, message, log and module preferences that an administrator saves from the Dashboard.",
+        privacy_li_1_3: "<strong>Technical data:</strong> IP address, browser, error logs and basic data needed for security and operation.",
+        privacy_li_1_4: "<strong>Configured content:</strong> messages, images or links that the administrator chooses to save or send through a bot.",
+        privacy_h2_2: "2. What we use the information for",
+        privacy_p_2: "We use the information to authenticate users, display manageable servers, save configurations, run requested features, maintain security, fix errors and improve the services.",
+        privacy_h2_3: "3. Discord and third parties",
+        privacy_p_3: "Authentication uses Discord OAuth2. We may also use hosting, database, analytics or storage providers. Those providers may process data under their own policies and agreements.",
+        privacy_h2_4: "4. Retention and deletion",
+        privacy_p_4: "We keep information for as long as it's necessary to provide the service, maintain security, or comply with legal obligations. You can request deletion of configurations or revoke Discord authorization; some technical logs may be kept for a limited period for security reasons.",
+        privacy_h2_5: "5. Security",
+        privacy_p_5: "We apply reasonable measures such as environment variables for secrets, minimal permissions, redirect validation, access control and session protection. No system connected to the internet can guarantee absolute security.",
+        privacy_h2_6: "6. Cookies and local storage",
+        privacy_p_6: "The Dashboard may use session cookies necessary to maintain authentication. The public website may locally save your language preference. We do not use that preference to identify you.",
+        privacy_h2_7: "7. Rights and contact",
+        privacy_p_7: "Depending on your jurisdiction, you may request access, correction, deletion, restriction or objection to the processing of your data. To make a request, write to <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> and indicate which information you'd like reviewed.",
+        privacy_h2_8: "8. Minors",
+        privacy_p_8: "The services are not designed to knowingly collect information from minors. If you believe a minor has provided us with personal data, contact support so we can review it.",
+        privacy_h2_9: "9. Changes",
+        privacy_p_9: "We may update this policy when the services, providers or legal requirements change. We will publish the update date on this page.",
     }
 
 };
@@ -2935,6 +3039,58 @@ translations.de = {
     workflow_step_02: "Wähle einen Server",
     workflow_step_03: "Wähle die benötigten Systeme",
     workflow_step_04: "Konfigurieren und starten",
+
+    legal_back: "← Zurück zur Startseite",
+    legal_note_label: "Basisdokument:",
+    terms_title: "Nutzungsbedingungen",
+    terms_meta: "Zuletzt aktualisiert: 20. August 2026",
+    terms_note: "diese Bedingungen wurden für die NekroNex-Plattform und ihre Discord-Bots erstellt. Sie sollten von einer Rechtsfachperson geprüft werden, bevor sie als endgültiges Dokument verwendet werden.",
+    terms_intro: "Durch den Zugriff auf oder die Nutzung von NekroNex, NYVEX Dashboard, NEXORA, NYVEX, KRYVEX, VELTRIX, SYNVEX oder verwandten Systemen stimmst du diesen Bedingungen zu. Wenn du nicht einverstanden bist, nutze die Dienste nicht.",
+    terms_h2_1: "1. Beschreibung des Dienstes",
+    terms_p_1: "NekroNex bietet Tools und Bots für Discord-Communitys, einschließlich Automatisierung, Willkommen, Musik, Sicherheit, Tickets, Medienalarme und Konfigurationspanels. Manche Funktionen können sich in Entwicklung befinden, durch Berechtigungen eingeschränkt sein oder von externen Diensten abhängen.",
+    terms_h2_2: "2. Nutzungsvoraussetzungen",
+    terms_li_2_1: "Du musst die Regeln von Discord und die geltenden Gesetze einhalten.",
+    terms_li_2_2: "Du musst ausreichende Berechtigung haben, um einen Bot auf dem Server zu installieren und zu konfigurieren.",
+    terms_li_2_3: "Du bist dafür verantwortlich, dein Konto, deine Berechtigungen und jede über das Dashboard vorgenommene Konfiguration zu schützen.",
+    terms_li_2_4: "Du darfst die Dienste nicht für Spam, Betrug, Missbrauch, Belästigung, Malware, Umgehung von Sanktionen oder illegale Aktivitäten nutzen.",
+    terms_h2_3: "3. Discord und externe Dienste",
+    terms_p_3: "NekroNex gehört nicht zu Discord und wird nicht von Discord gesponsert. Die Nutzung von Discord unterliegt weiterhin dessen eigenen Bedingungen, Richtlinien und Regeln. Die Verfügbarkeit von Funktionen, die von Discord, Railway, Musikanbietern, sozialen Netzwerken oder anderen Dritten abhängen, kann sich ohne direkte Kontrolle durch NekroNex ändern.",
+    terms_h2_4: "4. Serverkonfiguration und Verantwortung",
+    terms_p_4: "Die Person, die einen Server verwaltet, entscheidet, welche Kanäle, Rollen, Nachrichten, Logs und Berechtigungen verwendet werden. NekroNex garantiert nicht, dass eine Konfiguration für jeden Server geeignet ist. Überprüfe stets die Berechtigungen, bevor du Moderation, Protokollierung oder Automatisierung aktivierst.",
+    terms_h2_5: "5. Verfügbarkeit und Änderungen",
+    terms_p_5: "Wir können Funktionen ändern, aussetzen oder entfernen, um die Sicherheit zu verbessern, Fehler zu beheben oder den Dienst anzupassen. Wir werden versuchen, die Kontinuität zu wahren, versprechen aber keine dauerhafte Verfügbarkeit oder völlige Fehlerfreiheit.",
+    terms_h2_6: "6. Geistiges Eigentum",
+    terms_p_6: "Die Namen, Marken, Designs, der Code, die Bilder und Komponenten von NekroNex gehören ihren jeweiligen Inhabern. Du darfst diese Elemente ohne Genehmigung nicht kopieren, weiterverkaufen, weiterverbreiten oder als deine eigenen ausgeben.",
+    terms_h2_7: "7. Haftungsbeschränkung",
+    terms_p_7: "Soweit gesetzlich zulässig, wird NekroNex „wie besehen“ bereitgestellt. Wir haften nicht für Datenverlust, fehlerhafte Konfigurationen, Discord-Ausfälle oder Entscheidungen von Serveradministratoren und Nutzern.",
+    terms_h2_8: "8. Änderungen dieser Bedingungen",
+    terms_p_8: "Wir können diese Bedingungen aktualisieren. Das Aktualisierungsdatum erscheint oben auf dieser Seite. Die weitere Nutzung der Dienste nach einer Änderung bedeutet, dass du die aktualisierte Version akzeptierst.",
+    terms_h2_9: "9. Kontakt",
+    terms_p_9: "Bei Fragen zu diesen Bedingungen schreibe an <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> oder nutze die offiziellen Support-Kanäle auf der NekroNex-Website.",
+    privacy_title: "Datenschutzrichtlinie",
+    privacy_note: "diese Richtlinie beschreibt die vorgesehene Funktionsweise von NekroNex. Sie sollte an die geltende Rechtsordnung, die Anbieter und die tatsächlichen Daten angepasst werden, bevor sie als endgültige Version veröffentlicht wird.",
+    privacy_intro: "Diese Richtlinie erklärt, welche Informationen NekroNex verarbeiten kann, wenn du seine Seiten, Bots, das Dashboard oder verwandte Systeme nutzt.",
+    privacy_h2_1: "1. Informationen, die wir erhalten können",
+    privacy_li_1_1: "<strong>Discord-Konto:</strong> Kennung, Benutzername, Avatar und Server, die Discord über OAuth2 anzuzeigen erlaubt.",
+    privacy_li_1_2: "<strong>Serverkonfiguration:</strong> Kanal-, Rollen-, Nachrichten-, Log- und Modulpräferenzen, die ein Administrator über das Dashboard speichert.",
+    privacy_li_1_3: "<strong>Technische Daten:</strong> IP-Adresse, Browser, Fehlerprotokolle und grundlegende Daten, die für Sicherheit und Betrieb erforderlich sind.",
+    privacy_li_1_4: "<strong>Konfigurierte Inhalte:</strong> Nachrichten, Bilder oder Links, die der Administrator speichern oder über einen Bot senden möchte.",
+    privacy_h2_2: "2. Wofür wir die Informationen verwenden",
+    privacy_p_2: "Wir verwenden die Informationen, um Nutzer zu authentifizieren, verwaltbare Server anzuzeigen, Konfigurationen zu speichern, angeforderte Funktionen auszuführen, die Sicherheit zu gewährleisten, Fehler zu beheben und die Dienste zu verbessern.",
+    privacy_h2_3: "3. Discord und Dritte",
+    privacy_p_3: "Die Authentifizierung nutzt Discord OAuth2. Wir können auch Hosting-, Datenbank-, Analyse- oder Speicheranbieter nutzen. Diese Anbieter können Daten gemäß ihren eigenen Richtlinien und Vereinbarungen verarbeiten.",
+    privacy_h2_4: "4. Aufbewahrung und Löschung",
+    privacy_p_4: "Wir bewahren Informationen so lange auf, wie es zur Erbringung des Dienstes, zur Wahrung der Sicherheit oder zur Erfüllung gesetzlicher Pflichten erforderlich ist. Du kannst die Löschung von Konfigurationen beantragen oder die Discord-Autorisierung widerrufen; einige technische Protokolle können aus Sicherheitsgründen für einen begrenzten Zeitraum aufbewahrt werden.",
+    privacy_h2_5: "5. Sicherheit",
+    privacy_p_5: "Wir wenden angemessene Maßnahmen an, wie Umgebungsvariablen für Geheimnisse, minimale Berechtigungen, Validierung von Weiterleitungen, Zugriffskontrolle und Sitzungsschutz. Kein mit dem Internet verbundenes System kann absolute Sicherheit garantieren.",
+    privacy_h2_6: "6. Cookies und lokaler Speicher",
+    privacy_p_6: "Das Dashboard kann Sitzungscookies verwenden, die zur Aufrechterhaltung der Authentifizierung notwendig sind. Die öffentliche Website kann deine Sprachpräferenz lokal speichern. Wir verwenden diese Präferenz nicht, um dich zu identifizieren.",
+    privacy_h2_7: "7. Rechte und Kontakt",
+    privacy_p_7: "Je nach deiner Rechtsordnung kannst du Zugang, Berichtigung, Löschung, Einschränkung oder Widerspruch gegen die Verarbeitung deiner Daten beantragen. Um eine Anfrage zu stellen, schreibe an <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> und gib an, welche Informationen du überprüfen möchtest.",
+    privacy_h2_8: "8. Minderjährige",
+    privacy_p_8: "Die Dienste sind nicht darauf ausgelegt, wissentlich Informationen von Minderjährigen zu sammeln. Wenn du glaubst, dass uns ein Minderjähriger personenbezogene Daten mitgeteilt hat, kontaktiere den Support, damit wir dies prüfen können.",
+    privacy_h2_9: "9. Änderungen",
+    privacy_p_9: "Wir können diese Richtlinie aktualisieren, wenn sich die Dienste, Anbieter oder gesetzlichen Anforderungen ändern. Wir werden das Aktualisierungsdatum auf dieser Seite veröffentlichen.",
 };
 
 /* Français — traduction complète */
@@ -3420,6 +3576,58 @@ translations.fr = {
     workflow_step_02: "Sélectionnez un serveur",
     workflow_step_03: "Choisissez les systèmes dont vous avez besoin",
     workflow_step_04: "Configurez et lancez",
+
+    legal_back: "← Retour à l'accueil",
+    legal_note_label: "Document de base :",
+    terms_title: "Conditions d'utilisation",
+    terms_meta: "Dernière mise à jour : 20 août 2026",
+    terms_note: "ces conditions sont préparées pour la plateforme NekroNex et ses bots Discord. Elles doivent être révisées par un professionnel du droit avant d'être utilisées comme document définitif.",
+    terms_intro: "En accédant à ou en utilisant NekroNex, NYVEX Dashboard, NEXORA, NYVEX, KRYVEX, VELTRIX, SYNVEX ou d'autres systèmes connexes, vous acceptez ces conditions. Si vous n'êtes pas d'accord, n'utilisez pas les services.",
+    terms_h2_1: "1. Description du service",
+    terms_p_1: "NekroNex propose des outils et des bots pour les communautés Discord, incluant automatisation, bienvenue, musique, sécurité, tickets, alertes multimédias et panneaux de configuration. Certaines fonctionnalités peuvent être en développement, limitées par des permissions ou dépendre de services externes.",
+    terms_h2_2: "2. Conditions d'utilisation",
+    terms_li_2_1: "Vous devez respecter les règles de Discord et les lois applicables.",
+    terms_li_2_2: "Vous devez disposer des permissions suffisantes pour installer et configurer un bot sur le serveur.",
+    terms_li_2_3: "Vous êtes responsable de la protection de votre compte, de vos permissions et de toute configuration effectuée depuis le Dashboard.",
+    terms_li_2_4: "Vous ne devez pas utiliser les services pour du spam, de la fraude, des abus, du harcèlement, des malwares, le contournement de sanctions ou des activités illégales.",
+    terms_h2_3: "3. Discord et services externes",
+    terms_p_3: "NekroNex n'est ni détenu ni parrainé par Discord. L'utilisation de Discord reste soumise à ses propres conditions, politiques et règles. La disponibilité des fonctionnalités dépendant de Discord, Railway, fournisseurs de musique, réseaux sociaux ou autres tiers peut changer sans le contrôle direct de NekroNex.",
+    terms_h2_4: "4. Configuration et responsabilité du serveur",
+    terms_p_4: "La personne qui administre un serveur décide quels canaux, rôles, messages, journaux et permissions utiliser. NekroNex ne garantit pas qu'une configuration convienne à tous les serveurs. Vérifiez toujours les permissions avant d'activer la modération, la journalisation ou l'automatisation.",
+    terms_h2_5: "5. Disponibilité et modifications",
+    terms_p_5: "Nous pouvons modifier, suspendre ou retirer des fonctionnalités pour améliorer la sécurité, corriger des erreurs ou adapter le service. Nous chercherons à maintenir la continuité, mais nous ne promettons pas une disponibilité permanente ni l'absence totale d'erreurs.",
+    terms_h2_6: "6. Propriété intellectuelle",
+    terms_p_6: "Les noms, marques, designs, code, images et composants propres à NekroNex appartiennent à leurs titulaires respectifs. Vous ne pouvez pas copier, revendre, redistribuer ou présenter ces éléments comme les vôtres sans autorisation.",
+    terms_h2_7: "7. Limitation de responsabilité",
+    terms_p_7: "Dans la mesure permise par la loi, NekroNex est fourni « tel quel ». Nous ne sommes pas responsables des pertes de données, des configurations incorrectes, des interruptions de Discord ou des décisions prises par les administrateurs et utilisateurs du serveur.",
+    terms_h2_8: "8. Modifications de ces conditions",
+    terms_p_8: "Nous pouvons mettre à jour ces conditions. La date de mise à jour apparaîtra en haut de cette page. Continuer à utiliser les services après une modification signifie que vous acceptez la version mise à jour.",
+    terms_h2_9: "9. Contact",
+    terms_p_9: "Pour toute question concernant ces conditions, écrivez à <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> ou utilisez les canaux de support officiels publiés sur le site NekroNex.",
+    privacy_title: "Politique de confidentialité",
+    privacy_note: "cette politique décrit le fonctionnement prévu de NekroNex. Elle doit être adaptée à la juridiction applicable, aux fournisseurs et aux données réelles avant d'être publiée en tant que version définitive.",
+    privacy_intro: "Cette politique explique quelles informations NekroNex peut traiter lorsque vous utilisez ses pages, bots, Dashboard ou systèmes connexes.",
+    privacy_h2_1: "1. Informations que nous pouvons recevoir",
+    privacy_li_1_1: "<strong>Compte Discord :</strong> identifiant, nom d'utilisateur, avatar et serveurs que Discord autorise à afficher via OAuth2.",
+    privacy_li_1_2: "<strong>Configuration du serveur :</strong> préférences de canaux, rôles, messages, journaux et modules qu'un administrateur enregistre depuis le Dashboard.",
+    privacy_li_1_3: "<strong>Données techniques :</strong> adresse IP, navigateur, journaux d'erreurs et données de base nécessaires à la sécurité et au fonctionnement.",
+    privacy_li_1_4: "<strong>Contenu configuré :</strong> messages, images ou liens que l'administrateur choisit d'enregistrer ou d'envoyer via un bot.",
+    privacy_h2_2: "2. À quoi nous utilisons les informations",
+    privacy_p_2: "Nous utilisons les informations pour authentifier les utilisateurs, afficher les serveurs gérables, enregistrer les configurations, exécuter les fonctionnalités demandées, maintenir la sécurité, corriger les erreurs et améliorer les services.",
+    privacy_h2_3: "3. Discord et tiers",
+    privacy_p_3: "L'authentification utilise Discord OAuth2. Nous pouvons également utiliser des fournisseurs d'hébergement, de bases de données, d'analyse ou de stockage. Ces fournisseurs peuvent traiter les données selon leurs propres politiques et accords.",
+    privacy_h2_4: "4. Conservation et suppression",
+    privacy_p_4: "Nous conservons les informations aussi longtemps que nécessaire pour fournir le service, maintenir la sécurité ou respecter les obligations légales. Vous pouvez demander la suppression des configurations ou révoquer l'autorisation Discord ; certains journaux techniques peuvent être conservés pendant une période limitée pour des raisons de sécurité.",
+    privacy_h2_5: "5. Sécurité",
+    privacy_p_5: "Nous appliquons des mesures raisonnables telles que des variables d'environnement pour les secrets, des permissions minimales, la validation des redirections, le contrôle d'accès et la protection des sessions. Aucun système connecté à Internet ne peut garantir une sécurité absolue.",
+    privacy_h2_6: "6. Cookies et stockage local",
+    privacy_p_6: "Le Dashboard peut utiliser des cookies de session nécessaires au maintien de l'authentification. Le site public peut enregistrer localement votre préférence de langue. Nous n'utilisons pas cette préférence pour vous identifier.",
+    privacy_h2_7: "7. Droits et contact",
+    privacy_p_7: "Selon votre juridiction, vous pouvez demander l'accès, la correction, la suppression, la limitation ou l'opposition au traitement de vos données. Pour faire une demande, écrivez à <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> en indiquant quelles informations vous souhaitez examiner.",
+    privacy_h2_8: "8. Mineurs",
+    privacy_p_8: "Les services ne sont pas conçus pour collecter sciemment des informations sur des mineurs. Si vous pensez qu'un mineur nous a fourni des données personnelles, contactez le support afin que nous puissions vérifier.",
+    privacy_h2_9: "9. Modifications",
+    privacy_p_9: "Nous pouvons mettre à jour cette politique lorsque les services, fournisseurs ou exigences légales changent. Nous publierons la date de mise à jour sur cette page.",
 };
 
 /* Português — tradução completa */
@@ -3905,4 +4113,428 @@ translations.pt = {
     workflow_step_02: "Selecione um servidor",
     workflow_step_03: "Escolha os sistemas que você precisa",
     workflow_step_04: "Configure e lance",
+
+    legal_back: "← Voltar ao início",
+    legal_note_label: "Documento base:",
+    terms_title: "Termos de Serviço",
+    terms_meta: "Última atualização: 20 de agosto de 2026",
+    terms_note: "estes termos foram preparados para a plataforma NekroNex e seus bots do Discord. Devem ser revisados por um profissional jurídico antes de serem usados como documento definitivo.",
+    terms_intro: "Ao acessar ou utilizar o NekroNex, NYVEX Dashboard, NEXORA, NYVEX, KRYVEX, VELTRIX, SYNVEX ou outros sistemas relacionados, você concorda com estes termos. Se não concordar, não utilize os serviços.",
+    terms_h2_1: "1. Descrição do serviço",
+    terms_p_1: "O NekroNex oferece ferramentas e bots para comunidades do Discord, incluindo automação, boas-vindas, música, segurança, tickets, alertas multimídia e painéis de configuração. Alguns recursos podem estar em desenvolvimento, limitados por permissões ou depender de serviços externos.",
+    terms_h2_2: "2. Requisitos de uso",
+    terms_li_2_1: "Você deve cumprir as regras do Discord e as leis aplicáveis.",
+    terms_li_2_2: "Você deve ter permissão suficiente para instalar e configurar um bot no servidor.",
+    terms_li_2_3: "Você é responsável por proteger sua conta, suas permissões e qualquer configuração feita a partir do Dashboard.",
+    terms_li_2_4: "Você não deve usar os serviços para spam, fraude, abuso, assédio, malware, evasão de sanções ou atividades ilegais.",
+    terms_h2_3: "3. Discord e serviços externos",
+    terms_p_3: "O NekroNex não é propriedade nem é patrocinado pelo Discord. O uso do Discord continua sujeito aos seus próprios termos, políticas e regras. A disponibilidade de recursos que dependem do Discord, Railway, provedores de música, redes sociais ou outros terceiros pode mudar sem o controle direto do NekroNex.",
+    terms_h2_4: "4. Configuração e responsabilidade do servidor",
+    terms_p_4: "A pessoa que administra um servidor decide quais canais, cargos, mensagens, logs e permissões usar. O NekroNex não garante que uma configuração seja adequada para todos os servidores. Sempre revise as permissões antes de ativar moderação, registros ou automações.",
+    terms_h2_5: "5. Disponibilidade e mudanças",
+    terms_p_5: "Podemos modificar, suspender ou remover recursos para melhorar a segurança, corrigir erros ou adaptar o serviço. Procuraremos manter a continuidade, mas não prometemos disponibilidade permanente nem ausência total de erros.",
+    terms_h2_6: "6. Propriedade intelectual",
+    terms_p_6: "Os nomes, marcas, designs, código, imagens e componentes do NekroNex pertencem aos seus respectivos titulares. Você não pode copiar, revender, redistribuir ou apresentar esses elementos como próprios sem autorização.",
+    terms_h2_7: "7. Limitação de responsabilidade",
+    terms_p_7: "Na medida permitida por lei, o NekroNex é fornecido \"como está\". Não nos responsabilizamos por perda de dados, configurações incorretas, interrupções do Discord ou decisões tomadas por administradores e usuários do servidor.",
+    terms_h2_8: "8. Alterações nestes termos",
+    terms_p_8: "Podemos atualizar estes termos. A data de atualização aparecerá no início desta página. Continuar usando os serviços após uma alteração significa que você aceita a versão atualizada.",
+    terms_h2_9: "9. Contato",
+    terms_p_9: "Para dúvidas sobre estes termos, escreva para <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> ou use os canais oficiais de suporte publicados no site do NekroNex.",
+    privacy_title: "Política de Privacidade",
+    privacy_note: "esta política descreve o funcionamento previsto do NekroNex. Deve ser ajustada à jurisdição, aos provedores e aos dados reais antes de ser publicada como versão definitiva.",
+    privacy_intro: "Esta política explica quais informações o NekroNex pode processar quando você usa suas páginas, bots, Dashboard ou sistemas relacionados.",
+    privacy_h2_1: "1. Informações que podemos receber",
+    privacy_li_1_1: "<strong>Conta do Discord:</strong> identificador, nome de usuário, avatar e servidores que o Discord permite exibir via OAuth2.",
+    privacy_li_1_2: "<strong>Configuração do servidor:</strong> preferências de canais, cargos, mensagens, logs e módulos que um administrador salva pelo Dashboard.",
+    privacy_li_1_3: "<strong>Dados técnicos:</strong> endereço IP, navegador, registros de erros e dados básicos necessários para segurança e funcionamento.",
+    privacy_li_1_4: "<strong>Conteúdo configurado:</strong> mensagens, imagens ou links que o administrador decida salvar ou enviar por meio de um bot.",
+    privacy_h2_2: "2. Para que usamos as informações",
+    privacy_p_2: "Usamos as informações para autenticar usuários, exibir servidores administráveis, salvar configurações, executar funções solicitadas, manter a segurança, corrigir erros e melhorar os serviços.",
+    privacy_h2_3: "3. Discord e terceiros",
+    privacy_p_3: "A autenticação usa o Discord OAuth2. Também podemos usar provedores de hospedagem, bancos de dados, análise ou armazenamento. Esses provedores podem processar dados conforme suas próprias políticas e acordos.",
+    privacy_h2_4: "4. Retenção e exclusão",
+    privacy_p_4: "Mantemos as informações pelo tempo necessário para prestar o serviço, manter a segurança ou cumprir obrigações legais. Você pode solicitar a exclusão de configurações ou revogar a autorização do Discord; alguns registros técnicos podem ser mantidos por um período limitado por motivos de segurança.",
+    privacy_h2_5: "5. Segurança",
+    privacy_p_5: "Aplicamos medidas razoáveis, como variáveis de ambiente para segredos, permissões mínimas, validação de redirecionamentos, controle de acesso e proteção de sessões. Nenhum sistema conectado à internet pode garantir segurança absoluta.",
+    privacy_h2_6: "6. Cookies e armazenamento local",
+    privacy_p_6: "O Dashboard pode usar cookies de sessão necessários para manter a autenticação. O site público pode salvar localmente sua preferência de idioma. Não usamos essa preferência para identificá-lo.",
+    privacy_h2_7: "7. Direitos e contato",
+    privacy_p_7: "Dependendo da sua jurisdição, você pode solicitar acesso, correção, exclusão, limitação ou oposição ao tratamento dos seus dados. Para fazer uma solicitação, escreva para <a href=\"mailto:nekronex.support@gmail.com\">nekronex.support@gmail.com</a> e indique quais informações deseja revisar.",
+    privacy_h2_8: "8. Menores de idade",
+    privacy_p_8: "Os serviços não são projetados para coletar conscientemente informações de menores de idade. Se você acredita que um menor nos forneceu dados pessoais, entre em contato com o suporte para que possamos revisar.",
+    privacy_h2_9: "9. Alterações",
+    privacy_p_9: "Podemos atualizar esta política quando os serviços, provedores ou requisitos legais mudarem. Publicaremos a data de atualização nesta página.",
 };
+
+
+/* =====================================================
+   NEKRONEX V2 ALIASES + SHARED UI
+   ===================================================== */
+(function () {
+  const shared = {
+    es: {
+      products:'Productos',resources:'Recursos',documentation:'Documentación',support:'Soporte',premium:'Premium',dashboard:'Dashboard',home:'Inicio',legal:'Legal',privacy:'Privacidad',terms:'Términos',get_started:'Comenzar',
+      hero_label:'LA NUEVA GENERACIÓN DE HERRAMIENTAS PARA DISCORD',hero_desc:'Bots, infraestructura y control central reunidos en una sola experiencia. Menos fricción. Más control. Más comunidad.',explore:'Explorar ecosistema',open_dashboard:'Abrir Dashboard',systems:'Sistemas activos',languages:'Idiomas de interfaz',dashboard_central:'Control central',premium_ready:'Premium preparado',platform_label:'EL ECOSISTEMA NEKRONEX',platform_title:'Todo conectado. Todo en su sitio.',platform_desc:'Cada sistema tiene una función clara y el Dashboard reúne la configuración en un solo punto.',products_label:'PRODUCTOS',products_heading:'Herramientas creadas para trabajar juntas.',
+      product_dashboard:'Centro de control para todo el ecosistema.',product_nexora:'Música, colas, playlists y control de reproducción para Discord.',product_nyvex:'Bienvenidas, despedidas, autoroles y gestión de comunidad.',product_kryvex:'Protección, moderación, Anti-Raid, Anti-Nuke y recuperación.',product_veltrix:'Tickets privados, staff, prioridades, transcripciones y registros.',synvex_desc:'Alertas multimedia para vídeos nuevos, directos y contenido reciente.',available:'DISPONIBLE',development:'EN DESARROLLO',view_product:'Ver producto',docs:'Documentación',soon:'Próximamente',
+      workflow_label:'CÓMO FUNCIONA',workflow_title:'De la instalación al control.',workflow_desc:'Conecta tus bots, entra al Dashboard y configura el ecosistema desde un flujo sencillo.',workflow_1:'Añade los sistemas que necesitas',workflow_2:'Conecta tu cuenta de Discord',workflow_3:'Selecciona un servidor',workflow_4:'Configura cada módulo',workflow_5:'Amplía con Premium cuando quieras',
+      premium_label:'NEKRONEX CUSTOM',premium_title:'Haz que tu bot se sienta parte de tu servidor.',premium_desc:'Estamos preparando un sistema Premium para contratar personalización compatible y funciones adicionales mediante licencias temporales.',premium_feature_1:'Personalización compatible',premium_feature_2:'Licencia por servidor',premium_feature_3:'Duraciones flexibles',premium_feature_4:'Gestión desde Dashboard',premium_plan1:'Custom · 30 días',premium_plan2:'Pro · 90 días',premium_plan3:'Elite · 365 días',
+      collab_label:'FUTURAS COLABORACIONES',collab_title:'Construyendo conexiones más grandes.',collab_desc:'Un espacio preparado para futuras colaboraciones con creadores, comunidades y proyectos.',faq_label:'PREGUNTAS FRECUENTES',faq_title:'Respuestas antes de empezar.',faq1q:'¿NekroNex reemplaza a Discord?',faq1a:'No. NekroNex crea herramientas que funcionan alrededor de Discord para ayudarte a gestionar tu comunidad.',faq2q:'¿Dónde configuro los bots?',faq2a:'Las funciones centrales de configuración se concentran en NYVEX Dashboard.',faq3q:'¿Qué es NekroNex Custom?',faq3a:'Es el concepto Premium para ofrecer personalización asociada a un servidor durante una licencia contratada.',faq4q:'¿Los pagos ya están activos?',faq4a:'No todavía. El checkout y la gestión real de licencias requieren el backend de pagos.',cta_title:'Tu comunidad. Un solo ecosistema.',cta_desc:'Empieza con los sistemas que necesitas y deja que NekroNex haga el resto.',footer_desc:'Tecnología, infraestructura y herramientas para comunidades modernas de Discord.',creator:'Un proyecto independiente de RinzlerVoid.',rights:'© 2026 NEKRONEX',send_email:'Enviar correo',choose:'Selecciona una opción',support_mail:'Escribe a nekronex.support@gmail.com',back:'Volver',quick:'Guía rápida',features:'Características',status:'Estado',platform:'Plataforma',version:'Versión',developer:'Desarrollador',commands:'Comandos',configuration:'Configuración',cookie_title:'Privacidad y almacenamiento local',cookie_desc:'Usamos almacenamiento local para recordar idioma y preferencias. No añadimos analítica opcional sin consentimiento.',accept:'Aceptar',reject:'Rechazar',settings:'Configurar',legal_note:'Documento base. Revísalo para tu jurisdicción y proveedores antes de publicarlo como texto legal definitivo.'
+    },
+    en: {
+      products:'Products',resources:'Resources',documentation:'Documentation',support:'Support',premium:'Premium',dashboard:'Dashboard',home:'Home',legal:'Legal',privacy:'Privacy',terms:'Terms',get_started:'Get Started',hero_label:'THE NEXT GENERATION OF DISCORD TOOLS',hero_desc:'Bots, infrastructure and central control brought together in one experience. Less friction. More control. More community.',explore:'Explore ecosystem',open_dashboard:'Open Dashboard',systems:'Active systems',languages:'Interface languages',dashboard_central:'Central control',premium_ready:'Premium ready',platform_label:'THE NEKRONEX ECOSYSTEM',platform_title:'Everything connected. Everything in its place.',platform_desc:'Every system has a clear role and the Dashboard brings configuration together.',products_label:'PRODUCTS',products_heading:'Tools designed to work together.',product_dashboard:'Central control for the whole ecosystem.',product_nexora:'Music, queues, playlists and playback control for Discord.',product_nyvex:'Welcomes, goodbyes, auto roles and community management.',product_kryvex:'Protection, moderation, Anti-Raid, Anti-Nuke and recovery.',product_veltrix:'Private tickets, staff tools, priorities, transcripts and logs.',synvex_desc:'Media alerts for new videos, livestreams and recent content.',available:'AVAILABLE',development:'IN DEVELOPMENT',view_product:'View product',docs:'Documentation',soon:'Coming soon',workflow_label:'HOW IT WORKS',workflow_title:'From installation to control.',workflow_desc:'Connect your bots, open the Dashboard and configure the ecosystem through a simple flow.',workflow_1:'Add the systems you need',workflow_2:'Connect your Discord account',workflow_3:'Select a server',workflow_4:'Configure each module',workflow_5:'Expand with Premium when ready',premium_label:'NEKRONEX CUSTOM',premium_title:'Make your bot feel native to your server.',premium_desc:'We are preparing a Premium system for compatible customization and additional features through time-limited licenses.',premium_feature_1:'Compatible customization',premium_feature_2:'Server-bound license',premium_feature_3:'Flexible durations',premium_feature_4:'Dashboard management',premium_plan1:'Custom · 30 days',premium_plan2:'Pro · 90 days',premium_plan3:'Elite · 365 days',collab_label:'FUTURE COLLABORATIONS',collab_title:'Building bigger connections.',collab_desc:'A space prepared for future collaborations with creators, communities and projects.',faq_label:'FAQ',faq_title:'Answers before you start.',faq1q:'Does NekroNex replace Discord?',faq1a:'No. NekroNex builds tools around Discord to help you manage your community.',faq2q:'Where do I configure the bots?',faq2a:'Core configuration is centralized in NYVEX Dashboard.',faq3q:'What is NekroNex Custom?',faq3a:'A Premium concept for server-bound customization during a paid license period.',faq4q:'Are payments live already?',faq4a:'Not yet. Real checkout and license management require the payment backend.',cta_title:'Your community. One ecosystem.',cta_desc:'Start with the systems you need and let NekroNex handle the rest.',footer_desc:'Technology, infrastructure and tools for modern Discord communities.',creator:'An independent project by RinzlerVoid.',rights:'© 2026 NEKRONEX',send_email:'Email support',choose:'Choose an option',support_mail:'Write to nekronex.support@gmail.com',back:'Back',quick:'Quick start',features:'Features',status:'Status',platform:'Platform',version:'Version',developer:'Developer',commands:'Commands',configuration:'Configuration',cookie_title:'Privacy and local storage',cookie_desc:'We use local storage to remember language and preferences. We do not add optional analytics without consent.',accept:'Accept',reject:'Reject',settings:'Settings',legal_note:'Base document. Review it for your jurisdiction and providers before publishing as final legal copy.'
+    },
+    pt:{},de:{},fr:{}
+  };
+  shared.pt = {...shared.en, products:'Produtos',resources:'Recursos',documentation:'Documentação',support:'Suporte',get_started:'Começar',home:'Início',hero_label:'A NOVA GERAÇÃO DE FERRAMENTAS PARA DISCORD',hero_desc:'Bots, infraestrutura e controle central em uma única experiência. Menos atrito. Mais controle. Mais comunidade.',explore:'Explorar ecossistema',open_dashboard:'Abrir Dashboard',available:'DISPONÍVEL',development:'EM DESENVOLVIMENTO',view_product:'Ver produto',docs:'Documentação',soon:'Em breve',premium_title:'Faça seu bot fazer parte do seu servidor.',collab_label:'FUTURAS COLABORAÇÕES',workflow_label:'COMO FUNCIONA',faq_label:'PERGUNTAS FREQUENTES',cta_title:'Sua comunidade. Um único ecossistema.',send_email:'Enviar e-mail',back:'Voltar',quick:'Início rápido',features:'Recursos',status:'Status',platform:'Plataforma',version:'Versão',developer:'Desenvolvedor',commands:'Comandos',configuration:'Configuração',accept:'Aceitar',reject:'Recusar',settings:'Configurar'};
+  shared.de = {...shared.en, products:'Produkte',resources:'Ressourcen',documentation:'Dokumentation',support:'Support',get_started:'Starten',home:'Startseite',hero_label:'DIE NÄCHSTE GENERATION VON DISCORD-TOOLS',hero_desc:'Bots, Infrastruktur und zentrale Steuerung in einer einzigen Erfahrung. Weniger Reibung. Mehr Kontrolle. Mehr Community.',explore:'Ökosystem erkunden',open_dashboard:'Dashboard öffnen',available:'VERFÜGBAR',development:'IN ENTWICKLUNG',view_product:'Produkt ansehen',docs:'Dokumentation',soon:'Demnächst',premium_title:'Mach deinen Bot zum Teil deines Servers.',collab_label:'ZUKÜNFTIGE ZUSAMMENARBEITEN',workflow_label:'SO FUNKTIONIERT ES',faq_label:'FAQ',cta_title:'Deine Community. Ein Ökosystem.',send_email:'E-Mail senden',back:'Zurück',quick:'Schnellstart',features:'Funktionen',status:'Status',platform:'Plattform',version:'Version',developer:'Entwickler',commands:'Befehle',configuration:'Konfiguration',accept:'Akzeptieren',reject:'Ablehnen',settings:'Einstellungen'};
+  shared.fr = {...shared.en, products:'Produits',resources:'Ressources',documentation:'Documentation',support:'Support',get_started:'Commencer',home:'Accueil',hero_label:'LA NOUVELLE GÉNÉRATION D’OUTILS DISCORD',hero_desc:'Bots, infrastructure et contrôle central réunis dans une seule expérience. Moins de friction. Plus de contrôle. Plus de communauté.',explore:'Explorer l’écosystème',open_dashboard:'Ouvrir le Dashboard',available:'DISPONIBLE',development:'EN DÉVELOPPEMENT',view_product:'Voir le produit',docs:'Documentation',soon:'Bientôt',premium_title:'Faites du bot une partie de votre serveur.',collab_label:'FUTURES COLLABORATIONS',workflow_label:'COMMENT ÇA MARCHE',faq_label:'FAQ',cta_title:'Votre communauté. Un seul écosystème.',send_email:'Envoyer un e-mail',back:'Retour',quick:'Démarrage rapide',features:'Fonctionnalités',status:'Statut',platform:'Plateforme',version:'Version',developer:'Développeur',commands:'Commandes',configuration:'Configuration',accept:'Accepter',reject:'Refuser',settings:'Configurer'};
+  Object.keys(shared).forEach(lang => Object.assign(translations[lang], shared[lang]));
+})();
+
+
+/* Extra shared copy for V2 product/documentation layouts. */
+(function(){
+ const extra={
+  es:{page_features_heading:'Todo lo importante, en un solo lugar.',page_commands_heading:'Controles claros.',page_commands_desc:'Acciones directas para que cada equipo pueda trabajar con menos fricción.',page_cta_heading:'Hecho para tu comunidad.',page_cta_desc:'Explora el sistema, consulta la documentación y sigue ampliando tu ecosistema NekroNex.',dashboard_hero_label:'SISTEMA NEKRONEX',dashboard_feature_1_title:'Configuración central',dashboard_feature_1_desc:'Configura los sistemas conectados desde un único flujo.',dashboard_feature_2_title:'Visión de seguridad',dashboard_feature_2_desc:'Consulta el estado de las capas de seguridad disponibles.',dashboard_feature_3_title:'Resumen operativo',dashboard_feature_3_desc:'Mantén una visión clara de herramientas y configuración.',dashboard_cmd_1:'Selecciona un servidor',dashboard_cmd_2:'Elige un sistema',dashboard_cmd_3:'Guarda los cambios',dashboard_cmd_4:'Revisa el estado.',support_subject_1:'Soporte técnico',support_subject_2:'Reportar un error',support_subject_3:'Consulta general',support_message_placeholder:'Describe tu problema con detalle...'},
+  en:{page_features_heading:'Everything important, in one place.',page_commands_heading:'Clear controls.',page_commands_desc:'Direct actions so every team can work with less friction.',page_cta_heading:'Built for your community.',page_cta_desc:'Explore the system, read the documentation and keep expanding your NekroNex stack.',dashboard_hero_label:'NEKRONEX SYSTEM',dashboard_feature_1_title:'Central configuration',dashboard_feature_1_desc:'Configure connected systems through one central flow.',dashboard_feature_2_title:'Security overview',dashboard_feature_2_desc:'Review the status of the available security layers.',dashboard_feature_3_title:'Operational overview',dashboard_feature_3_desc:'Keep a clear view of your tools and configuration.',dashboard_cmd_1:'Select a server',dashboard_cmd_2:'Choose a system',dashboard_cmd_3:'Save changes',dashboard_cmd_4:'Review status.',support_subject_1:'Technical support',support_subject_2:'Report a bug',support_subject_3:'General inquiry',support_message_placeholder:'Describe your issue in detail...'},
+  pt:{page_features_heading:'Tudo o que importa, em um só lugar.',page_commands_heading:'Controles claros.',page_commands_desc:'Ações diretas para que cada equipe trabalhe com menos atrito.',page_cta_heading:'Feito para sua comunidade.',page_cta_desc:'Explore o sistema, consulte a documentação e amplie seu ecossistema NekroNex.',dashboard_hero_label:'SISTEMA NEKRONEX',dashboard_feature_1_title:'Configuração central',dashboard_feature_1_desc:'Configure os sistemas conectados em um único fluxo.',dashboard_feature_2_title:'Visão de segurança',dashboard_feature_2_desc:'Consulte o estado das camadas de segurança disponíveis.',dashboard_feature_3_title:'Resumo operacional',dashboard_feature_3_desc:'Mantenha uma visão clara das ferramentas e configurações.',dashboard_cmd_1:'Selecione um servidor',dashboard_cmd_2:'Escolha um sistema',dashboard_cmd_3:'Salve as alterações',dashboard_cmd_4:'Revise o status.',support_subject_1:'Suporte técnico',support_subject_2:'Relatar um erro',support_subject_3:'Consulta geral',support_message_placeholder:'Descreva seu problema em detalhes...'},
+  de:{page_features_heading:'Alles Wichtige an einem Ort.',page_commands_heading:'Klare Steuerung.',page_commands_desc:'Direkte Aktionen für weniger Reibung im Alltag.',page_cta_heading:'Für deine Community gebaut.',page_cta_desc:'Entdecke das System, lies die Dokumentation und erweitere dein NekroNex-Ökosystem.',dashboard_hero_label:'NEKRONEX-SYSTEM',dashboard_feature_1_title:'Zentrale Konfiguration',dashboard_feature_1_desc:'Konfiguriere verbundene Systeme über einen zentralen Ablauf.',dashboard_feature_2_title:'Sicherheitsübersicht',dashboard_feature_2_desc:'Prüfe den Status der verfügbaren Sicherheitsebenen.',dashboard_feature_3_title:'Betriebsübersicht',dashboard_feature_3_desc:'Behalte einen klaren Überblick über Tools und Konfiguration.',dashboard_cmd_1:'Server auswählen',dashboard_cmd_2:'System auswählen',dashboard_cmd_3:'Änderungen speichern',dashboard_cmd_4:'Status prüfen.',support_subject_1:'Technischer Support',support_subject_2:'Fehler melden',support_subject_3:'Allgemeine Anfrage',support_message_placeholder:'Beschreibe dein Problem im Detail...'},
+  fr:{page_features_heading:'Tout ce qui compte, au même endroit.',page_commands_heading:'Des contrôles clairs.',page_commands_desc:'Des actions directes pour travailler avec moins de friction.',page_cta_heading:'Pensé pour votre communauté.',page_cta_desc:'Explorez le système, consultez la documentation et développez votre écosystème NekroNex.',dashboard_hero_label:'SYSTÈME NEKRONEX',dashboard_feature_1_title:'Configuration centrale',dashboard_feature_1_desc:'Configurez les systèmes connectés dans un flux unique.',dashboard_feature_2_title:'Vue sécurité',dashboard_feature_2_desc:'Consultez l’état des couches de sécurité disponibles.',dashboard_feature_3_title:'Vue opérationnelle',dashboard_feature_3_desc:'Gardez une vue claire des outils et de la configuration.',dashboard_cmd_1:'Sélectionner un serveur',dashboard_cmd_2:'Choisir un système',dashboard_cmd_3:'Enregistrer les changements',dashboard_cmd_4:'Vérifier le statut.',support_subject_1:'Support technique',support_subject_2:'Signaler un bug',support_subject_3:'Demande générale',support_message_placeholder:'Décrivez votre problème en détail...'}
+ }; Object.keys(extra).forEach(l=>Object.assign(translations[l],extra[l]));
+})();
+
+
+(function(){
+ const e={
+ es:{vel_action_create:'Crear ticket',vel_action_claim:'Asignar ticket',vel_action_priority:'Definir prioridad',vel_action_rename:'Renombrar ticket',vel_action_note:'Añadir nota interna',vel_action_close:'Cerrar ticket',page_lead_more:'Acciones directas para administrar el sistema con claridad.',doc_official:'Documentación oficial del sistema.',
+ dashboard_step_1:'Selecciona un servidor',dashboard_step_2:'Elige un sistema',dashboard_step_3:'Guarda los cambios',dashboard_step_4:'Revisa el estado.'},
+ en:{vel_action_create:'Create ticket',vel_action_claim:'Claim ticket',vel_action_priority:'Set priority',vel_action_rename:'Rename ticket',vel_action_note:'Add internal note',vel_action_close:'Close ticket',page_lead_more:'Direct actions for managing the system with clarity.',doc_official:'Official system documentation.',dashboard_step_1:'Select a server',dashboard_step_2:'Choose a system',dashboard_step_3:'Save changes',dashboard_step_4:'Review status.'},
+ pt:{vel_action_create:'Criar ticket',vel_action_claim:'Assumir ticket',vel_action_priority:'Definir prioridade',vel_action_rename:'Renomear ticket',vel_action_note:'Adicionar nota interna',vel_action_close:'Fechar ticket',page_lead_more:'Ações diretas para administrar o sistema com clareza.',doc_official:'Documentação oficial do sistema.',dashboard_step_1:'Selecione um servidor',dashboard_step_2:'Escolha um sistema',dashboard_step_3:'Salve as alterações',dashboard_step_4:'Revise o status.'},
+ de:{vel_action_create:'Ticket erstellen',vel_action_claim:'Ticket übernehmen',vel_action_priority:'Priorität setzen',vel_action_rename:'Ticket umbenennen',vel_action_note:'Interne Notiz hinzufügen',vel_action_close:'Ticket schließen',page_lead_more:'Direkte Aktionen für eine klare Verwaltung des Systems.',doc_official:'Offizielle Systemdokumentation.',dashboard_step_1:'Server auswählen',dashboard_step_2:'System auswählen',dashboard_step_3:'Änderungen speichern',dashboard_step_4:'Status prüfen.'},
+ fr:{vel_action_create:'Créer un ticket',vel_action_claim:'Prendre en charge',vel_action_priority:'Définir la priorité',vel_action_rename:'Renommer le ticket',vel_action_note:'Ajouter une note interne',vel_action_close:'Fermer le ticket',page_lead_more:'Des actions directes pour administrer le système avec clarté.',doc_official:'Documentation officielle du système.',dashboard_step_1:'Sélectionner un serveur',dashboard_step_2:'Choisir un système',dashboard_step_3:'Enregistrer les changements',dashboard_step_4:'Vérifier le statut.'}
+ }; Object.keys(e).forEach(l=>Object.assign(translations[l],e[l]));
+})();
+
+
+(function(){
+ const x={
+ es:{message:'Mensaje',collab_creator:'Colaboración con creadores',collab_creator_desc:'Un espacio preparado para futuras integraciones con creadores y comunidades.',collab_minecraft:'Comunidad de Minecraft',collab_minecraft_desc:'Futuras alianzas con comunidades y servidores de Minecraft.',collab_twitch:'Creadores de Twitch',collab_twitch_desc:'Futuras integraciones con creadores de contenido.',premium_model_title:'El modelo está pensado para crecer contigo.',premium_model_desc:'Licencias asociadas al servidor, personalización compatible y renovación cuando necesites continuar.',premium_checkout_title:'El checkout todavía no está activo.',premium_checkout_desc:'La interfaz comercial ya está preparada, pero los pagos, webhooks y licencias reales necesitan un backend antes de venderse.',support_intro_title:'Encuentra el canal correcto',support_docs:'Consulta la documentación oficial antes de abrir una solicitud.',support_ticket:'Usa VELTRIX para el soporte de tu comunidad.',support_contact:'Para asuntos oficiales, escribe a nuestro correo.',not_found_title:'Perdido en la cuadrícula.',not_found_desc:'La página que buscas no existe.'},
+ en:{message:'Message',collab_creator:'Creator collaboration',collab_creator_desc:'A space prepared for future integrations with creators and communities.',collab_minecraft:'Minecraft community',collab_minecraft_desc:'Future partnerships with Minecraft communities and servers.',collab_twitch:'Twitch creators',collab_twitch_desc:'Future integrations with content creators.',premium_model_title:'The model is designed to grow with you.',premium_model_desc:'Server-bound licenses, compatible customization and renewal when you need to continue.',premium_checkout_title:'Checkout is not active yet.',premium_checkout_desc:'The commercial interface is prepared, but real payments, webhooks and licenses still need a backend before launch.',support_intro_title:'Find the right channel',support_docs:'Read the official documentation before opening a request.',support_ticket:'Use VELTRIX for community support.',support_contact:'For official matters, email our team.',not_found_title:'Lost in the grid.',not_found_desc:'The page you requested does not exist.'},
+ pt:{message:'Mensagem',collab_creator:'Colaboração com criadores',collab_creator_desc:'Um espaço preparado para futuras integrações com criadores e comunidades.',collab_minecraft:'Comunidade de Minecraft',collab_minecraft_desc:'Futuras parcerias com comunidades e servidores de Minecraft.',collab_twitch:'Criadores da Twitch',collab_twitch_desc:'Futuras integrações com criadores de conteúdo.',premium_model_title:'O modelo foi pensado para crescer com você.',premium_model_desc:'Licenças vinculadas ao servidor, personalização compatível e renovação quando necessário.',premium_checkout_title:'O checkout ainda não está ativo.',premium_checkout_desc:'A interface comercial está preparada, mas pagamentos reais, webhooks e licenças ainda precisam de um backend.',support_intro_title:'Encontre o canal certo',support_docs:'Consulte a documentação oficial antes de abrir uma solicitação.',support_ticket:'Use o VELTRIX para o suporte da comunidade.',support_contact:'Para assuntos oficiais, envie um e-mail para nossa equipe.',not_found_title:'Perdido na grade.',not_found_desc:'A página solicitada não existe.'},
+ de:{message:'Nachricht',collab_creator:'Creator-Kollaboration',collab_creator_desc:'Ein Bereich für zukünftige Integrationen mit Creators und Communities.',collab_minecraft:'Minecraft-Community',collab_minecraft_desc:'Zukünftige Partnerschaften mit Minecraft-Communities und Servern.',collab_twitch:'Twitch-Creator',collab_twitch_desc:'Zukünftige Integrationen mit Content-Creators.',premium_model_title:'Das Modell wächst mit deiner Community.',premium_model_desc:'Servergebundene Lizenzen, kompatible Anpassungen und Verlängerung nach Bedarf.',premium_checkout_title:'Der Checkout ist noch nicht aktiv.',premium_checkout_desc:'Die kommerzielle Oberfläche ist vorbereitet, aber Zahlungen, Webhooks und echte Lizenzen benötigen noch ein Backend.',support_intro_title:'Den richtigen Kanal finden',support_docs:'Lies die offizielle Dokumentation, bevor du eine Anfrage öffnest.',support_ticket:'Nutze VELTRIX für den Community-Support.',support_contact:'Für offizielle Anliegen schreib uns per E-Mail.',not_found_title:'Verloren im Raster.',not_found_desc:'Die angeforderte Seite existiert nicht.'},
+ fr:{message:'Message',collab_creator:'Collaboration avec des créateurs',collab_creator_desc:'Un espace préparé pour de futures intégrations avec des créateurs et des communautés.',collab_minecraft:'Communauté Minecraft',collab_minecraft_desc:'De futurs partenariats avec des communautés et serveurs Minecraft.',collab_twitch:'Créateurs Twitch',collab_twitch_desc:'De futures intégrations avec des créateurs de contenu.',premium_model_title:'Le modèle est conçu pour évoluer avec vous.',premium_model_desc:'Des licences liées au serveur, une personnalisation compatible et un renouvellement selon vos besoins.',premium_checkout_title:'Le checkout n’est pas encore actif.',premium_checkout_desc:'L’interface commerciale est prête, mais les paiements, webhooks et licences réelles nécessitent encore un backend.',support_intro_title:'Trouvez le bon canal',support_docs:'Consultez la documentation officielle avant d’ouvrir une demande.',support_ticket:'Utilisez VELTRIX pour le support de votre communauté.',support_contact:'Pour les demandes officielles, écrivez-nous par e-mail.',not_found_title:'Perdu dans la grille.',not_found_desc:'La page demandée n’existe pas.'}
+ }; Object.keys(x).forEach(l=>Object.assign(translations[l],x[l]));
+})();
+
+
+(function(){const x={es:{premium_choose:'Elige el modelo.',premium_layer:'La capa comercial está pensada alrededor de licencias asociadas al servidor, no de la propiedad permanente de la identidad principal.',premium_short:'Personalización de corto plazo para un servidor.',premium_long:'Acceso más largo a personalización y opciones Premium.',premium_year:'Licencia anual para comunidades que quieren la experiencia completa.',premium_soon:'PRÓXIMAMENTE',premium_how:'CÓMO FUNCIONARÁ',premium_flow:'El flujo previsto es simple: compra una licencia, asígnala a un servidor, desbloquea los controles compatibles y vuelve automáticamente a la identidad oficial cuando expire.',checkout:'Pago',license_created:'Licencia creada',server_linked:'Servidor vinculado',custom_unlocked:'Personalización desbloqueada',expiry:'Vencimiento y renovación',premium_prepared:'Premium está en preparación.',premium_not_live:'Los pagos todavía no están activos. Para acceso temprano o consultas, contacta con soporte.'},en:{premium_choose:'Choose the model.',premium_layer:'The commercial layer is designed around server-bound licenses, not permanent ownership of the core bot identity.',premium_short:'Short-term customization for one server.',premium_long:'Longer access to customization and Premium options.',premium_year:'Annual license for communities that want the full experience.',premium_soon:'COMING SOON',premium_how:'HOW IT WILL WORK',premium_flow:'The intended flow is simple: purchase a license, assign it to a server, unlock compatible controls and automatically revert to the official identity when the license expires.',checkout:'Checkout',license_created:'License created',server_linked:'Server linked',custom_unlocked:'Customization unlocked',expiry:'Expiry and renewal',premium_prepared:'Premium is being prepared.',premium_not_live:'Payments are not active yet. For early access or questions, contact support.'},pt:{premium_choose:'Escolha o modelo.',premium_layer:'A camada comercial é baseada em licenças vinculadas ao servidor, não em propriedade permanente da identidade principal do bot.',premium_short:'Personalização de curto prazo para um servidor.',premium_long:'Acesso mais longo à personalização e opções Premium.',premium_year:'Licença anual para comunidades que desejam a experiência completa.',premium_soon:'EM BREVE',premium_how:'COMO VAI FUNCIONAR',premium_flow:'O fluxo previsto é simples: compre uma licença, vincule-a a um servidor, desbloqueie controles compatíveis e volte automaticamente à identidade oficial quando a licença expirar.',checkout:'Pagamento',license_created:'Licença criada',server_linked:'Servidor vinculado',custom_unlocked:'Personalização desbloqueada',expiry:'Expiração e renovação',premium_prepared:'O Premium está sendo preparado.',premium_not_live:'Os pagamentos ainda não estão ativos. Para acesso antecipado ou dúvidas, fale com o suporte.'},de:{premium_choose:'Wähle das Modell.',premium_layer:'Die kommerzielle Ebene basiert auf servergebundenen Lizenzen statt auf dauerhaftem Besitz der Kernidentität des Bots.',premium_short:'Kurzfristige Anpassung für einen Server.',premium_long:'Längerer Zugriff auf Anpassungen und Premium-Optionen.',premium_year:'Jahreslizenz für Communities, die das vollständige Erlebnis wünschen.',premium_soon:'DEMNÄCHST',premium_how:'SO WIRD ES FUNKTIONIEREN',premium_flow:'Der geplante Ablauf ist einfach: Lizenz kaufen, einem Server zuweisen, kompatible Anpassungen freischalten und nach Ablauf automatisch zur offiziellen Identität zurückkehren.',checkout:'Zahlung',license_created:'Lizenz erstellt',server_linked:'Server verknüpft',custom_unlocked:'Anpassung freigeschaltet',expiry:'Ablauf und Verlängerung',premium_prepared:'Premium wird vorbereitet.',premium_not_live:'Zahlungen sind noch nicht aktiv. Für frühen Zugang oder Fragen kontaktiere den Support.'},fr:{premium_choose:'Choisissez le modèle.',premium_layer:'La couche commerciale repose sur des licences liées au serveur, et non sur la propriété permanente de l’identité principale du bot.',premium_short:'Personnalisation à court terme pour un serveur.',premium_long:'Accès plus long à la personnalisation et aux options Premium.',premium_year:'Licence annuelle pour les communautés qui souhaitent l’expérience complète.',premium_soon:'BIENTÔT',premium_how:'COMMENT ÇA MARCHERA',premium_flow:'Le fonctionnement prévu est simple : acheter une licence, la lier à un serveur, débloquer les contrôles compatibles puis revenir automatiquement à l’identité officielle à l’expiration.',checkout:'Paiement',license_created:'Licence créée',server_linked:'Serveur lié',custom_unlocked:'Personnalisation activée',expiry:'Expiration et renouvellement',premium_prepared:'Le Premium est en préparation.',premium_not_live:'Les paiements ne sont pas encore actifs. Pour un accès anticipé ou des questions, contactez le support.'}};Object.keys(x).forEach(l=>Object.assign(translations[l],x[l]));})();
+
+(function(){const x={es:{support_faq_1_q:'¿Por dónde empiezo?',support_faq_1_a:'Empieza por la documentación. Si el problema continúa, usa el formulario de soporte o el correo oficial.',support_faq_2_q:'¿Qué productos están disponibles?',support_faq_2_a:'NYVEX Dashboard, NEXORA Music, NYVEX Community Manager, KRYVEX Sentinel y VELTRIX Tickets aparecen actualmente como disponibles en esta versión del sitio.',support_faq_3_q:'¿Premium ya está activo?',support_faq_3_a:'Todavía no. La experiencia comercial está preparada en la web, pero el checkout y la gestión de licencias requieren el backend.'},en:{support_faq_1_q:'Where should I start?',support_faq_1_a:'Start with Documentation. If the issue remains, use the support form or official email.',support_faq_2_q:'Which products are available?',support_faq_2_a:'NYVEX Dashboard, NEXORA Music, NYVEX Community Manager, KRYVEX Sentinel and VELTRIX Tickets are currently presented as available in this site build.',support_faq_3_q:'Is Premium active?',support_faq_3_a:'Not yet. The commercial experience is prepared on the site, but checkout and license management require the backend.'},pt:{support_faq_1_q:'Por onde começo?',support_faq_1_a:'Comece pela documentação. Se o problema continuar, use o formulário de suporte ou o e-mail oficial.',support_faq_2_q:'Quais produtos estão disponíveis?',support_faq_2_a:'NYVEX Dashboard, NEXORA Music, NYVEX Community Manager, KRYVEX Sentinel e VELTRIX Tickets aparecem atualmente como disponíveis nesta versão do site.',support_faq_3_q:'O Premium já está ativo?',support_faq_3_a:'Ainda não. A experiência comercial está preparada no site, mas o checkout e as licenças precisam do backend.'},de:{support_faq_1_q:'Wo soll ich anfangen?',support_faq_1_a:'Beginne mit der Dokumentation. Wenn das Problem bleibt, nutze das Supportformular oder die offizielle E-Mail.',support_faq_2_q:'Welche Produkte sind verfügbar?',support_faq_2_a:'NYVEX Dashboard, NEXORA Music, NYVEX Community Manager, KRYVEX Sentinel und VELTRIX Tickets werden in dieser Website-Version als verfügbar angezeigt.',support_faq_3_q:'Ist Premium bereits aktiv?',support_faq_3_a:'Noch nicht. Das kommerzielle Erlebnis ist auf der Website vorbereitet, aber Checkout und Lizenzen benötigen das Backend.'},fr:{support_faq_1_q:'Par où commencer ?',support_faq_1_a:'Commencez par la documentation. Si le problème persiste, utilisez le formulaire de support ou l’e-mail officiel.',support_faq_2_q:'Quels produits sont disponibles ?',support_faq_2_a:'NYVEX Dashboard, NEXORA Music, NYVEX Community Manager, KRYVEX Sentinel et VELTRIX Tickets sont actuellement présentés comme disponibles sur cette version du site.',support_faq_3_q:'Le Premium est-il actif ?',support_faq_3_a:'Pas encore. L’expérience commerciale est préparée sur le site, mais le checkout et les licences nécessitent encore le backend.'}};Object.keys(x).forEach(l=>Object.assign(translations[l],x[l]));})();
+
+
+(function(){const x={es:{support_desc:'Encuentra documentación, reporta problemas o contacta con el equipo.',add:'Añadir a Discord',docs_intro:'Documentación oficial del sistema.'},en:{support_desc:'Find documentation, report problems or contact the team.',add:'Add to Discord',docs_intro:'Official system documentation.'},pt:{support_desc:'Encontre documentação, relate problemas ou entre em contato com a equipe.',add:'Adicionar ao Discord',docs_intro:'Documentação oficial do sistema.'},de:{support_desc:'Finde Dokumentation, melde Probleme oder kontaktiere das Team.',add:'Zu Discord hinzufügen',docs_intro:'Offizielle Systemdokumentation.'},fr:{support_desc:'Trouvez la documentation, signalez un problème ou contactez l’équipe.',add:'Ajouter à Discord',docs_intro:'Documentation officielle du système.'}};Object.keys(x).forEach(l=>Object.assign(translations[l],x[l]));})();
+
+
+/* =====================================================
+   NEKRONEX V2.1 • HOMEPAGE SIGNALS
+   ===================================================== */
+(function(){const x={
+  es:{signal_1_title:'Ecosistema conectado',signal_1_desc:'Una misma identidad para todos tus sistemas.',signal_2_title:'Control central',signal_2_desc:'Configuración reunida en NYVEX Dashboard.',signal_3_title:'Cinco idiomas',signal_3_desc:'Una experiencia preparada para más comunidades.',signal_4_title:'Hecho para crecer',signal_4_desc:'Nuevos sistemas y funciones en camino.',metric_systems:'Bots y herramientas disponibles.',metric_dashboard:'Un punto para administrar el ecosistema.',metric_growth:'Premium y nuevos sistemas en preparación.',license_based:'Licencia por tiempo.'},
+  en:{signal_1_title:'Connected ecosystem',signal_1_desc:'One identity across all your systems.',signal_2_title:'Central control',signal_2_desc:'Configuration brought together in NYVEX Dashboard.',signal_3_title:'Five languages',signal_3_desc:'An experience prepared for more communities.',signal_4_title:'Built to grow',signal_4_desc:'New systems and features are on the way.',metric_systems:'Bots and tools available.',metric_dashboard:'One place to manage the ecosystem.',metric_growth:'Premium and new systems in preparation.',license_based:'Time-based license.'},
+  pt:{signal_1_title:'Ecossistema conectado',signal_1_desc:'Uma identidade para todos os seus sistemas.',signal_2_title:'Controle central',signal_2_desc:'Configuração reunida no NYVEX Dashboard.',signal_3_title:'Cinco idiomas',signal_3_desc:'Uma experiência preparada para mais comunidades.',signal_4_title:'Feito para crescer',signal_4_desc:'Novos sistemas e recursos a caminho.',metric_systems:'Bots e ferramentas disponíveis.',metric_dashboard:'Um só lugar para administrar o ecossistema.',metric_growth:'Premium e novos sistemas em preparação.',license_based:'Licença por tempo.'},
+  de:{signal_1_title:'Verbundenes Ökosystem',signal_1_desc:'Eine Identität für alle deine Systeme.',signal_2_title:'Zentrale Steuerung',signal_2_desc:'Konfiguration gebündelt im NYVEX Dashboard.',signal_3_title:'Fünf Sprachen',signal_3_desc:'Ein Erlebnis für weitere Communities.',signal_4_title:'Für Wachstum entwickelt',signal_4_desc:'Neue Systeme und Funktionen kommen.',metric_systems:'Bots und Tools verfügbar.',metric_dashboard:'Ein zentraler Ort für das Ökosystem.',metric_growth:'Premium und neue Systeme in Vorbereitung.',license_based:'Zeitbasierte Lizenz.'},
+  fr:{signal_1_title:'Écosystème connecté',signal_1_desc:'Une identité pour tous vos systèmes.',signal_2_title:'Contrôle central',signal_2_desc:'Configuration réunie dans NYVEX Dashboard.',signal_3_title:'Cinq langues',signal_3_desc:'Une expérience prête pour davantage de communautés.',signal_4_title:'Pensé pour évoluer',signal_4_desc:'De nouveaux systèmes et fonctionnalités arrivent.',metric_systems:'Bots et outils disponibles.',metric_dashboard:'Un seul endroit pour gérer l’écosystème.',metric_growth:'Premium et nouveaux systèmes en préparation.',license_based:'Licence à durée limitée.'}
+};Object.keys(x).forEach(l=>Object.assign(translations[l],x[l]));})();
+
+/* Bahasa Indonesia */
+translations.id = Object.assign({}, translations.en, {"nav_products": "Produk","nav_documentation": "Dokumentasi","nav_support": "Dukungan","nav_get_started": "Mulai","products": "Produk","resources": "Sumber daya","documentation": "Dokumentasi","support": "Dukungan","get_started": "Mulai","home": "Beranda","available": "TERSEDIA","in_development": "DALAM PENGEMBANGAN","planned": "DIRENCANAKAN","hero_label": "GENERASI BARU ALAT UNTUK DISCORD","hero_tagline": "Teknologi, disempurnakan.","hero_description": "Alat dan infrastruktur canggih yang dirancang untuk komunitas Discord modern.","hero_explore": "Jelajahi produk","products_label": "PRODUK KAMI","products_title": "Alat yang dibuat untuk komunitas Anda.","products_description": "Ekosistem alat Discord yang terus berkembang, dirancang untuk bekerja bersama.","music_description": "Pengalaman musik lengkap untuk Discord. Putar lagu, kelola antrean, buat playlist, dan kendalikan musik dengan mudah.","welcome_description": "Otomatiskan sambutan dan perpisahan agar setiap anggota mendapat pengalaman yang lebih personal.","guard_description": "Perlindungan dan moderasi canggih untuk menjaga komunitas Discord tetap aman dan tertata.","tickets_description": "Sistem dukungan profesional untuk mengatur percakapan, permintaan, dan bantuan di komunitas Discord Anda.","synvex_description": "Sistem peringatan multimedia untuk komunitas Anda. Pantau video baru, live stream, dan konten terbaru agar server tetap terhubung.","synvex_status": "Peringatan media segera hadir.","explore_music": "Jelajahi NEXORA →","explore_welcome": "Jelajahi NYVEX Community Manager →","explore_guard": "Jelajahi KRYVEX →","explore_ticket": "Jelajahi VELTRIX →","explore_dashboard": "Buka Dashboard →","coming_label": "SEGERA HADIR","coming_title": "Lebih banyak dari NekroNex.","coming_description": "Ekosistem ini baru saja dimulai.","ecosystem_label": "SATU EKOSISTEM","ecosystem_title": "Satu platform.<br>Beragam alat.","ecosystem_description": "Ekosistem alat yang terus berkembang dan dirancang untuk bekerja bersama, memberikan komunitas semua yang mereka butuhkan dari satu tempat.","open_documentation": "Buka dokumentasi","docs": "Dokumentasi","view_product": "Lihat produk","soon": "Segera hadir","add": "Tambahkan ke Discord","features": "Fitur","status": "Status","platform": "Platform","version": "Versi","developer": "Pengembang","commands": "Perintah","configuration": "Konfigurasi","quick": "Mulai cepat","send_email": "Kirim email","choose": "Pilih opsi","back": "Kembali","accept": "Terima","reject": "Tolak","settings": "Pengaturan","rights": "© 2026 NEKRONEX","creator": "Proyek independen oleh RinzlerVoid.","footer_desc": "Teknologi, infrastruktur, dan alat untuk komunitas Discord modern.","page_features_heading": "Semua hal penting, di satu tempat.","page_commands_heading": "Kontrol yang jelas.","page_commands_desc": "Tindakan langsung agar setiap tim dapat bekerja dengan lebih sedikit hambatan.","premium_label": "NEKRONEX CUSTOM","premium_title": "Buat bot terasa menyatu dengan server Anda.","premium_desc": "Sistem Premium sedang dipersiapkan untuk personalisasi yang kompatibel dan fitur tambahan melalui lisensi berbatas waktu.","premium_feature_1": "Personalisasi yang kompatibel","premium_feature_2": "Lisensi per server","premium_feature_3": "Durasi fleksibel","premium_feature_4": "Manajemen melalui Dashboard","premium_plan1": "Custom · 30 hari","premium_plan2": "Pro · 90 hari","premium_plan3": "Elite · 365 hari","premium_short": "Personalisasi jangka pendek untuk satu server.","premium_long": "Akses lebih lama ke personalisasi dan opsi Premium.","premium_year": "Lisensi tahunan untuk komunitas yang menginginkan pengalaman lengkap.","premium_soon": "SEGERA HADIR","premium_choose": "Pilih modelnya.","premium_layer": "Lapisan komersial dirancang berdasarkan lisensi per server, bukan kepemilikan permanen atas identitas bot inti.","premium_how": "CARA KERJANYA","premium_flow": "Alurnya sederhana: beli lisensi, hubungkan ke server, buka kontrol personalisasi yang kompatibel di Dashboard, lalu kembalikan identitas resmi saat lisensi berakhir.","checkout": "Checkout","license_created": "Lisensi dibuat","server_linked": "Server terhubung","custom_unlocked": "Personalisasi dibuka","expiry": "Kedaluwarsa dan perpanjangan","premium_prepared": "Premium sedang dipersiapkan.","premium_not_live": "Informasi komersial tersedia di situs. Untuk pertanyaan atau bantuan, hubungi dukungan resmi.","collab_label": "KOLABORASI MENDATANG","collab_title": "Membangun koneksi yang lebih besar.","collab_desc": "Ruang yang disiapkan untuk kolaborasi mendatang dengan kreator, komunitas, dan proyek.","collab_creator": "Kolaborasi dengan kreator","collab_creator_desc": "Ruang untuk integrasi mendatang dengan kreator dan komunitas.","faq_label": "FAQ","faq_title": "Jawaban sebelum memulai.","faq1q": "Apakah NekroNex menggantikan Discord?","faq1a": "Tidak. NekroNex membuat alat di sekitar Discord untuk membantu Anda mengelola komunitas.","faq2q": "Di mana saya mengonfigurasi bot?","faq2a": "Konfigurasi inti dipusatkan di NYVEX Dashboard.","faq3q": "Apa itu NekroNex Custom?","faq3a": "Konsep Premium untuk personalisasi yang terikat pada server selama periode lisensi berbayar.","faq4q": "Apakah pembayaran sudah aktif?","faq4a": "Gunakan alur pembayaran yang tersedia di sistem resmi NekroNex.","cookie_title": "Privasi dan penyimpanan lokal","cookie_description": "Kami menggunakan penyimpanan lokal untuk mengingat bahasa dan preferensi Anda.","cookie_necessary": "Diperlukan untuk fungsi inti","cookie_optional": "Opsional untuk peningkatan dan pengukuran","cookie_settings": "Atur preferensi","cookie_reject": "Tolak opsi tambahan","cookie_accept": "Terima semua","dashboard_page_description": "Satu tempat untuk mengelola seluruh ekosistem NYVEX.","dashboard_feature_1_title": "Konfigurasi terpusat","dashboard_feature_1_desc": "Konfigurasikan sistem yang terhubung melalui satu alur terpusat.","dashboard_feature_2_title": "Ikhtisar keamanan","dashboard_feature_2_desc": "Tinjau status lapisan keamanan yang tersedia.","dashboard_feature_3_title": "Ikhtisar operasional","dashboard_feature_3_desc": "Pertahankan pandangan yang jelas atas alat dan konfigurasi Anda.","dashboard_feature_config_title": "Konfigurasi","dashboard_feature_config": "Pilih server dan konfigurasikan setiap bot sesuai kebutuhannya.","music_features_label": "FITUR","music_features_title": "Musik tanpa kerumitan.","music_features_description": "Semua yang dibutuhkan komunitas Anda untuk menikmati musik tanpa kompleksitas yang tidak perlu.","music_feature_playback_title": "Pemutaran musik","music_feature_playback_description": "Putar musik favorit langsung di kanal suara Discord.","music_feature_queue_title": "Sistem antrean","music_feature_queue_description": "Tambah, hapus, acak, dan kelola lagu dalam antrean.","music_feature_search_title": "Pencarian cerdas","music_feature_search_description": "Cari musik dan pilih hasil yang tepat untuk diputar.","music_feature_playlist_title": "Playlist","music_feature_playlist_description": "Simpan lagu ke playlist server dan putar kapan pun.","music_feature_volume_title": "Kontrol volume","music_feature_volume_description": "Kendalikan volume pemutaran langsung dari Discord.","music_feature_loop_title": "Mode pengulangan","music_feature_loop_description": "Ulangi lagu saat ini atau seluruh antrean.","welcome_features_label": "FITUR","welcome_features_title": "Setiap kedatangan penting.","welcome_features_description": "Ciptakan pengalaman sambutan bagi setiap anggota yang bergabung.","welcome_feature_join_title": "Pesan sambutan","welcome_feature_join_description": "Sapa anggota baru secara otomatis saat mereka bergabung.","welcome_feature_leave_title": "Pesan perpisahan","welcome_feature_leave_description": "Kirim pesan perpisahan yang disesuaikan saat anggota pergi.","welcome_feature_cards_title": "Kartu sambutan","welcome_feature_cards_description": "Buat kartu visual yang sesuai dengan identitas server Anda.","welcome_feature_roles_title": "Peran otomatis","welcome_feature_roles_description": "Tetapkan peran secara otomatis kepada anggota baru.","welcome_feature_config_title": "Konfigurasi server","welcome_feature_config_description": "Konfigurasikan sistem sambutan sesuai kebutuhan server.","welcome_feature_logs_title": "Log peristiwa","welcome_feature_logs_description": "Catat peristiwa penting saat anggota masuk dan keluar.","guard_features_label": "FITUR","guard_features_title": "Perlindungan yang selalu siap.","guard_features_description": "Berikan tim moderasi alat yang dibutuhkan untuk melindungi komunitas.","guard_feature_moderation_title": "Moderasi","guard_feature_moderation_description": "Alat moderasi kuat untuk menjaga komunitas tetap tertata.","guard_feature_automod_title": "Moderasi otomatis","guard_feature_automod_description": "Deteksi dan tangani perilaku yang tidak diinginkan secara otomatis.","guard_feature_antispam_title": "Anti-Spam","guard_feature_antispam_description": "Bantu mencegah spam, flooding, dan aktivitas yang mengganggu.","guard_feature_logs_title": "Log moderasi","guard_feature_logs_description": "Catat peristiwa penting terkait moderasi dan keamanan.","guard_feature_members_title": "Manajemen anggota","guard_feature_members_description": "Kelola anggota dengan tindakan moderasi saat dibutuhkan.","guard_feature_config_title": "Konfigurasi server","guard_feature_config_description": "Atur perlindungan dan moderasi sesuai kebutuhan komunitas.","guard_security_label": "KEAMANAN","guard_security_title": "Server Anda. Aturan Anda.","guard_security_description": "KRYVEX memberi tim kontrol yang dibutuhkan tanpa membuat moderasi menjadi rumit.","guard_security_warn": "Kirim peringatan moderasi","guard_security_timeout": "Batasi anggota sementara","guard_security_kick": "Keluarkan anggota dari server","guard_security_ban": "Ban anggota secara permanen","guard_security_logs": "Catat peristiwa moderasi","guard_security_nuke": "Tindakan anti-nuke","guard_security_raid": "Tindakan anti-raid","guard_security_recovery": "Lihat daftar backup","ticket_description": "Sistem dukungan profesional untuk mengatur percakapan, permintaan, dan bantuan di komunitas Discord.","ticket_features_label": "FITUR","ticket_features_title": "Dukungan tanpa kekacauan.","ticket_features_description": "Jaga dukungan komunitas tetap tertata, privat, dan mudah dikelola.","ticket_feature_creation_title": "Pembuatan tiket","ticket_feature_creation_description": "Izinkan anggota membuat tiket dukungan privat langsung dari server.","ticket_feature_panel_title": "Panel dukungan","ticket_feature_panel_description": "Buat panel khusus yang membuat permintaan bantuan menjadi sederhana.","ticket_feature_private_title": "Kanal privat","ticket_feature_private_description": "Jaga percakapan dukungan hanya dapat dilihat oleh pihak yang membutuhkan.","ticket_feature_categories_title": "Kategori tiket","ticket_feature_categories_description": "Atur permintaan menggunakan kategori berbeda untuk tim dukungan.","ticket_feature_transcripts_title": "Transkrip","ticket_feature_transcripts_description": "Simpan percakapan penting ketika tiket ditutup.","ticket_feature_logs_title": "Log tiket","ticket_feature_logs_description": "Catat aktivitas, penutupan, dan peristiwa penting tiket."});
+
+Object.assign(translations.es, {"synvex_title": "SYNVEX Media Alerts","synvex_label": "SYNVEX MEDIA ALERTS","synvex_page_description": "Alertas multimedia para mantener tu comunidad al día con nuevos vídeos, directos y contenido reciente.","synvex_status_detail": "EN DESARROLLO","synvex_features_title": "Alertas sin perder el ritmo.","synvex_features_description": "Diseñado para conectar tu comunidad con contenido nuevo y transmisiones en múltiples plataformas.","synvex_feature_live_title": "Directos","synvex_feature_live_desc": "Detecta transmisiones en vivo y comunica nuevos directos a tu comunidad.","synvex_feature_video_title": "Nuevos vídeos","synvex_feature_video_desc": "Recibe alertas cuando aparezca contenido nuevo en las plataformas conectadas.","synvex_feature_content_title": "Monitoreo de contenido","synvex_feature_content_desc": "Mantén tu servidor informado sobre actividad reciente sin revisar cada plataforma manualmente.","synvex_docs_title": "Documentación de SYNVEX","synvex_docs_intro": "Guía inicial para entender la función y el flujo previsto de SYNVEX Media Alerts.","synvex_quick_title": "Preparado para integraciones futuras.","synvex_quick_desc": "La arquitectura prevista conecta fuentes de contenido, detecta eventos y publica alertas en Discord.","synvex_step_01": "Conecta las plataformas compatibles.","synvex_step_02": "Define los canales de alertas.","synvex_step_03": "Configura los tipos de eventos.","synvex_step_04": "Personaliza el formato de las alertas.","synvex_step_05": "Activa y verifica el sistema."});
+
+Object.assign(translations.en, {"synvex_title": "SYNVEX Media Alerts","synvex_label": "SYNVEX MEDIA ALERTS","synvex_page_description": "Multimedia alerts that keep your community up to date with new videos, live streams and recent content.","synvex_status_detail": "IN DEVELOPMENT","synvex_features_title": "Alerts without losing the rhythm.","synvex_features_description": "Designed to connect your community with fresh content and live broadcasts across platforms.","synvex_feature_live_title": "Live streams","synvex_feature_live_desc": "Detect live broadcasts and notify your community when new streams begin.","synvex_feature_video_title": "New videos","synvex_feature_video_desc": "Receive alerts when new content appears on connected platforms.","synvex_feature_content_title": "Content monitoring","synvex_feature_content_desc": "Keep your server informed about recent activity without checking each platform manually.","synvex_docs_title": "SYNVEX Documentation","synvex_docs_intro": "An initial guide to the purpose and planned flow of SYNVEX Media Alerts.","synvex_quick_title": "Prepared for future integrations.","synvex_quick_desc": "The planned architecture connects content sources, detects events and publishes alerts to Discord.","synvex_step_01": "Connect supported platforms.","synvex_step_02": "Choose alert channels.","synvex_step_03": "Configure event types.","synvex_step_04": "Customize alert formatting.","synvex_step_05": "Enable and verify the system."});
+
+Object.assign(translations.pt, {"synvex_title": "SYNVEX Media Alerts","synvex_label": "SYNVEX MEDIA ALERTS","synvex_page_description": "Alertas de mídia para manter sua comunidade atualizada com novos vídeos, lives e conteúdos recentes.","synvex_status_detail": "EM DESENVOLVIMENTO","synvex_features_title": "Alertas sem perder o ritmo.","synvex_features_description": "Projetado para conectar sua comunidade a conteúdos novos e transmissões ao vivo em várias plataformas.","synvex_feature_live_title": "Lives","synvex_feature_live_desc": "Detecte transmissões ao vivo e avise sua comunidade quando novas lives começarem.","synvex_feature_video_title": "Novos vídeos","synvex_feature_video_desc": "Receba alertas quando novos conteúdos aparecerem nas plataformas conectadas.","synvex_feature_content_title": "Monitoramento de conteúdo","synvex_feature_content_desc": "Mantenha seu servidor informado sobre atividades recentes sem verificar cada plataforma manualmente.","synvex_docs_title": "Documentação do SYNVEX","synvex_docs_intro": "Um guia inicial para entender a finalidade e o fluxo planejado do SYNVEX Media Alerts.","synvex_quick_title": "Preparado para futuras integrações.","synvex_quick_desc": "A arquitetura planejada conecta fontes de conteúdo, detecta eventos e publica alertas no Discord.","synvex_step_01": "Conecte as plataformas compatíveis.","synvex_step_02": "Escolha os canais de alerta.","synvex_step_03": "Configure os tipos de evento.","synvex_step_04": "Personalize o formato dos alertas.","synvex_step_05": "Ative e verifique o sistema."});
+
+Object.assign(translations.de, {"synvex_title": "SYNVEX Media Alerts","synvex_label": "SYNVEX MEDIA ALERTS","synvex_page_description": "Medienalarme für neue Videos, Livestreams und aktuelle Inhalte, damit deine Community auf dem Laufenden bleibt.","synvex_status_detail": "IN ENTWICKLUNG","synvex_features_title": "Alarme ohne den Rhythmus zu verlieren.","synvex_features_description": "Entwickelt, um deine Community mit neuen Inhalten und Live-Übertragungen auf mehreren Plattformen zu verbinden.","synvex_feature_live_title": "Livestreams","synvex_feature_live_desc": "Erkennt Live-Übertragungen und informiert deine Community über neue Streams.","synvex_feature_video_title": "Neue Videos","synvex_feature_video_desc": "Erhalte Hinweise, sobald auf verbundenen Plattformen neue Inhalte erscheinen.","synvex_feature_content_title": "Content-Monitoring","synvex_feature_content_desc": "Halte deinen Server über aktuelle Aktivitäten informiert, ohne jede Plattform manuell zu prüfen.","synvex_docs_title": "SYNVEX-Dokumentation","synvex_docs_intro": "Eine erste Anleitung zum Zweck und zum geplanten Ablauf von SYNVEX Media Alerts.","synvex_quick_title": "Für zukünftige Integrationen vorbereitet.","synvex_quick_desc": "Die geplante Architektur verbindet Inhaltsquellen, erkennt Ereignisse und veröffentlicht Alarme in Discord.","synvex_step_01": "Unterstützte Plattformen verbinden.","synvex_step_02": "Alarmkanäle auswählen.","synvex_step_03": "Ereignistypen konfigurieren.","synvex_step_04": "Alarmformat anpassen.","synvex_step_05": "System aktivieren und prüfen."});
+
+Object.assign(translations.fr, {"synvex_title": "SYNVEX Media Alerts","synvex_label": "SYNVEX MEDIA ALERTS","synvex_page_description": "Des alertes média pour suivre les nouvelles vidéos, les lives et les contenus récents de votre communauté.","synvex_status_detail": "EN DÉVELOPPEMENT","synvex_features_title": "Des alertes sans perdre le rythme.","synvex_features_description": "Conçu pour relier votre communauté aux nouveaux contenus et aux diffusions en direct sur plusieurs plateformes.","synvex_feature_live_title": "Lives","synvex_feature_live_desc": "Détectez les diffusions en direct et informez votre communauté des nouveaux streams.","synvex_feature_video_title": "Nouvelles vidéos","synvex_feature_video_desc": "Recevez une alerte lorsqu’un nouveau contenu apparaît sur une plateforme connectée.","synvex_feature_content_title": "Suivi du contenu","synvex_feature_content_desc": "Gardez votre serveur informé de l’activité récente sans vérifier chaque plateforme manuellement.","synvex_docs_title": "Documentation SYNVEX","synvex_docs_intro": "Un guide initial pour comprendre l’objectif et le flux prévu de SYNVEX Media Alerts.","synvex_quick_title": "Préparé pour de futures intégrations.","synvex_quick_desc": "L’architecture prévue connecte les sources de contenu, détecte les événements et publie des alertes dans Discord.","synvex_step_01": "Connectez les plateformes compatibles.","synvex_step_02": "Choisissez les salons d’alerte.","synvex_step_03": "Configurez les types d’événements.","synvex_step_04": "Personnalisez le format des alertes.","synvex_step_05": "Activez et vérifiez le système."});
+
+Object.assign(translations.id, {"synvex_title": "SYNVEX Media Alerts","synvex_label": "SYNVEX MEDIA ALERTS","synvex_page_description": "Peringatan multimedia untuk menjaga komunitas Anda tetap terhubung dengan video baru, live stream, dan konten terbaru.","synvex_status_detail": "DALAM PENGEMBANGAN","synvex_features_title": "Peringatan tanpa kehilangan ritme.","synvex_features_description": "Dirancang untuk menghubungkan komunitas dengan konten baru dan siaran langsung di berbagai platform.","synvex_feature_live_title": "Live stream","synvex_feature_live_desc": "Deteksi siaran langsung dan beri tahu komunitas Anda saat stream baru dimulai.","synvex_feature_video_title": "Video baru","synvex_feature_video_desc": "Terima peringatan saat konten baru muncul di platform yang terhubung.","synvex_feature_content_title": "Pemantauan konten","synvex_feature_content_desc": "Jaga server tetap mendapat informasi tentang aktivitas terbaru tanpa memeriksa setiap platform secara manual.","synvex_docs_title": "Dokumentasi SYNVEX","synvex_docs_intro": "Panduan awal untuk memahami tujuan dan alur SYNVEX Media Alerts.","synvex_quick_title": "Disiapkan untuk integrasi mendatang.","synvex_quick_desc": "Arsitektur yang direncanakan menghubungkan sumber konten, mendeteksi peristiwa, dan menerbitkan peringatan ke Discord.","synvex_step_01": "Hubungkan platform yang didukung.","synvex_step_02": "Pilih kanal peringatan.","synvex_step_03": "Konfigurasikan jenis peristiwa.","synvex_step_04": "Sesuaikan format peringatan.","synvex_step_05": "Aktifkan dan verifikasi sistem."});
+
+Object.assign(translations.es, {"signal_languages_title": "6 idiomas","signal_languages_desc": "Una experiencia internacional preparada para tu comunidad."});
+
+Object.assign(translations.en, {"signal_languages_title": "6 languages","signal_languages_desc": "An international experience ready for your community."});
+
+Object.assign(translations.pt, {"signal_languages_title": "6 idiomas","signal_languages_desc": "Uma experiência internacional pronta para sua comunidade."});
+
+Object.assign(translations.de, {"signal_languages_title": "6 Sprachen","signal_languages_desc": "Eine internationale Erfahrung für deine Community."});
+
+Object.assign(translations.fr, {"signal_languages_title": "6 langues","signal_languages_desc": "Une expérience internationale prête pour votre communauté."});
+
+Object.assign(translations.id, {"signal_languages_title": "6 bahasa","signal_languages_desc": "Pengalaman internasional yang siap untuk komunitas Anda."});
+
+
+// Complete localized consent copy.
+Object.assign(translations.pt, {
+  cookie_title: "Privacidade e armazenamento local",
+  cookie_description: "Usamos cookies necessários para o funcionamento e armazenamento local para lembrar seu idioma. Opções adicionais só são ativadas com sua permissão."
+});
+Object.assign(translations.de, {
+  cookie_title: "Datenschutz und lokaler Speicher",
+  cookie_description: "Wir verwenden notwendige Cookies für den Betrieb und lokalen Speicher, um deine Sprache zu merken. Zusätzliche Optionen werden nur mit deiner Erlaubnis aktiviert."
+});
+Object.assign(translations.fr, {
+  cookie_title: "Confidentialité et stockage local",
+  cookie_description: "Nous utilisons les cookies nécessaires au fonctionnement et le stockage local pour mémoriser votre langue. Les options supplémentaires ne sont activées qu'avec votre autorisation."
+});
+
+/* =========================================================
+   DOCUMENTATION INDEX + MUSIC DOCS
+   (these had hardcoded English text with no data-i18n before)
+   ========================================================= */
+Object.assign(translations.es, {
+  docs_index_title: "Todo lo que necesitas.",
+  docs_products_heading: "Elige un sistema.",
+  docs_products_desc: "Lee el resumen antes de configurar tu servidor.",
+  docs_card_dashboard_desc: "Configuración y control central.",
+  docs_card_music_desc: "Reproducción, colas, listas de reproducción.",
+  docs_card_welcome_desc: "Bienvenidas y herramientas de comunidad.",
+  docs_card_guard_desc: "Seguridad y moderación.",
+  docs_card_ticket_desc: "Soporte y flujo de tickets.",
+  docs_card_open: "Abrir",
+  docs_quick_heading: "Empieza en minutos.",
+  docs_quick_desc: "Elige un sistema, añádelo a Discord, configura los permisos y conéctalo al Dashboard cuando esté disponible.",
+  docs_step_1: "Elige un producto",
+  docs_step_2: "Añade el bot a tu servidor",
+  docs_step_3: "Configura los permisos",
+  docs_step_4: "Configura el sistema",
+  docs_step_5: "Verifica el resultado",
+  support_page_desc: "Encuentra documentación, reporta problemas o contacta al equipo.",
+  support_docs_card_desc: "Lee la documentación oficial antes de abrir una solicitud."
+});
+Object.assign(translations.en, {
+  docs_index_title: "Everything you need.",
+  docs_products_heading: "Choose a system.",
+  docs_products_desc: "Read the overview before configuring your server.",
+  docs_card_dashboard_desc: "Central configuration and control.",
+  docs_card_music_desc: "Playback, queues, playlists.",
+  docs_card_welcome_desc: "Welcome and community tools.",
+  docs_card_guard_desc: "Security and moderation.",
+  docs_card_ticket_desc: "Support and ticket workflows.",
+  docs_card_open: "Open",
+  docs_quick_heading: "Start in minutes.",
+  docs_quick_desc: "Pick a system, add it to Discord, configure permissions and connect it to the Dashboard when available.",
+  docs_step_1: "Choose a product",
+  docs_step_2: "Add the bot to your server",
+  docs_step_3: "Configure permissions",
+  docs_step_4: "Configure the system",
+  docs_step_5: "Verify the result",
+  support_page_desc: "Find documentation, report problems or contact the team.",
+  support_docs_card_desc: "Read the official documentation before opening a request."
+});
+Object.assign(translations.pt, {
+  docs_index_title: "Tudo o que você precisa.",
+  docs_products_heading: "Escolha um sistema.",
+  docs_products_desc: "Leia o resumo antes de configurar seu servidor.",
+  docs_card_dashboard_desc: "Configuração e controle central.",
+  docs_card_music_desc: "Reprodução, filas, playlists.",
+  docs_card_welcome_desc: "Boas-vindas e ferramentas de comunidade.",
+  docs_card_guard_desc: "Segurança e moderação.",
+  docs_card_ticket_desc: "Suporte e fluxo de tickets.",
+  docs_card_open: "Abrir",
+  docs_quick_heading: "Comece em minutos.",
+  docs_quick_desc: "Escolha um sistema, adicione-o ao Discord, configure as permissões e conecte-o ao Dashboard quando disponível.",
+  docs_step_1: "Escolha um produto",
+  docs_step_2: "Adicione o bot ao seu servidor",
+  docs_step_3: "Configure as permissões",
+  docs_step_4: "Configure o sistema",
+  docs_step_5: "Verifique o resultado",
+  support_page_desc: "Encontre documentação, relate problemas ou contate a equipe.",
+  support_docs_card_desc: "Leia a documentação oficial antes de abrir uma solicitação."
+});
+Object.assign(translations.de, {
+  docs_index_title: "Alles, was du brauchst.",
+  docs_products_heading: "Wähle ein System.",
+  docs_products_desc: "Lies die Übersicht, bevor du deinen Server konfigurierst.",
+  docs_card_dashboard_desc: "Zentrale Konfiguration und Kontrolle.",
+  docs_card_music_desc: "Wiedergabe, Warteschlangen, Playlists.",
+  docs_card_welcome_desc: "Begrüßungen und Community-Tools.",
+  docs_card_guard_desc: "Sicherheit und Moderation.",
+  docs_card_ticket_desc: "Support- und Ticket-Workflows.",
+  docs_card_open: "Öffnen",
+  docs_quick_heading: "In Minuten starten.",
+  docs_quick_desc: "Wähle ein System, füge es zu Discord hinzu, konfiguriere die Berechtigungen und verbinde es mit dem Dashboard, sobald verfügbar.",
+  docs_step_1: "Produkt auswählen",
+  docs_step_2: "Bot zu deinem Server hinzufügen",
+  docs_step_3: "Berechtigungen konfigurieren",
+  docs_step_4: "System konfigurieren",
+  docs_step_5: "Ergebnis überprüfen",
+  support_page_desc: "Finde Dokumentation, melde Probleme oder kontaktiere das Team.",
+  support_docs_card_desc: "Lies die offizielle Dokumentation, bevor du eine Anfrage stellst."
+});
+Object.assign(translations.fr, {
+  docs_index_title: "Tout ce dont vous avez besoin.",
+  docs_products_heading: "Choisissez un système.",
+  docs_products_desc: "Lisez l'aperçu avant de configurer votre serveur.",
+  docs_card_dashboard_desc: "Configuration et contrôle centralisés.",
+  docs_card_music_desc: "Lecture, files d'attente, playlists.",
+  docs_card_welcome_desc: "Bienvenues et outils communautaires.",
+  docs_card_guard_desc: "Sécurité et modération.",
+  docs_card_ticket_desc: "Support et gestion des tickets.",
+  docs_card_open: "Ouvrir",
+  docs_quick_heading: "Démarrez en quelques minutes.",
+  docs_quick_desc: "Choisissez un système, ajoutez-le à Discord, configurez les permissions et connectez-le au Dashboard quand disponible.",
+  docs_step_1: "Choisissez un produit",
+  docs_step_2: "Ajoutez le bot à votre serveur",
+  docs_step_3: "Configurez les permissions",
+  docs_step_4: "Configurez le système",
+  docs_step_5: "Vérifiez le résultat",
+  support_page_desc: "Trouvez la documentation, signalez un problème ou contactez l'équipe.",
+  support_docs_card_desc: "Lisez la documentation officielle avant d'ouvrir une demande."
+});
+Object.assign(translations.id, {
+  docs_index_title: "Semua yang Anda butuhkan.",
+  docs_products_heading: "Pilih sebuah sistem.",
+  docs_products_desc: "Baca ringkasannya sebelum mengonfigurasi server Anda.",
+  docs_card_dashboard_desc: "Konfigurasi dan kontrol terpusat.",
+  docs_card_music_desc: "Pemutaran, antrean, daftar putar.",
+  docs_card_welcome_desc: "Sambutan dan alat komunitas.",
+  docs_card_guard_desc: "Keamanan dan moderasi.",
+  docs_card_ticket_desc: "Dukungan dan alur tiket.",
+  docs_card_open: "Buka",
+  docs_quick_heading: "Mulai dalam hitungan menit.",
+  docs_quick_desc: "Pilih sistem, tambahkan ke Discord, konfigurasikan izin, dan hubungkan ke Dashboard saat tersedia.",
+  docs_step_1: "Pilih produk",
+  docs_step_2: "Tambahkan bot ke server Anda",
+  docs_step_3: "Konfigurasikan izin",
+  docs_step_4: "Konfigurasikan sistem",
+  docs_step_5: "Verifikasi hasilnya",
+  support_page_desc: "Temukan dokumentasi, laporkan masalah, atau hubungi tim.",
+  support_docs_card_desc: "Baca dokumentasi resmi sebelum membuka permintaan."
+});
+
+// Expose the catalog to the rest of the site.
+window.translations = translations;
+window.dispatchEvent(new CustomEvent("nekronex:translations-ready"));
+
+
+/* =========================================================
+   PREMIUM LIVE COMMERCE COPY
+   ========================================================= */
+(function () {
+  const premiumLive = {
+    es: {
+      premium_live_status: "PREMIUM DISPONIBLE",
+      premium_live_title: "Haz que tu bot se sienta parte de tu servidor.",
+      premium_live_desc: "Activa personalización compatible por servidor mediante una licencia temporal. Administra el acceso desde NYVEX Dashboard.",
+      premium_live_buy: "Comprar Premium",
+      premium_live_open: "Abrir Dashboard",
+      premium_live_note: "La compra y activación se gestionan mediante el sistema Premium de NYVEX Dashboard.",
+      premium_live_30_name: "Custom",
+      premium_live_30_desc: "Personalización esencial para un servidor.",
+      premium_live_90_name: "Pro",
+      premium_live_90_desc: "Más tiempo para personalizar y administrar tu experiencia.",
+      premium_live_365_name: "Elite",
+      premium_live_365_desc: "La experiencia anual para comunidades que quieren mantenerlo todo activo.",
+      premium_live_days_30: "30 días",
+      premium_live_days_90: "90 días",
+      premium_live_days_365: "365 días",
+      premium_live_active: "ACTIVO"
+    },
+    en: {
+      premium_live_status: "PREMIUM AVAILABLE",
+      premium_live_title: "Make your bot feel native to your server.",
+      premium_live_desc: "Enable compatible server-level customization through a time-limited license. Manage access from NYVEX Dashboard.",
+      premium_live_buy: "Buy Premium",
+      premium_live_open: "Open Dashboard",
+      premium_live_note: "Purchase and activation are managed through the NYVEX Dashboard Premium system.",
+      premium_live_30_name: "Custom",
+      premium_live_30_desc: "Essential customization for one server.",
+      premium_live_90_name: "Pro",
+      premium_live_90_desc: "More time to personalize and manage your experience.",
+      premium_live_365_name: "Elite",
+      premium_live_365_desc: "The annual experience for communities that want to keep everything active.",
+      premium_live_days_30: "30 days",
+      premium_live_days_90: "90 days",
+      premium_live_days_365: "365 days",
+      premium_live_active: "ACTIVE"
+    },
+    pt: {
+      premium_live_status: "PREMIUM DISPONÍVEL",
+      premium_live_title: "Faça seu bot se sentir parte do seu servidor.",
+      premium_live_desc: "Ative a personalização compatível por servidor por meio de uma licença temporária. Gerencie o acesso pelo NYVEX Dashboard.",
+      premium_live_buy: "Comprar Premium",
+      premium_live_open: "Abrir Dashboard",
+      premium_live_note: "A compra e a ativação são gerenciadas pelo sistema Premium do NYVEX Dashboard.",
+      premium_live_30_name: "Custom",
+      premium_live_30_desc: "Personalização essencial para um servidor.",
+      premium_live_90_name: "Pro",
+      premium_live_90_desc: "Mais tempo para personalizar e gerenciar sua experiência.",
+      premium_live_365_name: "Elite",
+      premium_live_365_desc: "A experiência anual para comunidades que querem manter tudo ativo.",
+      premium_live_days_30: "30 dias",
+      premium_live_days_90: "90 dias",
+      premium_live_days_365: "365 dias",
+      premium_live_active: "ATIVO"
+    },
+    de: {
+      premium_live_status: "PREMIUM VERFÜGBAR",
+      premium_live_title: "Mach deinen Bot zu einem Teil deines Servers.",
+      premium_live_desc: "Aktiviere kompatible serverbezogene Anpassungen über eine zeitlich begrenzte Lizenz. Verwalte den Zugriff im NYVEX Dashboard.",
+      premium_live_buy: "Premium kaufen",
+      premium_live_open: "Dashboard öffnen",
+      premium_live_note: "Kauf und Aktivierung werden über das Premium-System des NYVEX Dashboards verwaltet.",
+      premium_live_30_name: "Custom",
+      premium_live_30_desc: "Wichtige Anpassungen für einen Server.",
+      premium_live_90_name: "Pro",
+      premium_live_90_desc: "Mehr Zeit für Personalisierung und Verwaltung.",
+      premium_live_365_name: "Elite",
+      premium_live_365_desc: "Das Jahreserlebnis für Communities, die alles aktiv halten möchten.",
+      premium_live_days_30: "30 Tage",
+      premium_live_days_90: "90 Tage",
+      premium_live_days_365: "365 Tage",
+      premium_live_active: "AKTIV"
+    },
+    fr: {
+      premium_live_status: "PREMIUM DISPONIBLE",
+      premium_live_title: "Faites du bot une partie de votre serveur.",
+      premium_live_desc: "Activez une personnalisation compatible par serveur grâce à une licence limitée dans le temps. Gérez l’accès depuis NYVEX Dashboard.",
+      premium_live_buy: "Acheter Premium",
+      premium_live_open: "Ouvrir le Dashboard",
+      premium_live_note: "L’achat et l’activation sont gérés par le système Premium de NYVEX Dashboard.",
+      premium_live_30_name: "Custom",
+      premium_live_30_desc: "Personnalisation essentielle pour un serveur.",
+      premium_live_90_name: "Pro",
+      premium_live_90_desc: "Plus de temps pour personnaliser et gérer votre expérience.",
+      premium_live_365_name: "Elite",
+      premium_live_365_desc: "L’expérience annuelle pour les communautés qui veulent tout garder actif.",
+      premium_live_days_30: "30 jours",
+      premium_live_days_90: "90 jours",
+      premium_live_days_365: "365 jours",
+      premium_live_active: "ACTIF"
+    },
+    id: {
+      premium_live_status: "PREMIUM TERSEDIA",
+      premium_live_title: "Buat bot Anda terasa menyatu dengan server Anda.",
+      premium_live_desc: "Aktifkan kustomisasi yang kompatibel untuk server melalui lisensi berbatas waktu. Kelola akses dari NYVEX Dashboard.",
+      premium_live_buy: "Beli Premium",
+      premium_live_open: "Buka Dashboard",
+      premium_live_note: "Pembelian dan aktivasi dikelola melalui sistem Premium NYVEX Dashboard.",
+      premium_live_30_name: "Custom",
+      premium_live_30_desc: "Kustomisasi penting untuk satu server.",
+      premium_live_90_name: "Pro",
+      premium_live_90_desc: "Lebih banyak waktu untuk mempersonalisasi pengalaman Anda.",
+      premium_live_365_name: "Elite",
+      premium_live_365_desc: "Pengalaman tahunan untuk komunitas yang ingin semuanya tetap aktif.",
+      premium_live_days_30: "30 hari",
+      premium_live_days_90: "90 hari",
+      premium_live_days_365: "365 hari",
+      premium_live_active: "AKTIF"
+    }
+  };
+  Object.keys(premiumLive).forEach((lang) => {
+    if (!window.translations?.[lang]) window.translations = window.translations || {};
+    if (window.translations?.[lang]) Object.assign(window.translations[lang], premiumLive[lang]);
+  });
+})();
