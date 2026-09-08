@@ -452,28 +452,16 @@
   }
 
   function interactions() {
-    let lastSpark = 0;
-    document.addEventListener("pointerover", (event) => {
-      const t = event.target.closest("a,button,select,.product-card,.feature,.plan,.faq-q,.nx-support-category,.nx-support-template");
-      if (!t || t.dataset.nxHover === "1") return;
-      t.dataset.nxHover = "1";
-      tone("hover");
-      // Hard global throttle: skip the DOM-spawning spark burst if the
-      // user is sweeping across many elements quickly (fast mouse over
-      // a grid of cards), which used to create a burst of short-lived
-      // elements on every single one.
-      const now = performance.now();
-      if (now - lastSpark > 70) {
-        lastSpark = now;
-        energy(t, { count: 2, mode: "burst" });
-      }
-      setTimeout(() => delete t.dataset.nxHover, 90);
-    }, { passive: true });
-
+    // By request: no more hover-triggered sound/sparks (was firing on
+    // every single element the pointer passed over — costly and, per
+    // feedback, more annoying than "interactive" feeling). Ambient
+    // motion (particles, nebula, glow/blink) keeps running on its own;
+    // actual interaction feedback now only happens on click.
     document.addEventListener("click", (event) => {
       const t = event.target.closest("button,a,select,.faq-q,.product-card,.feature,.plan");
       if (!t) return;
       ripple(t, event);
+      energy(t, { count: 6, mode: "burst" });
       if (!t.matches(".lang-btn,.nav-menu-trigger,.faq-q")) tone("click");
     });
   }
@@ -515,34 +503,11 @@
   }
 
   function cards() {
+    // Tilt-on-hover removed by request (no more "reacts when you pass
+    // over it" behavior) — cards just get their base styling class,
+    // whatever hover/click visuals exist now live purely in CSS.
     $$(".product-card,.feature,.metric,.collab,.plan,.premium,.ecosystem-panel,.command,.support-card,.cta-box,.visual-panel,.faq-item").forEach(card => {
       card.classList.add("nx-card-v4");
-      if (innerWidth < 850) return;
-      let ticking = false, lastEvent = null;
-      card.addEventListener("pointermove", (e) => {
-        lastEvent = e;
-        // rAF-throttled: mousemove can fire far more often than the
-        // screen repaints, so without this we'd call the layout-forcing
-        // getBoundingClientRect() many more times than actually visible.
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(() => {
-          ticking = false;
-          const r = card.getBoundingClientRect();
-          const x = ((lastEvent.clientX - r.left) / r.width) * 100;
-          const y = ((lastEvent.clientY - r.top) / r.height) * 100;
-          card.style.setProperty("--mx", `${x}%`);
-          card.style.setProperty("--my", `${y}%`);
-          card.style.setProperty("--rx", `${((y - 50) / 26) * -1}deg`);
-          card.style.setProperty("--ry", `${((x - 50) / 30)}deg`);
-        });
-      }, { passive: true });
-      card.addEventListener("pointerleave", () => {
-        card.style.setProperty("--rx", "0deg");
-        card.style.setProperty("--ry", "0deg");
-        card.style.setProperty("--mx", "50%");
-        card.style.setProperty("--my", "50%");
-      });
     });
   }
 
