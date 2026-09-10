@@ -621,11 +621,28 @@ select:hover{
   position:relative;
   isolation:isolate;
   overflow:hidden;
+  /* Static base glow — no animation on box-shadow itself (that forces
+     a full repaint every frame). The "breathing" is done by fading a
+     second, brighter pre-rendered glow layer in and out via opacity,
+     which is compositor-only and effectively free. */
   box-shadow:
-    0 0 0 1px rgba(212,175,55,.35),
-    0 0 18px rgba(212,175,55,.35),
-    0 0 42px rgba(212,175,55,.18);
-  animation:nxCtaBreathe 2.6s ease-in-out infinite;
+    0 0 0 1px rgba(212,175,55,.4),
+    0 0 20px rgba(212,175,55,.4),
+    0 0 46px rgba(212,175,55,.2);
+}
+
+.nx-cta-glow::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  z-index:-2;
+  border-radius:inherit;
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,.55),
+    0 0 30px rgba(212,175,55,.55),
+    0 0 62px rgba(212,175,55,.3);
+  opacity:0;
+  animation:nxCtaBreatheOpacity 2.6s ease-in-out infinite;
 }
 
 .nx-cta-glow::before{
@@ -649,9 +666,9 @@ select:hover{
     0 0 60px rgba(212,175,55,.3);
 }
 
-@keyframes nxCtaBreathe{
-  0%,100%{box-shadow:0 0 0 1px rgba(212,175,55,.35),0 0 18px rgba(212,175,55,.35),0 0 42px rgba(212,175,55,.18)}
-  50%{box-shadow:0 0 0 1px rgba(212,175,55,.5),0 0 26px rgba(212,175,55,.5),0 0 58px rgba(212,175,55,.28)}
+@keyframes nxCtaBreatheOpacity{
+  0%,100%{opacity:0}
+  50%{opacity:1}
 }
 
 /* nx-cta-glow intentionally keeps animating regardless of the OS
@@ -706,28 +723,49 @@ select:hover{
 }
 
 .nx-live-dot{
+  position:relative;
   width:7px;
   height:7px;
   border-radius:50%;
   background:currentColor;
-  box-shadow:0 0 0 0 currentColor;
-  animation:nxLiveBlink 1.8s ease-in-out infinite;
   flex:none;
 }
 
+.nx-live-dot::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:1px solid rgba(228,191,77,.55);
+  opacity:0;
+  animation:nxLiveBlink 1.8s ease-in-out infinite;
+}
+
 @keyframes nxLiveBlink{
-  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(228,191,77,.55)}
-  50%{opacity:.55;box-shadow:0 0 0 6px rgba(228,191,77,0)}
+  0%{opacity:.7;transform:scale(.3)}
+  70%,100%{opacity:0;transform:scale(1)}
 }
 
 .nx-icon-glow{
   position:relative;
-  animation:nxIconBreathe 3.2s ease-in-out infinite;
+  display:inline-block;
 }
 
-@keyframes nxIconBreathe{
-  0%,100%{filter:drop-shadow(0 0 0px currentColor)}
-  50%{filter:drop-shadow(0 0 9px currentColor)}
+.nx-icon-glow::after{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  z-index:-1;
+  border-radius:50%;
+  background:radial-gradient(circle,currentColor,transparent 68%);
+  opacity:0;
+  filter:blur(7px);
+  animation:nxIconBreatheOpacity 3.2s ease-in-out infinite;
+}
+
+@keyframes nxIconBreatheOpacity{
+  0%,100%{opacity:0}
+  50%{opacity:.55}
 }
 
 /* -------------------------
@@ -1208,68 +1246,15 @@ select:hover{
   height: 70px !important;
 }
 
-/* ---------- Video-inspired ambient background ---------- */
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: -10%;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(
-      34% 30% at 17% 39%,
-      rgba(155,108,255,.15),
-      transparent 72%
-    ),
-    radial-gradient(
-      30% 28% at 83% 42%,
-      rgba(54,217,255,.095),
-      transparent 73%
-    ),
-    radial-gradient(
-      26% 22% at 57% 84%,
-      rgba(212,175,55,.075),
-      transparent 72%
-    );
-  filter: blur(24px) saturate(118%);
-  animation: nx-v14-nebula 16s ease-in-out infinite alternate;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(
-      circle at 50% 42%,
-      rgba(255,255,255,.018),
-      transparent 40%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,.009) 0,
-      rgba(255,255,255,.009) 1px,
-      transparent 1px,
-      transparent 5px
-    );
-  opacity: .44;
-  mix-blend-mode: screen;
-  animation: nx-v14-scan 9s linear infinite;
-}
-
-@keyframes nx-v14-nebula {
-  0%   { transform: translate3d(-1.4%,0,0) scale(1); }
-  50%  { transform: translate3d(1.3%,1.5%,0) scale(1.045); }
-  100% { transform: translate3d(-.4%,2.2%,0) scale(1.02); }
-}
-
-@keyframes nx-v14-scan {
-  from { transform: translateY(0); }
-  to { transform: translateY(8px); }
-}
+/* ---------- Legacy full-viewport nebula (removed) ----------
+   This used to run a blurred, animated, edge-to-edge gradient behind
+   EVERY page via body::before (filter: blur(24px), constantly
+   repainting) plus a scanline texture via body::after — both fixed,
+   full-viewport, and running forever regardless of what page you're
+   on. It's now fully redundant with the lighter .nx-nebula-field
+   blobs (small blurred circles, not a full-screen filter), so it's
+   removed rather than kept duplicated. This alone was likely the
+   single heaviest thing running on every page. */
 
 /* ---------- Cookies: bottom-left, always over content ---------- */
 
@@ -1359,15 +1344,6 @@ body::after {
   .nx-support-widget {
     right: 14px !important;
     bottom: calc(14px + env(safe-area-inset-bottom)) !important;
-  }
-
-  body::before {
-    opacity: .72;
-    filter: blur(18px) saturate(112%);
-  }
-
-  body::after {
-    opacity: .22;
   }
 }
 

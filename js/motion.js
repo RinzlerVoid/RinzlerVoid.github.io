@@ -279,7 +279,6 @@
 
     const frame = () => {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
-      const px = state.pointerX, py = state.pointerY;
       frameCount++;
 
       state.particles.forEach(p => {
@@ -303,13 +302,14 @@
       }
 
       state.particles.forEach(p => {
-        const dx = p.x - px, dy = p.y - py;
-        const dist = Math.hypot(dx, dy);
-        const influence = Math.max(0, 1 - dist / 290);
+        // No more cursor-proximity reaction (removed by request — it
+        // meant a Math.hypot() distance check against the pointer for
+        // every single particle, every frame). Particles now just
+        // drift and pulse on their own.
         const pulse = p.pulse ? (0.62 + Math.sin(p.tw) * 0.38) : 1;
-        const radius = p.r + influence * 0.9;
+        const radius = p.r;
         const color = colorFor(p.hue);
-        const alpha = Math.min(.92, (p.a * pulse) + (influence * .18));
+        const alpha = Math.min(.92, p.a * pulse);
 
         if (p.glow) {
           // Cheap glow: draw the pre-rendered sprite instead of a live
