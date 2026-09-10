@@ -178,10 +178,15 @@
     document.body.appendChild(canvas);
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const count = lowPower ? 55 : 120;
+    const count = lowPower ? 40 : 85;
 
     const resize = () => {
-      const dpr = Math.min(devicePixelRatio || 1, 2);
+      // Capped lower than the usual devicePixelRatio (which can be 2-3
+      // on modern phones/laptops): the particle field is soft glowing
+      // shapes, not text or sharp UI, so it doesn't need full retina
+      // sharpness — and every extra 0.5x here is a real jump in the
+      // number of pixels the canvas has to fill every frame.
+      const dpr = Math.min(devicePixelRatio || 1, 1.5);
       canvas.width = innerWidth * dpr;
       canvas.height = innerHeight * dpr;
       canvas.style.width = `${innerWidth}px`;
@@ -238,48 +243,27 @@
     resize();
     addEventListener("resize", resize, { passive: true });
 
-    const linkDist = lowPower ? 80 : 120;
-    let cachedLinks = [];
-    let frameCount = 0;
+    // No more connecting lines between particles — that "constellation/
+    // circuit" look required rebuilding a spatial grid and redrawing
+    // dozens of line segments every few frames. Removed by request in
+    // favor of a plain drifting star/nebula-sparkle field, which reads
+    // as the same space theme with a fraction of the per-frame work.
 
-    // Grid-bucketed neighbor search instead of comparing every particle
-    // against every other one (that was ~18,000 checks/frame at 190
-    // particles). Only recomputed every 4th frame — the field drifts
-    // slowly, so the topology barely changes frame to frame.
-    function computeLinks() {
-      const cell = linkDist;
-      const grid = new Map();
-      const key = (cx, cy) => `${cx},${cy}`;
-      state.particles.forEach((p, i) => {
-        const cx = Math.floor(p.x / cell), cy = Math.floor(p.y / cell);
-        const k = key(cx, cy);
-        if (!grid.has(k)) grid.set(k, []);
-        grid.get(k).push(i);
-      });
-      const links = [];
-      state.particles.forEach((a, i) => {
-        const cx = Math.floor(a.x / cell), cy = Math.floor(a.y / cell);
-        for (let ox = -1; ox <= 1; ox++) {
-          for (let oy = -1; oy <= 1; oy++) {
-            const bucket = grid.get(key(cx + ox, cy + oy));
-            if (!bucket) continue;
-            for (const j of bucket) {
-              if (j <= i) continue;
-              const b = state.particles[j];
-              const dx = a.x - b.x, dy = a.y - b.y;
-              const d2 = dx * dx + dy * dy;
-              if (d2 > linkDist * linkDist) continue;
-              links.push([i, j, 1 - Math.sqrt(d2) / linkDist]);
-            }
-          }
-        }
-      });
-      return links;
-    }
+    // Frame-rate cap: without this, the browser tries to redraw the
+    // canvas as fast as the display refreshes (60/120/144Hz+). Capping
+    // to ~30fps here is the single biggest lever for devices without
+    // GPU acceleration, since it directly halves (or more) how often
+    // any of the drawing below has to run, and the drift is slow
+    // enough that the difference isn't visually noticeable.
+    const frameInterval = 1000 / 30;
+    let lastFrameTime = 0;
 
-    const frame = () => {
+    const frame = (now) => {
+      requestAnimationFrame(frame);
+      if (now - lastFrameTime < frameInterval) return;
+      lastFrameTime = now;
+
       ctx.clearRect(0, 0, innerWidth, innerHeight);
-      frameCount++;
 
       state.particles.forEach(p => {
         p.y -= p.vy;
@@ -288,33 +272,15 @@
         if (p.y < -10) p.y = innerHeight + 10;
         if (p.x < -10) p.x = innerWidth + 10;
         if (p.x > innerWidth + 10) p.x = -10;
-      });
 
-      if (frameCount % 4 === 0) cachedLinks = computeLinks();
-      ctx.lineWidth = 1;
-      for (const [i, j, t] of cachedLinks) {
-        const a = state.particles[i], b = state.particles[j];
-        ctx.strokeStyle = `rgba(200,180,255,${t * 0.22})`;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
-
-      state.particles.forEach(p => {
-        // No more cursor-proximity reaction (removed by request — it
-        // meant a Math.hypot() distance check against the pointer for
-        // every single particle, every frame). Particles now just
-        // drift and pulse on their own.
         const pulse = p.pulse ? (0.62 + Math.sin(p.tw) * 0.38) : 1;
-        const radius = p.r;
         const color = colorFor(p.hue);
         const alpha = Math.min(.92, p.a * pulse);
 
         if (p.glow) {
           // Cheap glow: draw the pre-rendered sprite instead of a live
           // shadowBlur (drawImage is orders of magnitude cheaper).
-          const s = radius * 9;
+          const s = p.r * 9;
           ctx.globalAlpha = alpha;
           ctx.drawImage(glowSprites[color], p.x - s / 2, p.y - s / 2, s, s);
         }
@@ -322,10 +288,9 @@
         ctx.globalAlpha = alpha;
         ctx.fillStyle = `rgb(${color})`;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       });
-      requestAnimationFrame(frame);
     };
     requestAnimationFrame(frame);
   }
