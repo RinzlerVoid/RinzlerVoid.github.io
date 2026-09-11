@@ -57,68 +57,8 @@ html.nx-routing body{
 }
 
 /* -------------------------
-   pointer orb
+   pointer orb (removed — see js/motion.js, using the OS cursor now)
    ------------------------- */
-
-/* Only hide the OS cursor once we've actually created our own —
-   this class is added by JS, so users on touch/low-precision
-   pointers (where trackPointer() bails early) keep the normal
-   system cursor and are never left without one. */
-html.nx-custom-cursor,
-html.nx-custom-cursor *{
-  cursor:none!important;
-}
-
-.nx-cursor-orb,
-.nx-cursor-halo{
-  position:fixed;
-  left:0;
-  top:0;
-  pointer-events:none;
-  z-index:210000;
-  border-radius:50%;
-  transform:translate(-50%,-50%);
-}
-
-.nx-cursor-orb{
-  width:8px;
-  height:8px;
-  background:#fff;
-  box-shadow:
-    0 0 8px #fff,
-    0 0 18px var(--nx-purple),
-    0 0 20px var(--nx-cyan),
-    0 0 32px rgba(155,108,255,.75);
-  transition:width .18s ease,height .18s ease,box-shadow .18s ease;
-}
-
-.nx-cursor-halo{
-  width:30px;
-  height:30px;
-  border:1px solid rgba(201,174,255,.18);
-  background:radial-gradient(circle,rgba(173,127,255,.12),transparent 68%);
-  transition:
-    width .24s ease,
-    height .24s ease,
-    border-color .24s ease,
-    background .24s ease;
-}
-
-.nx-pointer-interactive .nx-cursor-orb{
-  width:11px;
-  height:11px;
-  box-shadow:
-    0 0 10px #fff,
-    0 0 22px var(--nx-gold,#d4af37),
-    0 0 46px rgba(212,175,55,.85);
-}
-
-.nx-pointer-interactive .nx-cursor-halo{
-  width:44px;
-  height:44px;
-  border-color:rgba(232,210,150,.34);
-  background:radial-gradient(circle,rgba(212,175,55,.17),transparent 70%);
-}
 
 /* -------------------------
    nebula field (behind the stars)
@@ -1189,62 +1129,7 @@ select:hover{
    These are deliberately additive. Existing layout remains intact.
    ========================================================= */
 
-/* ---------- Cursor: exact center + larger atmospheric glow ---------- */
-
-.nx-cursor-orb,
-.nx-cursor-halo,
-.nx-cursor-aura {
-  position: fixed !important;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none !important;
-  border-radius: 50%;
-}
-
-.nx-cursor-orb {
-  width: 8px !important;
-  height: 8px !important;
-  z-index: 210000 !important;
-}
-
-.nx-cursor-halo {
-  width: 54px !important;
-  height: 54px !important;
-  z-index: 209999 !important;
-  border: 1px solid rgba(205,175,255,.20) !important;
-  background: radial-gradient(
-    circle,
-    rgba(173,127,255,.14) 0%,
-    rgba(54,217,255,.045) 25%,
-    transparent 70%
-  ) !important;
-}
-
-.nx-cursor-aura {
-  width: 180px;
-  height: 180px;
-  z-index: 209998 !important;
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,.06) 0%,
-    rgba(155,108,255,.12) 16%,
-    rgba(54,217,255,.035) 32%,
-    transparent 72%
-  );
-  filter: blur(5px);
-  opacity: .82;
-}
-
-.nx-pointer-interactive .nx-cursor-orb {
-  width: 11px !important;
-  height: 11px !important;
-}
-
-.nx-pointer-interactive .nx-cursor-halo {
-  width: 70px !important;
-  height: 70px !important;
-}
+/* ---------- Cursor overrides removed — OS cursor is used now ---------- */
 
 /* ---------- Legacy full-viewport nebula (removed) ----------
    This used to run a blurred, animated, edge-to-edge gradient behind

@@ -99,53 +99,10 @@
     }
   }
 
-  function trackPointer() {
-    // Custom cursor: replaces the OS pointer entirely on desktop-sized
-    // screens (touch devices don't have a hover pointer, so we leave
-    // the system cursor alone there).
-    if (innerWidth >= 900 && matchMedia("(pointer:fine)").matches) {
-      document.documentElement.classList.add("nx-custom-cursor");
-      const orb = document.createElement("span");
-      orb.className = "nx-cursor-orb";
-      const halo = document.createElement("span");
-      halo.className = "nx-cursor-halo";
-      document.body.append(halo, orb);
-
-      document.addEventListener("pointermove", (e) => {
-        state.pointerX = e.clientX;
-        state.pointerY = e.clientY;
-        orb.style.left = `${e.clientX}px`;
-        orb.style.top = `${e.clientY}px`;
-        halo.style.left = `${e.clientX}px`;
-        halo.style.top = `${e.clientY}px`;
-      }, { passive: true });
-
-      const interactive = () => {
-        document.documentElement.classList.add("nx-pointer-interactive");
-        clearTimeout(interactive.timer);
-        interactive.timer = setTimeout(() => document.documentElement.classList.remove("nx-pointer-interactive"), 120);
-      };
-      document.addEventListener("pointerover", (e) => {
-        if (e.target.closest("a,button,select,.product-card,.feature,.plan,.faq-q")) interactive();
-      }, { passive: true });
-
-      // If the pointer leaves the window or the device turns out to
-      // actually be touch-driven, don't leave the user without any
-      // visible cursor at all.
-      document.addEventListener("pointerdown", (e) => {
-        if (e.pointerType === "touch") {
-          document.documentElement.classList.remove("nx-custom-cursor");
-          orb.remove(); halo.remove();
-        }
-      }, { passive: true, once: true });
-      return;
-    }
-
-    document.addEventListener("pointermove", (e) => {
-      state.pointerX = e.clientX;
-      state.pointerY = e.clientY;
-    }, { passive: true });
-  }
+  // Custom cursor removed by request — the OS/browser's native cursor
+  // is used everywhere now. This also drops the pointermove listener
+  // entirely, since nothing else in the file needs live pointer
+  // coordinates anymore (particles no longer react to the cursor).
 
   function setupNebula() {
     // Soft drifting color clouds behind the stars — pure CSS (no
@@ -545,7 +502,7 @@
 
     // Each visual module runs isolated: a failure in particles/cursor/etc
     // must never prevent the page content from becoming visible.
-    safe("cursor", trackPointer);
+    // (cursor tracking removed — see note near the top of the file)
     safe("nebula", setupNebula);
     safe("particles", setupParticles);
     safe("portal-layer", createPortal);
