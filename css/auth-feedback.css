@@ -1,0 +1,22 @@
+.nx-auth-feedback{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:22px;background:rgba(3,5,10,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:1;transition:opacity .18s ease}
+.nx-auth-feedback.is-closing{opacity:0}
+.nx-auth-feedback-card{position:relative;width:min(100%,560px);max-height:min(88vh,780px);overflow:auto;padding:clamp(28px,5vw,48px);border:1px solid rgba(255,255,255,.12);border-radius:24px;background:radial-gradient(circle at 50% -12%,rgba(137,102,255,.2),transparent 38%),linear-gradient(155deg,rgba(19,23,35,.98),rgba(8,10,17,.99));box-shadow:0 34px 120px rgba(0,0,0,.62),inset 0 1px rgba(255,255,255,.04);text-align:center;color:#f7f8fc}
+.nx-auth-feedback-card:before{content:"";position:absolute;inset:0 18% auto;height:1px;background:linear-gradient(90deg,transparent,rgba(178,153,255,.75),transparent)}
+.nx-auth-feedback-brand{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;color:#e5e8f3;font-size:12px;font-weight:900;letter-spacing:.22em}
+.nx-auth-feedback-brand-mark{display:grid;place-items:center;width:28px;height:28px;border:1px solid rgba(181,155,255,.62);border-radius:9px;color:#c5adff;font-size:15px;letter-spacing:0;box-shadow:0 0 24px rgba(142,103,255,.2)}
+.nx-auth-feedback-icon{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 22px;border:1px solid rgba(91,232,170,.3);border-radius:22px;background:rgba(46,202,137,.1);color:#75efb5;font-size:34px;font-weight:800;box-shadow:0 0 50px rgba(43,206,143,.12)}
+.nx-auth-feedback.is-error .nx-auth-feedback-icon{border-color:rgba(255,173,82,.3);background:rgba(255,173,82,.09);color:#ffc27c;box-shadow:0 0 50px rgba(255,173,82,.1)}
+.nx-auth-feedback-eyebrow{margin:0 0 10px;color:#b8a4ff;font-size:9px;font-weight:900;letter-spacing:.19em;text-transform:uppercase}
+.nx-auth-feedback-card h1{margin:0;color:#fff;font-size:clamp(27px,5vw,38px);font-weight:850;line-height:1.13;letter-spacing:-.04em}
+.nx-auth-feedback-body{max-width:420px;margin:15px auto 24px;color:#aeb5c7;font-size:14px;line-height:1.8}
+.nx-auth-feedback-next{padding:18px 20px;border:1px solid rgba(255,255,255,.09);border-radius:15px;background:rgba(255,255,255,.035);text-align:left}
+.nx-auth-feedback-next strong{display:block;margin-bottom:7px;color:#f0edff;font-size:14px;font-weight:850}
+.nx-auth-feedback-next p{margin:0;color:#b8bdcc;font-size:13px;line-height:1.8}
+.nx-auth-feedback-action{display:inline-flex;justify-content:center;align-items:center;min-height:46px;margin:24px 0 0;padding:0 22px;border:1px solid rgba(190,166,255,.32);border-radius:11px;background:linear-gradient(135deg,#8965e8,#6946bd);box-shadow:0 10px 30px rgba(103,71,189,.24);color:#fff;font-size:12px;font-weight:850;cursor:pointer;transition:transform .18s ease,filter .18s ease}
+.nx-auth-feedback-action:hover{transform:translateY(-1px);filter:brightness(1.1)}
+.nx-auth-feedback-action:focus-visible,.nx-auth-feedback-dismiss:focus-visible{outline:2px solid #c4b4ff;outline-offset:3px}
+.nx-auth-feedback-foot{margin-top:24px;color:#676e80;font-size:9px;font-weight:800;letter-spacing:.2em}
+.nx-auth-feedback-dismiss{position:absolute;top:14px;right:15px;display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.09);border-radius:10px;color:#98a0b2;font-size:22px;cursor:pointer}
+.nx-auth-feedback-dismiss:hover{background:rgba(255,255,255,.06);color:#fff}
+@media(max-width:520px){.nx-auth-feedback{padding:12px}.nx-auth-feedback-card{padding:30px 22px 26px;border-radius:19px}.nx-auth-feedback-brand{margin-bottom:22px}.nx-auth-feedback-body{font-size:13px}.nx-auth-feedback-next{padding:15px}.nx-auth-feedback-next p{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.nx-auth-feedback,.nx-auth-feedback-action{transition:none}}
