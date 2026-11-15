@@ -221,10 +221,10 @@
     const shell = el("div", "nx-auth-feedback-shell");
     const header = el("header", "nx-auth-header");
     const brand = el("a", "nx-auth-brand");
-    brand.href = "/";
+    brand.href = "VER-DISENO.html";
     brand.setAttribute("aria-label", "NEKRONEX home");
     const logo = el("img", "nx-auth-brand-symbol");
-    logo.src = "/assets/brand/favicon-48.png";
+    logo.src = "assets/brand/favicon-48.png";
     logo.alt = "";
     logo.width = 36;
     logo.height = 36;
@@ -257,7 +257,7 @@
     next.querySelector(".nx-auth-next-copy").append(nextTitle, nextText);
 
     const action = el("a", "nx-auth-action");
-    action.href = "/";
+    action.href = "VER-DISENO.html";
     action.append(el("span", ""), el("span", "nx-auth-action-label"));
     action.querySelector(".nx-auth-action-label").setAttribute("data-auth-copy", success ? "successAction" : "errorAction");
     action.querySelector("span:first-child").textContent = "↗";
@@ -270,7 +270,7 @@
     const orbitInner = el("div", "nx-auth-orbit nx-auth-orbit-inner");
     const emblem = el("div", "nx-auth-emblem");
     const emblemImage = el("img", "nx-auth-emblem-image");
-    emblemImage.src = "/assets/brand/icon-192.png";
+    emblemImage.src = "assets/brand/icon-192.png";
     emblemImage.alt = "";
     emblemImage.width = 192;
     emblemImage.height = 192;
