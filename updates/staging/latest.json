@@ -1,11 +1,11 @@
 {
     "version":  "0.11.11",
     "notes":  "NEKRONEX Launcher 0.11.11: actualización firmada. Consulta el changelog incluido en el paquete.",
-    "pub_date":  "2026-11-23T01:53:30.6030451Z",
+    "pub_date":  "2026-11-23T04:29:33.7101370Z",
     "platforms":  {
                       "windows-x86_64-nsis":  {
                                                   "url":  "https://nekronex.com/updates/staging/NEKRONEX-Launcher-0.11.11-windows-x64-nsis.exe",
-                                                  "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUeU4rcVhHdi9rZFN3VG9KSmorK25hUWx3WHM5cVFHeGFyaWU3NU5MMVl0TUVYd3BsTUJINEN2ZGh3VUhUSkJ6Z2J6SDVPQXpHeGVHN20rZ29INEtIbmcyQ2NMTFFlVGdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1Mzk4ODEwCWZpbGU6TkVLUk9ORVgtTGF1bmNoZXItMC4xMS4xMS13aW5kb3dzLXg2NC1uc2lzLmV4ZQl2ZXJzaW9uOjAuMTEuMTEKbDNFY0lwcHNpc2x0Z3hxZG9Jb0NxNTM2dEFhTDBjc1duY2FqVDV4bytGRmxxM2kzRlhTZ0cyb1Z3OENpbmQ0YW8wTUpvVTlwa1JRdHcrVXZQZUNWQUE9PQo="
+                                                  "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUeU4rcVhHdi9rZFIzMGV5eDByTkgyTWZ2UC9SK2JPeUlBVnJhbVNobEtuRlJ0TDFtR2JyQWZBUjJsYUdSTHBoN0NhUEpUTkFWTkhEa042Q00zNWhmYmFSQmk2aUsxendNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NDA4MTczCWZpbGU6TkVLUk9ORVgtTGF1bmNoZXItMC4xMS4xMS13aW5kb3dzLXg2NC1uc2lzLmV4ZQl2ZXJzaW9uOjAuMTEuMTEKdExTZHNOVTNjby9SWjdBcXpPM08xYklSRUFEUkZReHZqQ1BuejhlNGhtUCtVcXNVcCttU1dqc0w3dnNTMDZiQzZGcFRXSlRxZDRXeGJubGJUTUg1QUE9PQo="
                                               }
                   }
 }
